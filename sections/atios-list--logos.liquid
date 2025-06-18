@@ -1,0 +1,359 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<style>
+  @media(max-width: 767px){
+    .atios-list--logos .text_description h3{
+      font-size: 24px;
+    }
+  }
+  .atios-list--photos.section-{{ section.id }}-padding .logos{
+    padding-top: {{ section.settings.padding_top_p_m }}px;
+    padding-bottom: {{ section.settings.padding_bottom_p_m }}px;
+  }
+  .atios-list--photos.section-{{ section.id }}-padding .logos .logo{
+    width: calc(100% / {{ section.settings.persons_per_row_m }});
+  }
+  @media screen and (min-width: 750px) {
+    .atios-list--photos.section-{{ section.id }}-padding .logos{
+      padding-top: {{ section.settings.padding_top_p | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom_p | times: 0.75 | round: 0 }}px;
+    }
+    .atios-list--photos.section-{{ section.id }}-padding .photos .logo{
+      width: calc(100% / {{ section.settings.persons_per_row_t }});
+    }
+  }
+  @media screen and (min-width: 1240px) {
+    .atios-list--photos.section-{{ section.id }}-padding .logos{
+      padding-top: {{ section.settings.padding_top_p }}px;
+      padding-bottom: {{ section.settings.padding_bottom_p }}px;
+    }
+    .atios-list--photos.section-{{ section.id }}-padding .logos .logo{
+      width: calc(100% / {{ section.settings.persons_per_row_d }});
+    }
+  }
+  .atios-list--logos .row{
+    overflow: hidden;
+  }
+</style>
+{% if section.settings.border_top == true %}
+  <style>
+    .atios-list--logos.section-{{ section.id }}-padding{
+      border-top: 1px solid #7C7F8040;
+    }
+  </style>
+{% endif %}
+
+<div class="atios-list--logos section-{{ section.id }}-padding {{ section.settings.custom_class }}">
+  <div class="container page-width">
+    <div class="row">
+      <div class="inner">
+        <div class="top_text">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'heading' -%}
+                <div class="text_heading h2">
+                  {{ block.settings.heading }}
+                </div>
+              {%- when 'text' -%}
+                <div class="text_description text_description--{{ block.id }}">
+                  <style>
+                    .text_description--{{ block.id }} {
+                      /*font-weight: 400;
+                      font-size: 20px;
+                      line-height: 100%;
+                      letter-spacing: 0;*/
+
+                      padding-top: {{ section.settings.pt_text | times: 0.75 | round: 0 }}px;
+                      padding-bottom: {{ section.settings.pb_text | times: 0.75 | round: 0 }}px;
+                    }
+                    @media(min-width: 750px){
+                      .text_description--{{ block.id }} {
+                        padding-top: {{ block.settings.pt_text }}px;
+                        padding-bottom: {{ block.settings.pb_text }}px;
+                      }
+                    }
+                  </style>
+                  {{ block.settings.text }}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+        <div class="logos d_flex">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'logo' -%}
+                {% if block.settings.logo != blank %}
+                  <div class="logo logo--{{ block.id }}">
+                    <style>
+                      .logo--{{ block.id }} img{
+                        width: 100%;
+                        max-width: {{ block.settings.max_width_logo }}px !important;
+                      }
+                      @media(min-width: 768px){
+                        .logo--{{ block.id }} img{
+                          max-width: {{ block.settings.max_width_logo }}px !important;
+                        }
+                      }
+                    </style>
+                    <img src="{{ block.settings.logo | img_url: 'master' }}" alt="{{ block.settings.logo_alt }}" />
+                    <div class="logo_label">
+                      {{ block.settings.logo_label }}
+                    </div>
+                  </div>
+                {% else %}
+                  {% if block.settings.logos_label != blank %}
+                    <div class="logos_label">
+                      <style>
+                        .logos_label{
+                          font-weight: 600;
+                          font-size: 14px;
+                          line-height: 22px;
+                          letter-spacing: 0;
+                          text-transform: uppercase;
+                        }
+                      </style>
+                      {{ block.settings.logos_label }}
+                    </div>
+                  {% endif %}
+                {% endif %}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "A List Logos",
+    "settings": [
+        {
+          "type": "text",
+          "id": "custom_class",
+          "label": "Custom Class"
+        },
+        {
+          "type": "checkbox",
+          "id": "border_top",
+          "label": "Border Top",
+          "default": false,
+          "info": "border-top: 1px solid #7C7F8040"
+        },
+        {
+          "type": "range",
+          "id": "persons_per_row_d",
+          "min": 1,
+          "max": 7,
+          "step": 1,
+          "default": 7,
+          "label": "Persons Per Row Desktop"
+        },
+        {
+          "type": "range",
+          "id": "persons_per_row_t",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Persons Per Row Tablet"
+        },
+        {
+          "type": "range",
+          "id": "persons_per_row_m",
+          "min": 1,
+          "max": 3,
+          "step": 1,
+          "default": 2,
+          "label": "Persons Per Row Mobile"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+        },
+        {
+          "type": "header",
+          "content": "Settings Logos Blocks"
+        },
+        {
+          "type": "range",
+          "id": "padding_top_p",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Logos Padding Top",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom_p",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Logos Padding Bottom",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "padding_top_p_m",
+          "min": 0,
+          "max": 160,
+          "step": 2,
+          "unit": "px",
+          "label": "Logos Padding Top M",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom_p_m",
+          "min": 0,
+          "max": 160,
+          "step": 2,
+          "unit": "px",
+          "label": "Logos Padding Bottom M",
+          "default": 50
+        }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<h2>Partners & Certifications</h2>"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Atios collaborates with trusted industry leaders to ensure seamless integration</p>"
+          },
+          {
+            "type": "range",
+            "id": "pt_text",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Text Padding Top",
+            "default": 36
+          },
+          {
+            "type": "range",
+            "id": "pb_text",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Text Padding Bottom",
+            "default": 36
+          }
+        ]
+      },
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo",
+            "info": "Recommended use PNG files"
+          },
+          {
+            "type": "text",
+            "id": "logo_alt",
+            "label": "Logo ALT"
+          },
+          {
+            "type": "number",
+            "id": "max_width_logo",
+            "label": "Max Width Logo",
+            "default": 220
+          },
+          {
+            "type": "text",
+            "id": "logo_label",
+            "label": "Logo Label"
+          },
+          {
+            "type": "text",
+            "id": "logos_label",
+            "label": "Logos Label"
+          }
+        ]
+      }
+    ],
+      "presets": [
+        {
+          "name": "A List Logos",
+          "blocks": [
+            {
+              "type": "heading"
+            },
+            {
+              "type": "text"
+            },
+            {
+              "type": "logo"
+            },
+            {
+              "type": "logo"
+            },
+            {
+              "type": "logo"
+            },
+            {
+              "type": "logo"
+            },
+            {
+              "type": "logo"
+            }
+          ]
+        }
+      ]
+  }
+{% endschema %}

@@ -1,0 +1,292 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+<div class="atios-media--content section-{{ section.id }}-padding">
+  <div class="container page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="collage-wrapper-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    <div class="row d_flex">
+      <div class="col col_media">
+        <div class="inner">
+          <div class="slider-for">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'image' -%}
+                  <div class="img">
+                    <img src="{{ block.settings.img | img_url: 'master' }}" alt="{{ block.settings.alt }}" />
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="slider-nav">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'image' -%}
+                <div class="img">
+                  <img src="{{ block.settings.img | img_url: 'master' }}" alt="{{ block.settings.alt }}" />
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="col col_content">
+        <div class="inner">
+          <div class="text">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'heading' -%}
+                  <div class="text_heading">
+                    {{ block.settings.heading }}
+                  </div>
+                {%- when 'text' -%}
+                <div class="text_description">
+                  {{ block.settings.text }}
+                </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+          <div class="icons d_flex">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'icon' -%}
+                  <div class="icon icon--{{ block.id }}">
+                    <style>
+                      .atios-media--content .container .row .col.col_content .inner .icons .icon.icon--{{ block.id }} img{
+                        max-width: {{ block.settings.mwblock }}%;
+                        max-height: {{ block.settings.mhblock }}%;
+                      }
+                    </style>
+                    <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.icon_label }}" />
+                    <div class="icon_label">
+                      {{ block.settings.icon_label }}
+                    </div>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    var $arrow_prev = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" transform="matrix(-1 0 0 1 30 0)" fill="#EEF6F8"/> <path d="M16.6426 20.7503L11.0711 15.1789L16.6426 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
+    var $arrow_next = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" fill="#EEF6F8"/> <path d="M13.3574 20.7503L18.9289 15.1789L13.3574 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
+    $('.atios-media--content.section-{{ section.id }}-padding .slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      prevArrow:"<button type='button' class='slick-prev'>"+$arrow_prev+"</button>",
+      nextArrow:"<button type='button' class='slick-next'>"+$arrow_next+"</button>",
+      asNavFor: '.atios-media--content.section-{{ section.id }}-padding .slider-nav'
+    });
+
+    $('.atios-media--content.section-{{ section.id }}-padding .slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.atios-media--content.section-{{ section.id }}-padding .slider-for',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      arrows: false
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "A Media Content",
+    "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.collage.settings.heading.default",
+          "label": "t:sections.collage.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+        }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image for Slider"
+          },
+          {
+            "type": "text",
+            "id": "alt",
+            "label": "Image ALT"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "icon",
+        "name": "Icon",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "range",
+            "id": "mwblock",
+            "min": 1,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Max Width Icon",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "mhblock",
+            "min": 1,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Max Height Icon",
+            "default": 50
+          },
+          {
+            "type": "text",
+            "id": "icon_label",
+            "label": "Icon Label"
+          }
+        ]
+      }
+    ],
+      "presets": [
+        {
+          "name": "A Media Content",
+          "blocks": [
+            {
+              "type": "image"
+            },
+            {
+              "type": "image"
+            },
+            {
+              "type": "image"
+            },
+            {
+              "type": "image"
+            },
+            {
+              "type": "heading"
+            },
+            {
+              "type": "text"
+            },
+            {
+              "type": "icon"
+            },
+            {
+              "type": "icon"
+            },
+            {
+              "type": "icon"
+            },
+            {
+              "type": "icon"
+            }
+          ]
+        }
+      ]
+  }
+{% endschema %}

@@ -1,0 +1,370 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  .atios-slider.section-{{ section.id }}-padding{
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+<div class="atios-slider atios-slider--reviews section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="inner">
+      <div class="js-atios-slider">
+        {%- for block in section.blocks -%}
+          <div class="item item-{{ block.id }}">
+            <div class="item_inner">
+              <div class="text">
+                {{ block.settings.text }}
+              </div>
+              {% if block.settings.pp != blank %}
+                <div class="person_photo">
+                  <style>
+                    .item-{{ block.id }} .person_photo {
+                      max-width: {{ block.settings.pp_mw_m }}%;
+                      margin: {{ block.settings.pp_alignment }};
+                      order: {{ block.settings.pp_position }};
+                    }
+                    @media(min-width: 768px){
+                      .item-{{ block.id }} .person_photo {
+                        max-width: {{ block.settings.pp_mw }}%;
+                        margin: {{ block.settings.pp_alignment }};
+                      }
+                    }
+                  </style>
+                  <img src="{{ block.settings.pp | img_url: 'master' }}" alt="" />
+                </div>
+              {% endif %}
+              <div class="heading">
+                <style>
+                  .heading,
+                  .heading *{
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    letter-spacing: -.2px;
+                    text-align: left !important;
+                  }
+                  @media(min-width: 750px){
+                    .heading,
+                    .heading * {
+                      font-size: 16px;
+                    }
+                  }
+                  @media(min-width: 1024px){
+                    .heading,
+                    .heading * {
+                      font-size: 18px;
+                    }
+                  }
+                </style>
+                {{ block.settings.heading }}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .slick-slide.slick-active.centered .item_inner{
+    background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%) !important;
+  }
+  .atios-slider--reviews .inner .js-atios-slider .slick-track .slick-slide>div .item .item_inner{
+    box-shadow: none !important;
+  }
+  .atios-slider--reviews .slick-slide.centered .item_inner{
+    background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);
+  }
+  .atios-slider.atios-slider--reviews .inner:before{
+    display: none;
+    content: "";
+    width: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    z-index: 3;
+    background: linear-gradient(90deg, #FFFFFF 60%, rgba(255, 255, 255, 0) 115%);
+  }
+  .atios-slider.atios-slider--reviews .inner:after{
+    display: none;
+    content: "";
+    width: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    z-index: 3;
+    background: linear-gradient(-90deg, #FFFFFF 60%, rgba(255, 255, 255, 0) 115%);
+  }
+
+  @media(max-width: 749px){
+    .atios-slider.atios-slider--reviews .slick-prev{
+      left: 40px !important;
+    }
+    .atios-slider.atios-slider--reviews .slick-next{
+      right: 40px !important;
+    }
+  }
+
+</style>
+
+<script>
+  $(document).ready(function () {
+
+
+    function markCenteredSlides(slick) {
+      slick.$slides.removeClass('centered');
+
+      const $activeSlides = slick.$slides.filter('.slick-active');
+
+      if ($activeSlides.length >= 4) {
+        // Определим центральные 2 слайда (второй и третий из активных)
+        const $center1 = $activeSlides.eq(1);
+        const $center2 = $activeSlides.eq(2);
+
+        const slideIndex1 = $center1.data('slick-index');
+        const slideIndex2 = $center2.data('slick-index');
+
+        // Добавим класс ко всем слайдам с этими индексами (включая клоны)
+        slick.$slides.each(function () {
+          const $slide = $(this);
+          const index = $slide.data('slick-index');
+
+          if (index === slideIndex1 || index === slideIndex2) {
+            $slide.addClass('centered');
+          }
+        });
+      }
+    }
+
+    $('.atios-slider.atios-slider--reviews.section-{{ section.id }}-padding .js-atios-slider').on('init reInit afterChange', function (event, slick) {
+      requestAnimationFrame(() => markCenteredSlides(slick));
+    });
+
+    var $arrow_prev = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" transform="matrix(-1 0 0 1 30 0)" fill="#EEF6F8"/> <path d="M16.6426 20.7503L11.0711 15.1789L16.6426 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
+    var $arrow_next = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" fill="#EEF6F8"/> <path d="M13.3574 20.7503L18.9289 15.1789L13.3574 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
+    $('.atios-slider.atios-slider--reviews.section-{{ section.id }}-padding .js-atios-slider').slick({
+      infinite: true,
+      slidesToShow: {{ section.settings.slidesToShow }},
+      slidesToScroll: 4,
+      arrows: true,
+      dots: true,
+      prevArrow:"<button type='button' class='slick-prev'>"+$arrow_prev+"</button>",
+      nextArrow:"<button type='button' class='slick-next'>"+$arrow_next+"</button>",
+      responsive: [
+        {
+          breakpoint: 1180,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "A Slider Reviews",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "range",
+      "id": "slidesToShow",
+      "min": 1,
+      "max": 7,
+      "step": 1,
+      "label": "Slide To Show",
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "<h3>Heading</h3>"
+        },
+        {
+          "type": "header",
+          "content": "Settings Person Photo"
+        },
+        {
+          "type": "image_picker",
+          "id": "pp",
+          "label": "Person Photo",
+          "info": "Use SVG or PNG photos"
+        },
+        {
+          "type": "range",
+          "id": "pp_mw",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Width Photo Desktop",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "pp_mw_m",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Width Photo Mobile",
+          "default": 30
+        },
+        {
+          "type": "select",
+          "id": "pp_alignment",
+          "options": [
+            {
+              "value": "0 0 auto",
+              "label": "Left"
+            },
+            {
+              "value": "0 auto",
+              "label": "Center"
+            },
+            {
+              "value": "0 0 0 auto",
+              "label": "Right"
+            }
+          ],
+          "default": "0 auto",
+          "label": "Alignment Photo"
+        },
+        {
+          "type": "select",
+          "id": "pp_position",
+          "options": [
+            {
+              "value": "-1",
+              "label": "Top"
+            },
+            {
+              "value": "0",
+              "label": "Middle"
+            },
+            {
+              "value": "1",
+              "label": "Bottom"
+            }
+          ],
+          "default": "0",
+          "label": "Position Photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A Slider Reviews",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

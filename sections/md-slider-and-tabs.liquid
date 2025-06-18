@@ -1,0 +1,487 @@
+{{ 'md-slider-and-tabs.css' | asset_url | stylesheet_tag }}
+<div
+  class="md-tab-main"
+  style="padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;"
+>
+  <div class="md-sec-container">
+    <div class="md-flex-container">
+      <div class="md-slic-tab-slider">
+        <div class="md-slider-section">
+          <div class="md-tb-sliderr">
+            <div class="md-slider">
+              {% for block in section.blocks %}
+                {% if block.type == 'slide' %}
+                  {% assign img = block.settings.img %}
+                  {% if img != blank %}
+                    <div class="md-slide">
+                      <div class="image-wrapper">
+                        <img src="{{ img | image_url }}" alt="{{ img.alt | escape }}">
+                      </div>
+                    </div>
+                    {% elsif block.settings.c_liquid != blank %}
+                    <div class="md-slide">
+                      <div class="image-wrapper">
+                        {{ block.settings.c_liquid }}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md-slic-tab-desc">
+        <div class="md-tabs-container">
+          <div class="md-tabs-header">
+            {% for block in section.blocks %}
+              {% if block.type == 'tab' %}
+                <button
+                  class="md-tabs-button {% if forloop.first %}active{% endif %}"
+                  data-tab="tab-{{ block.id }}"
+                >
+                  {% if block.settings.tab_url != blank and block.settings.tab_title != blank %}
+                    <a class="md-tab-link" href="{{ block.settings.tab_url }}">
+                      {{ block.settings.tab_title }}
+                    </a>
+                  {% else %}
+                    <span class="md-tab-link">
+                      {{ block.settings.tab_title }}
+                    </span>
+                  {% endif %}
+                </button>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% for block in section.blocks %}
+            {% if block.type == 'tab' %}
+              <div
+                id="tab-{{ block.id }}"
+                class="md-tabs-content {% if forloop.first %}active{% endif %}"
+              >
+                <div class="md-resp">
+                <div class="tab-content">
+                  {{ block.settings.tab_content }}
+                  {% if block.settings.show_button %}
+                    <div class="md-form-wrapper">
+                      {% if block.settings.selected_product != blank %}
+                        {%- assign product = block.settings.selected_product -%}
+                        {%- assign product_form_id = 'product-form-' | append: block.id -%}
+
+                        {%- if block.settings.selected_product != blank -%}
+                          {%- form 'product',
+                            block.settings.selected_product,
+                            id: product_form_id,
+                            class: 'form',
+                            data-type: 'add-to-cart-form'
+                          -%}
+                            <input
+                              type="hidden"
+                              name="id"
+                              value="{{ block.settings.selected_product.selected_or_first_available_variant.id }}"
+                            >
+                            <button
+                              type="submit"
+                              name="add"
+                              class="button button--primary md-primary-button"
+                            >
+                              {{ block.settings.button_label | default: 'Add to Cart' | escape }}
+                            </button>
+                          {%- endform -%}
+                        {%- endif -%}
+                      {% else %}
+                        {%- if block.settings.button_label != blank -%}
+                          <a
+                            {% if block.settings.button_link == blank %}
+                              role="link" aria-disabled="true"
+                            {% else %}
+                              href="{{ block.settings.button_link }}"
+                            {% endif %}
+                            class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                            {{ block.shopify_attributes }}
+                          >
+                            {{ block.settings.button_label | escape }}
+                          </a>
+                        {%- endif -%}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.show_table %}
+                    <table>
+                      {% if block.settings['Table-text1'] != blank or block.settings['Table-value1'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text1'] }}</td>
+                          <td>{{ block.settings['Table-value1'] }}</td>
+                        </tr>
+                      {% endif %}
+
+                      {% if block.settings['Table-text2'] != blank or block.settings['Table-value2'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text2'] }}</td>
+                          <td>{{ block.settings['Table-value2'] }}</td>
+                        </tr>
+                      {% endif %}
+
+                      {% if block.settings['Table-text3'] != blank or block.settings['Table-value3'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text3'] }}</td>
+                          <td>{{ block.settings['Table-value3'] }}</td>
+                        </tr>
+                      {% endif %}
+
+                      {% if block.settings['Table-text4'] != blank or block.settings['Table-value4'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text4'] }}</td>
+                          <td>{{ block.settings['Table-value4'] }}</td>
+                        </tr>
+                      {% endif %}
+
+                      {% if block.settings['Table-text5'] != blank or block.settings['Table-value5'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text5'] }}</td>
+                          <td>{{ block.settings['Table-value5'] }}</td>
+                        </tr>
+                      {% endif %}
+                      {% if block.settings['Table-text6'] != blank or block.settings['Table-value6'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text6'] }}</td>
+                          <td>{{ block.settings['Table-value6'] }}</td>
+                        </tr>
+                      {% endif %}
+                      {% if block.settings['Table-text7'] != blank or block.settings['Table-value7'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text7'] }}</td>
+                          <td>{{ block.settings['Table-value7'] }}</td>
+                        </tr>
+                      {% endif %}
+                      {% if block.settings['Table-text8'] != blank or block.settings['Table-value8'] != blank %}
+                        <tr>
+                          <td class="md-font">{{ block.settings['Table-text8'] }}</td>
+                          <td>{{ block.settings['Table-value8'] }}</td>
+                        </tr>
+                      {% endif %}
+                    </table>
+                  {% endif %}
+                  {% if block.settings.show_icons %}
+                    <div class="custom-icons">
+                      <div class="icon-item">
+                        {% if block.settings.icon1_image %}
+                          <img src="{{ block.settings.icon1_image | img_url: '40x40' }}" alt="Icon 1">
+                        {% endif %}
+                        <p>{{ block.settings.icon1_text }}</p>
+                      </div>
+                      <div class="icon-item">
+                        {% if block.settings.icon2_image %}
+                          <img src="{{ block.settings.icon2_image | img_url: '40x40' }}" alt="Icon 2">
+                        {% endif %}
+                        <p>{{ block.settings.icon2_text }}</p>
+                      </div>
+                      <div class="icon-item">
+                        {% if block.settings.icon3_image %}
+                          <img src="{{ block.settings.icon3_image | img_url: '40x40' }}" alt="Icon 3">
+                        {% endif %}
+                        <p>{{ block.settings.icon3_text }}</p>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    $('.md-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      dots: false,
+      prevArrow: '<button type="button" class="slick-prev">←</button>',
+      nextArrow: '<button type="button" class="slick-next">→</button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    const tabButtons = document.querySelectorAll('.md-tabs-button');
+    const tabContents = document.querySelectorAll('.md-tabs-content');
+
+    if (tabButtons.length > 0 && tabContents.length > 0) {
+      tabButtons[0].classList.add('active');
+      tabContents[0].classList.add('active');
+    }
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Slider with Tabs",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "liquid",
+          "id": "c_liquid",
+          "label": "Custom liquid"
+        }
+      ]
+    },
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "Tab"
+        },
+        {
+          "type": "url",
+          "id": "tab_url",
+          "label": "Tab Url"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content",
+          "label": "Tab Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_table",
+          "label": "Show Table"
+        },
+        {
+          "type": "text",
+          "id": "Table-text1",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value1",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text2",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value2",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text3",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value3",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text4",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value4",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text5",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value5",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text6",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value6",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text7",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value7",
+          "label": "value"
+        },
+        {
+          "type": "text",
+          "id": "Table-text8",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "Table-value8",
+          "label": "value"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Show Button",
+          "default": false
+        },
+         {
+          "type": "text",
+          "id": "button_label",
+          "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        },
+        {
+          "type": "product",
+          "id": "selected_product",
+          "label": "Select Product"
+        },
+        {
+          "type": "header",
+          "content": "Icon With Text",
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icons",
+          "label": "Show Icons",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "icon1_image",
+          "label": "First Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon1_text",
+          "label": "First Icon Text",
+          "default": "Worldwide shipping"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon2_image",
+          "label": "Second Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon2_text",
+          "label": "Second Icon Text",
+          "default": "100 days money-back guarantee"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon3_image",
+          "label": "Third Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon3_text",
+          "label": "Third Icon Text",
+          "default": "3 years warranty"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider with Tabs",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Description",
+            "tab_content": "<p>Product description goes here.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Specifications",
+            "tab_content": "<p>Technical specifications go here.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

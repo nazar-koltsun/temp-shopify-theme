@@ -1,0 +1,452 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "atios_list_logos_eArXzh": {
+      "type": "atios-list--logos",
+      "blocks": {
+        "heading_VNpQGb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Partners & Certifications</h2>"
+          }
+        },
+        "text_LyFhD3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Atios collaborates with trusted industry leaders to ensure seamless integration, highest quality, and long-term reliability. Our technology is built on open standards: it allows compatibility with a wide range of smart home systems and devices.We meet strict compliance standards in the smart home industry and are proud to work with certified partners. It reflects our commitment to transparency and lasting quality - so you can build with confidence and rely on technology that works today and tomorrow.</p>",
+            "pt_text": 0,
+            "pb_text": 36
+          }
+        },
+        "text_nAd7jt": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Manufacturers</h3>",
+            "pt_text": 0,
+            "pb_text": 0
+          }
+        },
+        "logo_w4g6YR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/casambi-logo-dark.svg",
+            "logo_alt": "casambi",
+            "max_width_logo": 185,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_Jkrd46": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/wago.svg",
+            "logo_alt": "wago",
+            "max_width_logo": 126,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_jjEQh6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/MDT_Logo.svg",
+            "logo_alt": "mdt",
+            "max_width_logo": 86,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_czDcfk": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Gira_logo.svg",
+            "logo_alt": "gira",
+            "max_width_logo": 133,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_7ti4BK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/siemens_logo.svg",
+            "logo_alt": "siemens",
+            "max_width_logo": 189,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_J6dYti": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/abb-logo.svg",
+            "logo_alt": "abb",
+            "max_width_logo": 102,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_WMETNP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/lunatone-logo.svg",
+            "logo_alt": "lunatone",
+            "max_width_logo": 131,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_VNpQGb",
+        "text_LyFhD3",
+        "text_nAd7jt",
+        "logo_w4g6YR",
+        "logo_Jkrd46",
+        "logo_jjEQh6",
+        "logo_czDcfk",
+        "logo_7ti4BK",
+        "logo_J6dYti",
+        "logo_WMETNP"
+      ],
+      "name": "A List Logos",
+      "settings": {
+        "custom_class": "",
+        "border_top": false,
+        "persons_per_row_d": 7,
+        "persons_per_row_t": 5,
+        "persons_per_row_m": 2,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
+      }
+    },
+    "atios_list_logos_npcwFG": {
+      "type": "atios-list--logos",
+      "blocks": {
+        "heading_CExAhc": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h2>Partners & Certifications</h2>"
+          }
+        },
+        "text_CVgbAf": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Distributors</h3>",
+            "pt_text": 0,
+            "pb_text": 0
+          }
+        },
+        "logo_cjpLM3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sonepar_logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 112,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_nUzpLb": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/EM-2.svg",
+            "logo_alt": "",
+            "max_width_logo": 64,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_EWJCEj": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ottofischer_logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 196,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_dFPtKd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/digitalcom_colour.svg",
+            "logo_alt": "",
+            "max_width_logo": 192,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_h9qFdL": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ivoryegg.svg",
+            "logo_alt": "",
+            "max_width_logo": 193,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_mhkr4P": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/emi-logo.svg",
+            "logo_alt": "emi",
+            "max_width_logo": 113,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_CExAhc",
+        "text_CVgbAf",
+        "logo_cjpLM3",
+        "logo_nUzpLb",
+        "logo_EWJCEj",
+        "logo_dFPtKd",
+        "logo_h9qFdL",
+        "logo_mhkr4P"
+      ],
+      "name": "A List Logos",
+      "settings": {
+        "custom_class": "",
+        "border_top": false,
+        "persons_per_row_d": 7,
+        "persons_per_row_t": 5,
+        "persons_per_row_m": 2,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
+      }
+    },
+    "atios_list_logos_HxHNwP": {
+      "type": "atios-list--logos",
+      "blocks": {
+        "heading_qYLnwq": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h2>Partners & Certifications</h2>"
+          }
+        },
+        "text_g9BDVA": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Developers & Architects</h3>",
+            "pt_text": 36,
+            "pb_text": 0
+          }
+        },
+        "logo_7GWpjV": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/EMWE_logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 220,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_P9d66c": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/schnell_logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 127,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_pz48DA": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/XANIA_Logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 149,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_3hgWp7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/dima_logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 151,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_tnERjq": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/AKS_logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 220,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qYLnwq",
+        "text_g9BDVA",
+        "logo_7GWpjV",
+        "logo_P9d66c",
+        "logo_pz48DA",
+        "logo_3hgWp7",
+        "logo_tnERjq"
+      ],
+      "name": "A List Logos",
+      "settings": {
+        "custom_class": "",
+        "border_top": false,
+        "persons_per_row_d": 7,
+        "persons_per_row_t": 5,
+        "persons_per_row_m": 2,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
+      }
+    },
+    "atios_list_logos_MrWUzJ": {
+      "type": "atios-list--logos",
+      "blocks": {
+        "heading_jahayN": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h2>Partners & Certifications</h2>"
+          }
+        },
+        "text_4jaddW": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Certifications</h3>",
+            "pt_text": 36,
+            "pb_text": 0
+          }
+        },
+        "logo_bBnPVD": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/KNX_Logo.svg",
+            "logo_alt": "",
+            "max_width_logo": 102,
+            "logo_label": "KNX Member",
+            "logos_label": ""
+          }
+        },
+        "logo_L9QVmF": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/dali_black.svg",
+            "logo_alt": "",
+            "max_width_logo": 154,
+            "logo_label": "DALI Member",
+            "logos_label": ""
+          }
+        },
+        "logo_HXThPi": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ISO_9001.svg",
+            "logo_alt": "",
+            "max_width_logo": 66,
+            "logo_label": "ISO-9001 Certified",
+            "logos_label": ""
+          }
+        },
+        "logo_i4QwXy": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/REACH.svg",
+            "logo_alt": "",
+            "max_width_logo": 92,
+            "logo_label": "REACH Compliance",
+            "logos_label": ""
+          }
+        },
+        "logo_thH6Gd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/RoHS.svg",
+            "logo_alt": "",
+            "max_width_logo": 165,
+            "logo_label": "RoHS Declaration",
+            "logos_label": ""
+          }
+        },
+        "logo_HkUHB7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/CE_Symbol-01.svg",
+            "logo_alt": "",
+            "max_width_logo": 64,
+            "logo_label": "CE Certified",
+            "logos_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_jahayN",
+        "text_4jaddW",
+        "logo_bBnPVD",
+        "logo_L9QVmF",
+        "logo_HXThPi",
+        "logo_i4QwXy",
+        "logo_thH6Gd",
+        "logo_HkUHB7"
+      ],
+      "name": "A List Logos",
+      "settings": {
+        "custom_class": "",
+        "border_top": false,
+        "persons_per_row_d": 7,
+        "persons_per_row_t": 5,
+        "persons_per_row_m": 2,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "atios_list_logos_eArXzh",
+    "atios_list_logos_npcwFG",
+    "atios_list_logos_HxHNwP",
+    "atios_list_logos_MrWUzJ"
+  ]
+}

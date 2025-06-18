@@ -1,0 +1,401 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<style>
+  .atios-grid.section-{{ section.id }}-padding {
+    background: linear-gradient(180deg, #FFFFFF 0%, #EAEFEF 81.17%);
+    background: url({{ section.settings.bg | img_url: 'master' }}) no-repeat 0 100%;
+    background-size: cover;
+  }
+  .atios-grid.section-{{ section.id }}-padding .inner{
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+</style>
+<div class="atios-grid section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <div class="heading_wrap">
+        <style>
+          .atios-grid.section-{{ section.id }}-padding .page-width > .heading_wrap *{
+            text-align: center;
+          }
+        </style>
+        {{ section.settings.heading }}
+      </div>
+    {% endif %}
+    <div class="inner d_flex">
+      {%- for block in section.blocks -%}
+        <div class="item item--{{ block.id }}">
+          <style>
+            .item--{{ block.id }} {
+              width: 100%;
+            }
+            .item--{{ block.id }} .btn_wrap {
+              margin-top: 20px;
+            }
+            .item--{{ block.id }} .btn_wrap button {
+              cursor: pointer;
+              color: #fff;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              letter-spacing: 1px;
+              text-align: center;
+              text-transform: uppercase;
+              background: #313637;
+              border-radius: 8px;
+              padding: 6px 40px;
+              transition: all 200ms ease-in-out;
+              min-height: 47px;
+            }
+            .item--{{ block.id }} .btn_wrap button:hover{
+              opacity: .8;
+            }
+            @media(min-width: 750px){
+              .item--{{ block.id }} {
+                width: calc({{ block.settings.block_width_t }} - 30px);
+              }
+            }
+            @media(min-width: 1440px){
+              .item--{{ block.id }} {
+                width: calc({{ block.settings.block_width }} - 30px);
+              }
+            }
+          </style>
+          <div class="item_inner">
+            <div class="heading">
+              {{ block.settings.heading }}
+            </div>
+            <div class="text">
+              {{ block.settings.text }}
+            </div>
+            <div class="btn_wrap">
+              {{ block.settings.item_btn_html }}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {% if section.settings.btn_label != blank %}
+      <div class="btn_wrap2">
+        <style>
+          .btn_wrap2{
+            text-align: center;
+            padding: 40px 0 20px 0;
+          }
+          .btn_wrap2 a.button{
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            background: #313637;
+            border-radius: 8px;
+            padding: 6px 40px;
+            transition: all 200ms ease-in-out;
+          }
+          .btn_wrap2 a.button:before,
+          .btn_wrap2 a.button:after{
+            display: none;
+          }
+          .btn_wrap2 a.button:hover{
+            opacity: .8;
+          }
+          @media(min-width: 750px){
+            .btn_wrap2{
+              padding: 80px 0 20px 0;
+            }
+          }
+        </style>
+        <a class="button" href="{{ section.settings.btn_url }}">
+          {{ section.settings.btn_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+
+
+  {% comment %}<button data-form="system-integrator">System Integrator</button>
+  <button data-form="developer">Developer</button>
+  <button data-form="home-owner">Home Owner</button>{% endcomment %}
+
+
+  <div id="popup-system-integrator" class="form-popup" style="display:none;">
+    <form class="ajax-form">
+      <input type="hidden" name="form_type" value="contact" />
+      <input type="hidden" name="utf8" value="✓" />
+      <input type="hidden" name="authenticity_token" value="{{ form | authenticity_token }}">
+      <input type="hidden" name="contact[body]" value="System Integrator Form">
+
+      <input type="text" name="contact[name]" placeholder="Full Name*" required />
+      <input type="text" name="contact[company]" placeholder="Company*" required />
+      <input type="email" name="contact[email]" placeholder="Email Address*" required />
+      <input type="tel" name="contact[phone]" placeholder="Phone Number" />
+
+      <div class="checkboxes">
+        <div>Type of Inquiry</div>
+        <label>
+          <input type="checkbox" name="contact[Type_of_Inquiry_Questions]" /> Questions to our products
+        </label>
+        <label>
+          <input type="checkbox" name="contact[Type_of_Inquiry_Support]" /> Support in planning a project
+        </label>
+        <label>
+          <input type="checkbox" name="contact[Type_of_Inquiry_Order]" /> Order inquiry
+        </label>
+        <label>
+          <input type="checkbox" name="contact[Type_of_Inquiry_Something_else]" /> Something else
+        </label>
+      </div>
+
+      <div>Project Location</div>
+      <input type="text" name="contact[location]" placeholder="Project Location" />
+
+      <div>Message: </div>
+      <textarea placeholder="Let us know what you’re working on and how we can help." name="contact[message]"></textarea>
+
+      <button type="submit" class="button">Send</button>
+      <button type="button" class="close-popup">Close</button>
+    </form>
+  </div>
+
+  <div id="popup-developer" class="form-popup" style="display:none;">
+    <form class="ajax-form">
+      <input type="hidden" name="form_type" value="contact" />
+      <input type="hidden" name="utf8" value="✓" />
+      <input type="hidden" name="authenticity_token" value="{{ form | authenticity_token }}">
+      <input type="hidden" name="contact[body]" value="Developer Form">
+
+      <input type="text" name="contact[name]" placeholder="Name developer" required>
+      <input type="email" name="contact[email]" placeholder="Email developer" required>
+      <button type="submit" class="button">Send</button>
+      <button type="button" class="close-popup">Close</button>
+    </form>
+  </div>
+
+  <div id="popup-home-owner" class="form-popup" style="display:none;">
+    <form class="ajax-form">
+      <input type="hidden" name="form_type" value="contact" />
+      <input type="hidden" name="utf8" value="✓" />
+      <input type="hidden" name="authenticity_token" value="{{ form | authenticity_token }}">
+      <input type="hidden" name="contact[body]" value="Home Owner Form">
+
+      <input type="text" name="contact[name]" placeholder="Name owner" required>
+      <input type="email" name="contact[email]" placeholder="Email owner" required>
+      <button type="submit" class="button">Send</button>
+      <button type="button" class="close-popup">Close</button>
+    </form>
+  </div>
+
+
+  <div id="form-success-popup">
+    <p>Sent!</p>
+    <button onclick="document.getElementById('form-success-popup').style.display='none'">Close</button>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "A Grid",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Bg"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "<h4>Heading</h4>"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+        },
+        {
+          "type": "html",
+          "id": "item_btn_html",
+          "label": "Button Code",
+          "default": "<button data-form='system-integrator'>System Integrator</button>",
+          "info": "Forms change in code section, we have 3 forms-> System Integrator & Developer & Home Owner"
+        },
+        {
+          "type": "select",
+          "id": "block_width",
+          "options": [
+            {
+              "value": "16.666%",
+              "label": "16.666%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33.333%",
+              "label": "33.333%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ],
+          "default": "50%",
+          "label": "Block Width Desktop"
+        },
+        {
+          "type": "select",
+          "id": "block_width_t",
+          "options": [
+            {
+              "value": "16.666%",
+              "label": "16.666%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33.333%",
+              "label": "33.333%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ],
+          "default": "50%",
+          "label": "Block Width Tablet"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A Grid",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

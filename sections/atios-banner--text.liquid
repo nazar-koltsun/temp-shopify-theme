@@ -1,0 +1,502 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% if section.settings.style_section == 'one' %}
+  <style>
+    .atios-banner--text.section-{{ section.id }}-padding {
+      background-image: url('{{ section.settings.image | img_url: "master" }}');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+    .atios-banner--text.section-{{ section.id }}-padding .inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+      max-width: 100%;
+      width: 100%;
+      min-height: 0;
+      background: transparent;
+    }
+    @media screen and (min-width: 750px) {
+      .atios-banner--text.section-{{ section.id }}-padding {
+        /*background-size: cover;*/
+        background-position: {{ section.settings.bg_pos1 }};
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner {
+        justify-content: {{ section.settings.alignment_content }};
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+        max-width: 100%;
+        /*background: #fff;*/
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container *{
+
+      }
+    }
+    @media screen and (min-width: 992px) {
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+        min-height: {{ section.settings.min_height1 }}px;
+        max-width: {{ section.settings.max_width1 }}%;
+      }
+    }
+    @media screen and (min-width: 1600px) {
+      .atios-banner--text.section-{{ section.id }}-padding {
+        /*background-size: cover;*/
+        background-position: {{ section.settings.bg_pos1 }};
+      }
+    }
+  </style>
+{% else %}
+  <style>
+    .atios-banner--text.section-{{ section.id }}-padding:after{
+      content: "";
+    {% if section.settings.image2 != blank %}
+      background-image: url('{{ section.settings.image2 | img_url: "master" }}');
+    {% endif %}
+      opacity: 1 !important;
+      position: absolute;
+      left: 0;
+      top: auto;
+      bottom: 20%;
+      right: auto;
+      z-index: 2;
+      height: 0;
+      padding-bottom: 45%;
+      width: 38%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+    @media(min-width: 750px){
+      .atios-banner--text.section-{{ section.id }}-padding:after{
+        bottom: 20%;
+      }
+    }
+    @media(min-width: 1240px) and (max-width: 1440px){
+      .atios-banner--text.section-{{ section.id }}-padding:after{
+        bottom: 10%;
+      }
+    }
+    @media(min-width: 1440px){
+      .atios-banner--text.section-{{ section.id }}-padding:after{
+        bottom: 25%;
+        padding-bottom: 30%;
+        width: 30%;
+      }
+    }
+    @media(min-width: 1600px){
+      .atios-banner--text.section-{{ section.id }}-padding:after{
+        padding-bottom: 30%;
+        width: 30%;
+        bottom: 10%;
+      }
+    }
+    @media(min-width: 1920px){
+      .atios-banner--text.section-{{ section.id }}-padding:after{
+        bottom: 0;
+        padding-bottom: 24%;
+        width: 24%;
+        bottom: 6%;
+        left: 10%;
+      }
+    }
+    .atios-banner--text.section-{{ section.id }}-padding {
+      background-image: url('{{ section.settings.image | img_url: "master" }}');
+      background-size: cover;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      min-height: {{ section.settings.height_num_m }}px;
+    }
+    .atios-banner--text.section-{{ section.id }}-padding .inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+      max-width: 100%;
+      width: 100%;
+      background: transparent;
+      align-items: baseline;
+      z-index: 3;
+      /*background: rgba(255, 255, 255, .5);*/
+    }
+    @media screen and (min-width: 750px) {
+      .atios-banner--text.section-{{ section.id }}-padding {
+        min-height: {{ section.settings.height_num_t }}px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner {
+        justify-content: flex-start;
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+        max-width: 100%;
+        background: transparent;
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container *{
+
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .atios-banner--text.section-{{ section.id }}-padding{
+        min-height: {{ section.settings.height_num }}px;
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+        max-width: 48%;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+        max-width: 58%;
+      }
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container:after{
+        padding-bottom: 37%;
+        width: 39%
+      }
+    }
+    @media screen and (min-width: 1600px) {
+      .atios-banner--text.section-{{ section.id }}-padding .inner .text_container{
+        max-width: 48%;
+      }
+      .atios-banner--text.section-{{ section.id }}-padding {
+        background-size: cover;
+        background-position: 0 50%;
+      }
+    }
+    @media screen and (min-width: 1730px) {
+      .atios-banner--text.section-{{ section.id }}-padding {
+        background-size: contain;
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+{% endif %}
+
+<style>
+  @media(max-width: 767px){
+    .atios-banner--text.section-{{ section.id }}-padding .page-width .inner .text_container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .atios-banner--text.section-{{ section.id }}-padding {
+    {{ section.settings.custom_css }}
+  }
+</style>
+
+<div class="atios-banner--text section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="inner">
+      <div class="text_container">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'icon' -%}
+              <div class="icon icon--{{ block.id }}">
+                <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ page_title }}" />
+              </div>
+              <style>
+                .icon--{{ block.id }} {
+                  padding-top: {{ block.settings.icon_pt | times: 0.75 | round: 0 }}px;
+                  padding-bottom: {{ block.settings.icon_pb | times: 0.75 | round: 0 }}px;
+                }
+                .icon--{{ block.id }} img{
+                  max-width: 100%;
+                  max-width: 225px;
+                }
+                @media(min-width: 750px){
+                  .icon--{{ block.id }} {
+                    padding-top: {{ block.settings.icon_pt }}px;
+                    padding-bottom: {{ block.settings.icon_pb }}px;
+                  }
+                }
+              </style>
+            {%- when 'heading' -%}
+              <div class="text_heading h2">
+                {{ block.settings.heading }}
+              </div>
+            {%- when 'text' -%}
+              <div class="text_description text_description--{{ block.id }}">
+                <style>
+                  .text_description--{{ block.id }} {
+                    padding-top: {{ section.settings.pt_text | times: 0.75 | round: 0 }}px;
+                    padding-bottom: {{ section.settings.pb_text | times: 0.75 | round: 0 }}px;
+                  }
+                  @media(min-width: 750px){
+                    .text_description--{{ block.id }} {
+                      padding-top: {{ block.settings.pt_text }}px;
+                      padding-bottom: {{ block.settings.pb_text }}px;
+                    }
+                  }
+                </style>
+                {{ block.settings.text }}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "A Banner Text",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "style_section",
+      "options": [
+        {
+        "value": "one",
+        "label": "1st"
+        },
+        {
+        "value": "two",
+        "label": "2nd"
+      }
+      ],
+      "default": "one",
+      "label": "Style Section"
+    },
+    {
+      "type": "header",
+      "content": "Settings for 1st Style"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image 1"
+    },
+    {
+      "type": "text",
+      "id": "bg_pos1",
+      "default": "0 50%",
+      "label": "Background Position Image 1"
+    },
+    {
+      "type": "number",
+      "id": "min_height1",
+      "default": 511,
+      "label": "Min Height Content Block in PX"
+    },
+    {
+      "type": "range",
+      "id": "max_width1",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Max Width Content Block",
+      "default": 45
+    },
+    {
+      "type": "select",
+      "id": "alignment_content",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "flex-start",
+      "label": "Alignment Horizontal Content"
+    },
+    {
+      "type": "header",
+      "content": "Settings for 2nd Style"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Background Image 2"
+    },
+    {
+      "type": "number",
+      "id": "height_num",
+      "label": "Section Min Height Desktop",
+      "default": 1020
+    },
+    {
+      "type": "number",
+      "id": "height_num_t",
+      "label": "Section Min Height Tablet",
+      "default": 840
+    },
+    {
+      "type": "number",
+      "id": "height_num_m",
+      "label": "Section Min Height Mobile",
+      "default": 640
+    },
+    {
+      "type": "header",
+      "content": "Settings Section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+    "type": "range",
+    "id": "margin_bottom",
+    "min": -100,
+    "max": 100,
+    "step": 2,
+    "unit": "px",
+    "label": "Margin Bottom",
+    "default": 0
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "type": "range",
+          "id": "icon_pt",
+          "min": 0,
+          "max": 80,
+          "step": 1,
+          "unit": "px",
+          "label": "Icon Padding Top",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "icon_pb",
+          "min": 0,
+          "max": 80,
+          "step": 1,
+          "unit": "px",
+          "label": "Icon Padding Bottom",
+          "default": 20
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+          {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<h2>Partners & Certifications</h2>"
+          }
+      ]
+    },
+    {
+          "type": "text",
+          "name": "Text",
+          "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Atios collaborates with trusted industry leaders to ensure seamless integration</p>"
+          },
+          {
+            "type": "range",
+            "id": "pt_text",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Text Padding Top",
+            "default": 36
+          },
+          {
+            "type": "range",
+            "id": "pb_text",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Text Padding Bottom",
+            "default": 36
+          }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A Banner Text",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

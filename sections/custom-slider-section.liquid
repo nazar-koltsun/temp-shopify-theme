@@ -1,0 +1,227 @@
+{% schema %}
+{
+  "name": "Custom Image Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Your Title Here"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Your description here."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Slide Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Slide Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Slide Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "icon_1_text",
+      "label": "Icon 1 Text",
+      "default": "Feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "icon_2_text",
+      "label": "Icon 2 Text",
+      "default": "Feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "icon_3_text",
+      "label": "Icon 3 Text",
+      "default": "Feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "icon_4_text",
+      "label": "Icon 4 Text",
+      "default": "Feature 4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.custom-slider-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  font-family: 'Inter', sans-serif;
+}
+.slider-left, .content-right {
+  flex: 1;
+  min-width: 300px;
+}
+.slider-left {
+  position: relative;
+}
+.slider-left img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.slider-left img.active {
+  display: block;
+}
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.slider-arrows button {
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.content-right {
+  padding: 1rem;
+}
+.content-right h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.content-right p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.icon-item {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon-item img {
+  width: 40px;
+  height: 40px;
+}
+</style>
+
+<div class="custom-slider-section">
+  <div class="slider-left">
+    {% assign images = '' | split: ',' %}
+    {% if section.settings.image_1 != blank %}
+      {% assign images = images | push: section.settings.image_1 %}
+    {% endif %}
+    {% if section.settings.image_2 != blank %}
+      {% assign images = images | push: section.settings.image_2 %}
+    {% endif %}
+    {% if section.settings.image_3 != blank %}
+      {% assign images = images | push: section.settings.image_3 %}
+    {% endif %}
+
+    {% for image in images %}
+      <img src="{{ image | img_url: 'master' }}" alt="Slide {{ forloop.index }}" class="{% if forloop.first %}active{% endif %}">
+    {% endfor %}
+
+    <div class="slider-arrows">
+      <button class="prev-slide">&#8592;</button>
+      <button class="next-slide">&#8594;</button>
+    </div>
+  </div>
+  <div class="content-right">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <div class="icon-row">
+      {% if section.settings.icon_1 != blank %}
+        <div class="icon-item">
+          <img src="{{ section.settings.icon_1 | img_url: 'small' }}" alt="Icon 1">
+          <span>{{ section.settings.icon_1_text }}</span>
+        </div>
+      {% endif %}
+      {% if section.settings.icon_2 != blank %}
+        <div class="icon-item">
+          <img src="{{ section.settings.icon_2 | img_url: 'small' }}" alt="Icon 2">
+          <span>{{ section.settings.icon_2_text }}</span>
+        </div>
+      {% endif %}
+      {% if section.settings.icon_3 != blank %}
+        <div class="icon-item">
+          <img src="{{ section.settings.icon_3 | img_url: 'small' }}" alt="Icon 3">
+          <span>{{ section.settings.icon_3_text }}</span>
+        </div>
+      {% endif %}
+      {% if section.settings.icon_4 != blank %}
+        <div class="icon-item">
+          <img src="{{ section.settings.icon_4 | img_url: 'small' }}" alt="Icon 4">
+          <span>{{ section.settings.icon_4_text }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = document.querySelectorAll('.slider-left img');
+  const prevButton = document.querySelector('.prev-slide');
+  const nextButton = document.querySelector('.next-slide');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  });
+});
+</script>

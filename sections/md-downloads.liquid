@@ -1,0 +1,149 @@
+{{ 'md-downloads.css' | asset_url | stylesheet_tag }}
+<div
+  class="downloads-section"
+  style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}; --border-color: {{ section.settings.border_color }};"
+>
+  <div
+    class="downloads-container"
+    style="--container-width: {% if section.settings.container_width == 'narrow' %}1000px{% elsif section.settings.container_width == 'wide' %}1400px{% else %}1200px{% endif %};"
+  >
+    {% if section.settings.title != blank %}
+      <h1 class="text-center md-heading-h1 mb-8">{{ section.settings.title }}</h1>
+    {% endif %}
+
+    <table style="border-collapse: collapse; text-align: left; background: #fff; border-radius: 30px; box-shadow: 0 20px 55px #29313226; max-width: 1100px; margin: auto;">
+      <thead style="font-weight: 600; border-bottom: 1px solid #E5E7EB; border-radius: 30px;">
+        <tr>
+          <th>{{ section.settings.product_header }}</th>
+          <th>{{ section.settings.dimensions_header }}</th>
+          <th>{{ section.settings.cad_header }}</th>
+          <th>{{ section.settings.database_header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for download_item in page.metafields.custom.atios_smartcore.value %}
+          <tr style="border-bottom: 1px solid #E5E7EB;">
+            <td>{{ download_item.title }}</td>
+            <td>
+              {% if download_item.dimensions != blank %}
+                <a href="{{ download_item.dimensions | file_url }}">
+                  {{ download_item.file_text }}
+                </a>
+              {% endif %}
+              {% if download_item.dimensions2 != blank %}
+                <a href="{{ download_item.dimensions2 | file_url }}">
+                  {{ download_item.dimensions2 | file_url | split: '.' | last | split: '?' | first }}
+                </a>
+              {% endif %}
+              <a href="{{ download_item.url }}">
+                {{ download_item.online }}
+              </a>
+            </td>
+            <td>
+              {% if download_item.version != blank %}
+                <p>
+                  {{ download_item.version }}
+                </p>
+              {% endif %}
+            </td>
+            <td>
+              {% if download_item.date != blank %}
+                <p>
+                  {{ download_item.date }}
+                </p>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Downloads Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Downloads"
+    },
+    {
+      "type": "header",
+      "content": "Column Headers"
+    },
+    {
+      "type": "text",
+      "id": "product_header",
+      "label": "Product Column Header",
+      "default": "Product"
+    },
+    {
+      "type": "text",
+      "id": "dimensions_header",
+      "label": "Dimensions Column Header",
+      "default": "Dimensions"
+    },
+    {
+      "type": "text",
+      "id": "cad_header",
+      "label": "CAD Column Header",
+      "default": "CAD"
+    },
+    {
+      "type": "text",
+      "id": "database_header",
+      "label": "Database Column Header",
+      "default": "Product Database"
+    },
+    {
+      "type": "header",
+      "content": "Style Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#E5E7EB"
+    },
+    {
+      "type": "select",
+      "id": "container_width",
+      "label": "Container Width",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Narrow"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ],
+      "default": "standard"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Downloads Section",
+    }
+  ]
+}
+{% endschema %}

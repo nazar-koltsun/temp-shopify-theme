@@ -1,0 +1,304 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<style>
+  .atios-columns--products.section-{{ section.id }}-padding {
+
+  }
+  .atios-columns--products.section-{{ section.id }}-padding .inner{
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @media(max-width: 749px){
+    .atios-columns--products.section-{{ section.id }}-padding .item .item_inner .heading{
+      text-align: center !important;
+    }
+    .atios-columns--products.section-{{ section.id }}-padding .item .item_inner{
+      padding: 40px 20px !important;
+    }
+  }
+</style>
+<div class="atios-columns--products section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="inner d_flex">
+      {%- for block in section.blocks -%}
+        <div class="item item--{{ block.id }}">
+          <style>
+            .item--{{ block.id }} {
+              width: 100%;
+            }
+            @media(min-width: 750px){
+              .item--{{ block.id }} {
+                width: calc({{ block.settings.block_width_t }} - 15px);
+              }
+            }
+            @media(min-width: 1440px){
+              .item--{{ block.id }} {
+                width: calc({{ block.settings.block_width }} - 15px);
+              }
+            }
+          </style>
+          <div class="item_inner">
+            <div class="heading">
+              {% if block.settings.heading != blank %}
+                {{ block.settings.heading }}
+              {% else %}
+                {{ block.settings.product.title }}
+              {% endif %}
+            </div>
+            <div class="text">
+              {{ block.settings.text }}
+            </div>
+            <div class="img">
+              {% if block.settings.product_img != blank %}
+                <img src="{{ block.settings.product_img | img_url: 'master' }}"
+                     alt="{{ block.settings.product_img.alt}}" />
+              {% else %}
+                <img src="{{ block.settings.product.featured_image | img_url: 'master' }}"
+                     alt="{{ block.settings.product.featured_image.alt}}" />
+              {% endif %}
+            </div>
+
+            <div class="desc_btn__wrap">
+              <div class="desc">
+                {{ block.settings.desc }}
+              </div>
+              {% if block.settings.btn_label != blank %}
+                <div class="btn_wrap">
+                  <style>
+                    .item--{{ block.id }} .btn_wrap{
+                      /*position: absolute;
+                      left: 50%;
+                      transform: translate(-50%, 0);
+                      bottom: 40px;
+                      padding: 20px 0;*/
+                      text-align: center;
+                    }
+                    .item--{{ block.id }} .btn_wrap a.button{
+                      color: #fff;
+                      font-weight: 700;
+                      font-size: 14px;
+                      line-height: 20px;
+                      letter-spacing: 1px;
+                      text-align: center;
+                      text-transform: uppercase;
+                      background: #4F8096;
+                      border-radius: 8px;
+                      padding: 6px 40px;
+                      transition: all 200ms ease-in-out;
+                    }
+                    .item--{{ block.id }} .btn_wrap a.button:hover{
+                      opacity: .8;
+                    }
+                  </style>
+                  <a class="button" href="{{ block.settings.product.url }}">
+                    {{ block.settings.btn_label }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "A Columns Products",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "html",
+      "id": "svg",
+      "label": "SVG code"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_img",
+          "label": "Product Image Custom"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description",
+          "default": "<h3>Heading text</h3><p>The Atios KNX Bridge ...</p>",
+          "info": "Use list for show divider"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "select",
+          "id": "block_width",
+          "options": [
+            {
+              "value": "16.666%",
+              "label": "16.666%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33.333%",
+              "label": "33.333%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ],
+          "default": "50%",
+          "label": "Block Width Desktop"
+        },
+        {
+          "type": "select",
+          "id": "block_width_t",
+          "options": [
+            {
+              "value": "16.666%",
+              "label": "16.666%"
+            },
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33.333%",
+              "label": "33.333%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ],
+          "default": "50%",
+          "label": "Block Width Tablet"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A Columns Products",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

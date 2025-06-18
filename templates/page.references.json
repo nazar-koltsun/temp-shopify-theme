@@ -1,0 +1,1140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "atios_media_content_Lmh7Cz": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_BhgWPY": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Pool-Light-view-1.png",
+            "alt": ""
+          }
+        },
+        "image_pyMchN": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Garden-Light-1.png",
+            "alt": ""
+          }
+        },
+        "image_ULzxpa": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Garten-Light-night-1.png",
+            "alt": ""
+          }
+        },
+        "heading_HkEjzQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Villa with an award-winning garden</h2>"
+          }
+        },
+        "text_qRn9Wi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The focus of the project was to beautifully showcase the award-winning garden. An individual access solution for the garden gate from the 1950s was also implemented and integrated into HomeKit. Additionally, a surveillance system was installed.</p>"
+          }
+        },
+        "icon_7dQGKg": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_FeUEtf": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_HH9PaG": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_k8KaD3": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_BhgWPY",
+        "image_pyMchN",
+        "image_ULzxpa",
+        "heading_HkEjzQ",
+        "text_qRn9Wi",
+        "icon_7dQGKg",
+        "icon_FeUEtf",
+        "icon_HH9PaG",
+        "icon_k8KaD3"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "References",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_bz7gK7": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_jNiQqa": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/IMG_4566-scaled-1.jpg",
+            "alt": ""
+          }
+        },
+        "image_wNENxV": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/IMG_4453-Large-1-1024x1024.jpg",
+            "alt": ""
+          }
+        },
+        "image_CUEmaV": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/IMG_3761-Large-1-1024x1024.jpg",
+            "alt": ""
+          }
+        },
+        "heading_tLETfx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Music Lovers Dream with B&O Soundsystem</p>"
+          }
+        },
+        "text_tnNbR3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Bang & Olufsen home automation system from 2008, including the wall tablet with outdated stylus input, was replaced with an iPad running HomeKit. The multi-room sound system was updated to AirPlay 2, allowing it to be integrated into scenes.</p>"
+          }
+        },
+        "icon_XGYFqy": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_JKiYrf": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_496RGf": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_teF6Jd": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_jNiQqa",
+        "image_wNENxV",
+        "image_CUEmaV",
+        "heading_tLETfx",
+        "text_tnNbR3",
+        "icon_XGYFqy",
+        "icon_JKiYrf",
+        "icon_496RGf",
+        "icon_teF6Jd"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_MFX8RG": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_H7E6W3": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/IMG_1105-scaled-1.jpg",
+            "alt": ""
+          }
+        },
+        "image_9MY8L7": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/IMG_4402-scaled-1-1024x1024.jpg",
+            "alt": ""
+          }
+        },
+        "image_N6KtmU": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/IMG_0558-scaled-1-1024x1024.jpg",
+            "alt": ""
+          }
+        },
+        "heading_QzDeXq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Hidden Art Gallery in Zumikons Forest</p>"
+          }
+        },
+        "text_qGR4Dc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Bauhaus dream with an existing KNX system was integrated into HomeKit, including a new video surveillance system, pool control, and setting the art scene. Changes to the switches also contribute to a comprehensible user interface concept.</p>"
+          }
+        },
+        "icon_tc4J4R": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_8CHhL3": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_gU6wCD": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_9LadJE": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_H7E6W3",
+        "image_9MY8L7",
+        "image_N6KtmU",
+        "heading_QzDeXq",
+        "text_qGR4Dc",
+        "icon_tc4J4R",
+        "icon_8CHhL3",
+        "icon_gU6wCD",
+        "icon_9LadJE"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_63mtFP": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_Ar99tB": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/pied-a-terre1.jpg",
+            "alt": ""
+          }
+        },
+        "image_3dMEJr": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/pied-a-terre2.jpg",
+            "alt": ""
+          }
+        },
+        "image_7Dt9qM": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/pied-a-terre3.jpg",
+            "alt": ""
+          }
+        },
+        "heading_3ghWHP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Designer pied-à-terre in Seefeld</p>"
+          }
+        },
+        "text_RJzRMx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The renovated penthouse apartment was integrated into HomeKit using our wireless retrofit solution. An alarm system, remote-access video intercom, and cleverly concealed speakers behind the artwork complete the package.</p>"
+          }
+        },
+        "icon_WemAnN": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_xrUHYp": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_BVQxPr": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_erHX8w": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ar99tB",
+        "image_3dMEJr",
+        "image_7Dt9qM",
+        "heading_3ghWHP",
+        "text_RJzRMx",
+        "icon_WemAnN",
+        "icon_xrUHYp",
+        "icon_BVQxPr",
+        "icon_erHX8w"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_gtbDzR": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_yiBaaX": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Villa-on-the-lakeside-promenade1.jpg",
+            "alt": ""
+          }
+        },
+        "image_cVYzK4": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Villa-on-the-lakeside-promenade2.jpg",
+            "alt": ""
+          }
+        },
+        "image_qrWKPM": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Villa-on-the-lakeside-promenade3.jpg",
+            "alt": ""
+          }
+        },
+        "heading_x7DXjG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Villa on the lakeside promenade</p>"
+          }
+        },
+        "text_XQQUht": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The renovated penthouse apartment was integrated into HomeKit using our wireless retrofit solution. An alarm system, remote-access video intercom, and cleverly concealed speakers behind the artwork complete the package.</p>"
+          }
+        },
+        "icon_4aH4J4": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_XYD4qq": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_mF9EFP": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_XYDCN4": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_yiBaaX",
+        "image_cVYzK4",
+        "image_qrWKPM",
+        "heading_x7DXjG",
+        "text_XQQUht",
+        "icon_4aH4J4",
+        "icon_XYD4qq",
+        "icon_mF9EFP",
+        "icon_XYDCN4"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_NTXpGw": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_z4dHGr": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Avant-garde-real-estate-showroom.jpg",
+            "alt": ""
+          }
+        },
+        "image_rVJDtr": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Avant-garde-real-estate-showroom2.jpg",
+            "alt": ""
+          }
+        },
+        "image_Lf3F7U": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/Avant-garde-real-estate-showroom3.jpg",
+            "alt": ""
+          }
+        },
+        "heading_btNQfp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Avant-garde real estate showroom</p>"
+          }
+        },
+        "text_eQzqdD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nestled within the meticulously curated showroom of Xania, our cutting-edge smart home solutions elevate the living experience. Through our integrated technology, visitors effortlessly control lighting, shading, and climate settings.</p>"
+          }
+        },
+        "icon_aJpFVR": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_6gJ7qp": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_dPcMQ8": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_gQtmnC": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_z4dHGr",
+        "image_rVJDtr",
+        "image_Lf3F7U",
+        "heading_btNQfp",
+        "text_eQzqdD",
+        "icon_aJpFVR",
+        "icon_6gJ7qp",
+        "icon_dPcMQ8",
+        "icon_gQtmnC"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_DyPqyz": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_gYCPLP": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/3-living-room-kitchen.png",
+            "alt": ""
+          }
+        },
+        "image_qHxray": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/2-living-room.png",
+            "alt": ""
+          }
+        },
+        "image_aMmmww": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/1-bathroom-with-lights.png",
+            "alt": ""
+          }
+        },
+        "heading_iUxirE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Seven condos by the lake</p>"
+          }
+        },
+        "text_LdFNfx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Set against the backdrop of a lakeside town, our advanced smart home solutions redefine modern living in high-quality residences. Seamlessly integrated technology empowers effortless control over lighting, shading, and climate settings, setting a new benchmark for lakeside luxury.</p>"
+          }
+        },
+        "icon_VThVzn": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_MbBnTc": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_dG6MgA": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_f8GKhx": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_gYCPLP",
+        "image_qHxray",
+        "image_aMmmww",
+        "heading_iUxirE",
+        "text_LdFNfx",
+        "icon_VThVzn",
+        "icon_MbBnTc",
+        "icon_dG6MgA",
+        "icon_f8GKhx"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_yeR3p3": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_Nz8JTE": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/1-bathroom-ambient-lights.png",
+            "alt": ""
+          }
+        },
+        "image_7PVwLH": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/2-kitchen-ambient-lights.png",
+            "alt": ""
+          }
+        },
+        "image_8EndEm": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/3-living-room-lights.png",
+            "alt": ""
+          }
+        },
+        "heading_NdKLCh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Contemporary green oasis in the middle of the nature</p>"
+          }
+        },
+        "text_rTzFJG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In a contemporary green oasis amidst nature’s embrace, our smart home solutions redefine modern living. Seamlessly blending with the lush surroundings, our integrated technology grants effortless control over lighting, shading, and climate settings.</p>"
+          }
+        },
+        "icon_MzVLPg": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_8Dphkr": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_QaC3MG": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_zBFAcA": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_Nz8JTE",
+        "image_7PVwLH",
+        "image_8EndEm",
+        "heading_NdKLCh",
+        "text_rTzFJG",
+        "icon_MzVLPg",
+        "icon_8Dphkr",
+        "icon_QaC3MG",
+        "icon_zBFAcA"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_eiaDKD": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_Byay9Y": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/2-living-room-with-one-light.png",
+            "alt": ""
+          }
+        },
+        "image_mdHpxD": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/3-living-room.png",
+            "alt": ""
+          }
+        },
+        "image_cdDNaV": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/1-balcony-lights.png",
+            "alt": ""
+          }
+        },
+        "heading_xQwigM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Residence merged gracefully with nature </p>"
+          }
+        },
+        "text_GqEebA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In perfect harmony with its surroundings, the building integrates our automated solutions seamlessly. From elegant design to meticulous details, our technology simplifies lighting, shading, security, blinds, and temperature control for your comfort.</p>"
+          }
+        },
+        "icon_yNL39c": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_JieGrk": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_QUQatB": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_TgANAU": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_Byay9Y",
+        "image_mdHpxD",
+        "image_cdDNaV",
+        "heading_xQwigM",
+        "text_GqEebA",
+        "icon_yNL39c",
+        "icon_JieGrk",
+        "icon_QUQatB",
+        "icon_TgANAU"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_WzxaeH": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_b6rkh8": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/2-house-lights.png",
+            "alt": ""
+          }
+        },
+        "image_iqQYHN": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/1.-living-room-noon.png",
+            "alt": ""
+          }
+        },
+        "image_VGHQz8": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/3-bedroom-lighs-and-blinds.png",
+            "alt": ""
+          }
+        },
+        "heading_zMfmrE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Three condos: smart and peaceful living</p>"
+          }
+        },
+        "text_gLGNbG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Living in Küsnacht means embracing the sunny side of life in every aspect. Our automated solutions seamlessly integrate into the building’s design, offering simplified control over lighting, shading, security, blinds, and temperature for residents’ comfort and convenience. </p>"
+          }
+        },
+        "icon_3qcViw": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_iPqMnq": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_X6DGMc": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_LaJPPw": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_b6rkh8",
+        "image_iqQYHN",
+        "image_VGHQz8",
+        "heading_zMfmrE",
+        "text_gLGNbG",
+        "icon_3qcViw",
+        "icon_iPqMnq",
+        "icon_X6DGMc",
+        "icon_LaJPPw"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_FeX83C": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_akNcyi": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/3-lights-scaled.jpg",
+            "alt": ""
+          }
+        },
+        "image_Jq6UfL": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/2-ambient-lights-scaled.jpg",
+            "alt": ""
+          }
+        },
+        "image_aTNfPB": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/1-tablet-logo-lights.png",
+            "alt": ""
+          }
+        },
+        "heading_6xh9Yy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>A vibrant nightlife hotspot in Zürich</p>"
+          }
+        },
+        "text_Qi37jz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le Petit Prince, a vibrant nightclub where the colors of the night are transformed at the touch of a button, thanks to our innovative solution. With our technology, club owners can remotely control the ambiance, creating dynamic lighting effects that elevate the party experience to new heights.</p>"
+          }
+        },
+        "icon_WEMtqf": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lights"
+          }
+        },
+        "icon_pLXT8f": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_hxXrXV": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_nDFgGx": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_akNcyi",
+        "image_Jq6UfL",
+        "image_aTNfPB",
+        "heading_6xh9Yy",
+        "text_Qi37jz",
+        "icon_WEMtqf",
+        "icon_pLXT8f",
+        "icon_hxXrXV",
+        "icon_nDFgGx"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "atios_media_content_cVC3wV": {
+      "type": "atios-media--content",
+      "blocks": {
+        "image_aNP6pk": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/3-front-of-bar-1.jpg",
+            "alt": ""
+          }
+        },
+        "image_zqrJNV": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/1-bar.jpg",
+            "alt": ""
+          }
+        },
+        "image_R9pPJL": {
+          "type": "image",
+          "settings": {
+            "img": "shopify://shop_images/2-corner-bar-1.png",
+            "alt": ""
+          }
+        },
+        "heading_aDVmJ3": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Mixing vintage with modern in a coquette Swiss cafe</p>"
+          }
+        },
+        "text_FMHK77": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cafe Europa: where vintage charm meets modern sophistication, seamlessly integrated with our innovative solution. Enjoy the perfect blend of nostalgia and contemporary convenience in every corner of this beloved establishment.</p>"
+          }
+        },
+        "icon_VWyKQp": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/lamp.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Lignts"
+          }
+        },
+        "icon_Xrn34j": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/sensor.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Sensors"
+          }
+        },
+        "icon_MzXAab": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/temperature.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Climate"
+          }
+        },
+        "icon_HXntdn": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/blinds.svg",
+            "mwblock": 50,
+            "mhblock": 50,
+            "icon_label": "Blinds"
+          }
+        }
+      },
+      "block_order": [
+        "image_aNP6pk",
+        "image_zqrJNV",
+        "image_R9pPJL",
+        "heading_aDVmJ3",
+        "text_FMHK77",
+        "icon_VWyKQp",
+        "icon_Xrn34j",
+        "icon_MzXAab",
+        "icon_HXntdn"
+      ],
+      "name": "A Media Content",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "atios_media_content_Lmh7Cz",
+    "atios_media_content_bz7gK7",
+    "atios_media_content_MFX8RG",
+    "atios_media_content_63mtFP",
+    "atios_media_content_gtbDzR",
+    "atios_media_content_NTXpGw",
+    "atios_media_content_DyPqyz",
+    "atios_media_content_yeR3p3",
+    "atios_media_content_eiaDKD",
+    "atios_media_content_WzxaeH",
+    "atios_media_content_FeX83C",
+    "atios_media_content_cVC3wV"
+  ]
+}

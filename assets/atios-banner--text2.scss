@@ -1,0 +1,51 @@
+.atios-banner--text{
+  position: relative;
+  .page-width{
+    height: 100%;
+    .inner{
+      height: 100%;
+      .text_container{
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 30px;
+        .text_heading{
+          position: relative;
+          z-index: 2;
+          p{
+            margin: 0;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1.2;
+            letter-spacing: 0;
+            @media(min-width: 750px){
+              font-size: 24px;
+            }
+            @media(min-width: 1440px){
+              font-size: 38px;
+            }
+          }
+        }
+        .text_description{
+          position: relative;
+          z-index: 2;
+          p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: -.2px;
+            @media(min-width: 750px){
+              font-size: 16px;
+            }
+            @media(min-width: 1440px){
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

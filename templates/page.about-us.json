@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "atios_list_photos_UUxyRt": {
+      "type": "atios-list--photos",
+      "blocks": {
+        "heading_aqtnH4": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>What we care about at Atios</h2>"
+          }
+        },
+        "text_yihbMw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Atios, we believe your home should be safe, starting with keeping your data private. That’s why all our products run locally, there is no cloud involved. We focus on reliable, long-lasting devices because your home should work every day. Smart also means sustainable: we give you control to help save energy instead of wasting it. In the end, it’s simple - happy customers are our priority. If you’re not satisfied, we’re not done.</p>",
+            "pt_text": 36,
+            "pb_text": 36
+          }
+        },
+        "person_BXbVgt": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/person1.png",
+            "person_name": "Aleksey",
+            "person_pos": "Technical Hardware Lead",
+            "person_desc": "<p><strong>Aleksey</strong>, our Technical Hardware Lead, spearheads the development of our printed circuit boards. He oversees our production in Spain, upholding the highest ISO quality standards.</p>"
+          }
+        },
+        "person_fQx6nw": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/person2.png",
+            "person_name": "Malte",
+            "person_pos": "Strategic Lead",
+            "person_desc": "<p>As the strategic lead of Atios, <strong>Malte</strong> oversees the team, diverse projects, and partnerships. His passion for smart home technology and entrepreneurship drive the excellence of our products.</p>"
+          }
+        },
+        "person_ji7EHt": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/person3.png",
+            "person_name": "Janick",
+            "person_pos": "Technical Software Lead",
+            "person_desc": "<p>Serving as our Technical Software Lead, <strong>Janick</strong> brings a vast expertise ranging from firmware development to agile methodologies. His code ensures our products remain cutting-edge.</p>"
+          }
+        },
+        "person_tfmJ9e": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/person4.png",
+            "person_name": "Daniel",
+            "person_pos": "Marketing",
+            "person_desc": "<p><strong>Daniel</strong> is the force behind Atios’ online presence and marketing team. Merging creativity with technical acumen, he amplifies Atios brand awareness in the digital and analog world.</p>"
+          }
+        },
+        "person_DC7Nm3": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Christina_memoji.png",
+            "person_name": "Christina",
+            "person_pos": "Creative Project Management",
+            "person_desc": ""
+          }
+        },
+        "person_q7JzyU": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-04_at_14.35.45_1.png",
+            "person_name": "Alwin",
+            "person_pos": "Business Development",
+            "person_desc": ""
+          }
+        },
+        "person_nkTmcT": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-03_at_13.38.49_1.png",
+            "person_name": "Recep",
+            "person_pos": "Software Engineer",
+            "person_desc": ""
+          }
+        },
+        "person_XJa3Tf": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-03_at_13.36.17_1.png",
+            "person_name": "Anna",
+            "person_pos": "Software Engineer",
+            "person_desc": ""
+          }
+        },
+        "person_tfEa8X": {
+          "type": "person",
+          "disabled": true,
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-04_at_14.47.32_1.png",
+            "person_name": "Rolf",
+            "person_pos": "Software Engineer",
+            "person_desc": ""
+          }
+        },
+        "person_6i46Ge": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-03_at_13.36.42_1.png",
+            "person_name": "Valentin",
+            "person_pos": "Web Development",
+            "person_desc": ""
+          }
+        },
+        "person_HAHiKe": {
+          "type": "person",
+          "disabled": true,
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-04_at_15.05.34_1.png",
+            "person_name": "Matthias",
+            "person_pos": "Software Engineer",
+            "person_desc": "<p>Description</p>"
+          }
+        },
+        "person_VPVtt4": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Screenshot_2025-06-03_at_13.37.58_1.png",
+            "person_name": "Mike",
+            "person_pos": "Software Engineer",
+            "person_desc": ""
+          }
+        },
+        "person_pYAKqp": {
+          "type": "person",
+          "settings": {
+            "person": "shopify://shop_images/Leo.png",
+            "person_name": "Leo",
+            "person_pos": "Vacuum Cleaner",
+            "person_desc": "<p>Description</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aqtnH4",
+        "text_yihbMw",
+        "person_BXbVgt",
+        "person_fQx6nw",
+        "person_ji7EHt",
+        "person_tfmJ9e",
+        "person_DC7Nm3",
+        "person_q7JzyU",
+        "person_nkTmcT",
+        "person_XJa3Tf",
+        "person_tfEa8X",
+        "person_6i46Ge",
+        "person_HAHiKe",
+        "person_VPVtt4",
+        "person_pYAKqp"
+      ],
+      "name": "A List Photos",
+      "settings": {
+        "persons_per_row_d": 5,
+        "persons_per_row_t": 3,
+        "persons_per_row_m": 1,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "atios_list_photos_UUxyRt"
+  ]
+}

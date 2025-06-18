@@ -1,0 +1,55 @@
+{%- comment -%}
+  Renders the language picker for the localization form
+
+  Accepts:
+    - localPosition: pass in the position in which the form is coming up to create specific IDs
+{%- endcomment -%}
+
+<div class="disclosure">
+  <button
+    type="button"
+    class="disclosure__button localization-form__select localization-selector link link--text caption-large"
+    aria-expanded="false"
+    aria-controls="{{ localPosition }}List"
+    aria-describedby="{{ localPosition }}Label"
+  >
+    {% comment %}<span>{{ localization.language.endonym_name | capitalize }}</span>
+    {{ 'icon-caret.svg' | inline_asset_content }} {% endcomment %}
+    <span class="wd-language">{{ localization.language.iso_code | upcase }}</span>
+    <span class="wd-language-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+        <path d="M17.5 10.3862C17.5 14.5284 14.1421 17.8862 10 17.8862M17.5 10.3862C17.5 6.24409 14.1421 2.88623 10 2.88623M17.5 10.3862C17.5 11.7669 14.1421 12.8862 10 12.8862C5.85786 12.8862 2.5 11.7669 2.5 10.3862M17.5 10.3862C17.5 9.00552 14.1421 7.88623 10 7.88623C5.85786 7.88623 2.5 9.00552 2.5 10.3862M10 17.8862C5.85786 17.8862 2.5 14.5284 2.5 10.3862M10 17.8862V2.88623M2.5 10.3862C2.5 6.24409 5.85786 2.88623 10 2.88623" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </button>
+  <div class="disclosure__list-wrapper language-selector" hidden>
+    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
+      {%- for language in localization.available_languages -%}
+        <li class="disclosure__item" tabindex="-1">
+          <a
+            class="link link--text disclosure__link caption-large focus-inset"
+            href="#"
+            hreflang="{{ language.iso_code }}"
+            lang="{{ language.iso_code }}"
+            {% if language.iso_code == localization.language.iso_code %}
+              aria-current="true"
+            {% endif %}
+            data-value="{{ language.iso_code }}"
+          >
+            <span
+              {% if language.iso_code != localization.language.iso_code %}
+                class="visibility-hidden"
+              {% endif %}
+            >
+              {{- 'icon-checkmark.svg' | inline_asset_content -}}
+            </span>
+            <span>
+              {{ language.endonym_name | capitalize }}
+            </span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+<input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">

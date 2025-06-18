@@ -1,0 +1,561 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "atios_image_banner_7MbJwt": {
+      "type": "atios-image--banner",
+      "blocks": {
+        "heading_NY388n": {
+          "type": "heading",
+          "settings": {
+            "heading": "Build the Homes of Tomorrow",
+            "heading_size": "h1"
+          }
+        },
+        "text_LP3nXW": {
+          "type": "text",
+          "settings": {
+            "text": "Experience a smarter, more efficient home built for the future.",
+            "text_style": "body"
+          }
+        },
+        "buttons_YjCLJY": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get started",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_pt": 60,
+            "button_pb": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_NY388n",
+        "text_LP3nXW",
+        "buttons_YjCLJY"
+      ],
+      "name": "A Image Banner",
+      "settings": {
+        "image": "shopify://shop_images/StockCake-Smart_Home_Sunset_1741872403_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "image_curve": "shopify://shop_images/Vector_2052_9d90982e-6433-4d22-926e-a041f79c2839.png"
+      }
+    },
+    "atios_banner_text_kTnXkX": {
+      "type": "atios-banner--text",
+      "blocks": {
+        "heading_LCjj7C": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Ever wondered what it’s like to have a concierge in your pocket?</p>"
+          }
+        },
+        "text_nzV8bG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Control your entire home with a tap. Adjust lighting, temperature, and security from your phone. For a house that feels like home.</p>",
+            "pt_text": 36,
+            "pb_text": 36
+          }
+        }
+      },
+      "block_order": [
+        "heading_LCjj7C",
+        "text_nzV8bG"
+      ],
+      "name": "A Banner Text",
+      "settings": {
+        "style_section": "one",
+        "image": "shopify://shop_images/Concierge_pocket.png",
+        "bg_pos1": "0 50%",
+        "min_height1": 511,
+        "max_width1": 45,
+        "alignment_content": "flex-start",
+        "height_num": 1020,
+        "height_num_t": 840,
+        "height_num_m": 640,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "custom_css": ""
+      }
+    },
+    "atios_banner_text_xYrNja": {
+      "type": "atios-banner--text",
+      "blocks": {
+        "icon_4p9VWP": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/Mask_group.png",
+            "icon_pt": 20,
+            "icon_pb": 20
+          }
+        },
+        "heading_t3XPpd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Everything in one App? Smart.</p>"
+          }
+        },
+        "text_CdmiE3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Matter connects smart home systems with easy-to-use apps, so you can control everything from one place. Whether you’re using Apple, Google, or Amazon, Matter ensures that lights, locks, and other devices connect smoothly.</p>",
+            "pt_text": 36,
+            "pb_text": 36
+          }
+        }
+      },
+      "block_order": [
+        "icon_4p9VWP",
+        "heading_t3XPpd",
+        "text_CdmiE3"
+      ],
+      "name": "A Banner Text",
+      "settings": {
+        "style_section": "two",
+        "image": "shopify://shop_images/a90c48c2eeafbf4a5f3cb7c56051dd98_1.png",
+        "bg_pos1": "0 50%",
+        "min_height1": 511,
+        "max_width1": 45,
+        "alignment_content": "flex-start",
+        "image2": "shopify://shop_images/smartphone-in-hand_1.png",
+        "height_num": 1043,
+        "height_num_t": 840,
+        "height_num_m": 640,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "custom_css": ""
+      }
+    },
+    "atios_slider_dwFMze": {
+      "type": "atios-slider",
+      "blocks": {
+        "slide_CbyK9G": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/interoperability.svg",
+            "heading": "<h3>Interoperability</h3>",
+            "text": "<p>Matter ensures that devices from different brands work seamlessly together, eliminating compatibility issues between ecosystems like Apple Home, Google Home, and Amazon Alexa.</p>"
+          }
+        },
+        "slide_ghfQ4D": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/multi-admin.svg",
+            "heading": "<h3>Multi-Admin Support</h3>",
+            "text": "<p>Matter allows devices to be controlled by multiple ecosystems at the same time. For example, you can use both Apple HomeKit and Google Home to control you home.</p>"
+          }
+        },
+        "slide_cnHU8V": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/qr.svg",
+            "heading": "<h3>Adding Devices</h3>",
+            "text": "<p>By scanning the QR Code on a device, you can add it to any Matter compatible app of your choice. This makes adding new devices fast and easy.</p>"
+          }
+        },
+        "slide_3zRwEG": {
+          "type": "slide",
+          "settings": {
+            "heading": "<h3>Heading</h3>",
+            "text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }
+        },
+        "slide_Ja3ndd": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/noun-lock-locked-4020631.svg",
+            "heading": "<h3>Security & Privacy</h3>",
+            "text": "<p>Matter is built with strong encryption and authentication measures, ensuring safer communication between devices while minimizing data exposure to external servers.</p>"
+          }
+        },
+        "slide_nVjTpj": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/fastforward.svg",
+            "heading": "<h3>Futureproof & Scalable</h3>",
+            "text": "<p>Matter is backed by major tech companies - like Apple and Google - and designed to evolve with new updates and features, ensuring long-term compatibility. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_CbyK9G",
+        "slide_ghfQ4D",
+        "slide_cnHU8V",
+        "slide_3zRwEG",
+        "slide_Ja3ndd",
+        "slide_nVjTpj"
+      ],
+      "name": "A Slider",
+      "settings": {
+        "slidesToShow": 3,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": -86,
+        "margin_bottom": 0
+      }
+    },
+    "atios_grid_GHPayE": {
+      "type": "atios-grid",
+      "blocks": {
+        "item_n84TV3": {
+          "type": "item",
+          "settings": {
+            "heading": "<h4>System Integrator</h4>",
+            "text": "<p>Our devices combine multiple features and easy installation. We help you achieve prompt results and happy clients.</p>",
+            "item_btn_html": "<button data-form=\"system-integrator\">System Integrator</button>",
+            "block_width": "33.333%",
+            "block_width_t": "50%"
+          }
+        },
+        "item_eXfryp": {
+          "type": "item",
+          "settings": {
+            "heading": "<h4>Developer</h4>",
+            "text": "<p>Atios hardware is made for scalable smart home projects. <strong>We assist with planning and provide ongoing support.</strong></p><p></p>",
+            "item_btn_html": "<button data-form=\"system-integrator\">System Integrator</button>",
+            "block_width": "33.333%",
+            "block_width_t": "50%"
+          }
+        },
+        "item_HD8zPJ": {
+          "type": "item",
+          "settings": {
+            "heading": "<h4>Home Owner</h4>",
+            "text": "<p>All our devices support Matter, delivering a user-friendly, modern interface with voice control, remote access, and secure local connectivity.</p>",
+            "item_btn_html": "<button data-form=\"system-integrator\">System Integrator</button>",
+            "block_width": "33.333%",
+            "block_width_t": "50%"
+          }
+        }
+      },
+      "block_order": [
+        "item_n84TV3",
+        "item_eXfryp",
+        "item_HD8zPJ"
+      ],
+      "name": "A Grid",
+      "settings": {
+        "bg": "shopify://shop_images/Frame_39398.png",
+        "heading": "<h2>How can we help you?</h2>",
+        "btn_url": "shopify://pages/contact",
+        "btn_label": "Get in touch",
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "atios_columns_products_ikTjWU": {
+      "type": "atios-columns-products",
+      "blocks": {
+        "product_wgJAHA": {
+          "type": "product",
+          "settings": {
+            "product": "atios-knx-bridge",
+            "heading": "",
+            "text": "<p>The KNX Bridge brings your home into the modern world. It connects your smart home with Matter, so you can use voice control and modern apps. It is built for any KNX setup - from small homes to large villas.</p>",
+            "desc": "<ul><li><strong>KNX-IP Interface</strong><br/>It has 12 built-in digital inputs and outputs, as well as a DALI-2 Controller, which enables the integration of 64 DALI control gears (lamps, switching actuators...) and 64 DALI control devices (push buttons and other sensors).</li><li><strong>KNX-DALI Gateway</strong><br/>Control DALI lights directly via KNX using the integrated DALI gateway. </li><li><strong>Matter</strong><br/>Matter is the new smart home standard supported by Apple, Google, Amazon and more. It works locally across platforms and is user-friendly and secure.</li></ul>",
+            "btn_label": "Learn more",
+            "block_width": "50%",
+            "block_width_t": "50%"
+          }
+        },
+        "product_H734ef": {
+          "type": "product",
+          "settings": {
+            "product": "atios-smartcore",
+            "heading": "",
+            "text": "<p>The Atios SmartCore is designed for apartments and smaller spaces. As a stand-alone controller, it  makes smart living simple and budget-friendly. The setup is easy and requires no software or programming skills.</p>",
+            "desc": "<ul><li><strong>12 inputs / 12 outputs</strong><br/>The SmartCore features 12 configurable digital inputs and outputs. They support both binary input and output modes for versatile integration.</li><li><strong>DALI </strong><br/>The SmartCore includes a built-in DALI interace to which you can connect up to 128 DALI devices including sensors, ballasts, and drivers.</li><li><strong>Matter</strong><br/>Matter is the new smart home standard supported by Apple, Google, Amazon and more. It works locally across platforms and is user-friendly and secure.</li></ul>",
+            "btn_label": "Learn more",
+            "block_width": "50%",
+            "block_width_t": "50%"
+          }
+        }
+      },
+      "block_order": [
+        "product_wgJAHA",
+        "product_H734ef"
+      ],
+      "name": "A Columns Products",
+      "settings": {
+        "svg": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "atios_slider_reviews_WRwrey": {
+      "type": "atios-slider-reviews",
+      "blocks": {
+        "slide_9zbBbz": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>“The ATIOS KNX Bridge made it super easy to control all my DALI lighting devices from my iPhone. What really stands out is their customer support. They are quick to respond and always helpful, which made the whole setup process a breeze. With the new beta firmware, you can turn on DALI polling. It checks the status of DALI devices every few seconds, so you get the correct state with just a short delay. This makes the system way more reliable. Highly recommend it!”</p>",
+            "heading": "<h3>Donatas, Lithuania</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        },
+        "slide_qFB9j9": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>“This is actually great that I can use DALI Cockpit Software through Atios SmartCore. Otherwise I would need to purchase an additional interface (DALI-USB, etc.) for 300-400 EUR. Thank you for making it possible! You are doing an amazing job.”</p>",
+            "heading": "<h3>Maksims, Software Consultant, Belgium</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        },
+        "slide_NJF8q3": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>“Thank you for your great product and fast  support. I've just finished my second project with the Atios SmartCore. Everything works well as it been expected. ”</p>",
+            "heading": "<h3>Semyon, Electrician, Russia</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        },
+        "slide_8TCi7q": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>“Wir steuern unser gesamtes Licht über den SmartCore. Einfache Anbindung an HomeKit. Tolles Produkt und super Service!”</p>",
+            "heading": "<h3>msm-studios, Berlin, Germany</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        },
+        "slide_AdQhCb": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>\"Preparing installation in Denmark of 2x Atios ADE-R12 modules. 24 relay channels in total, HomeKit and Matter compatible Can run on PoE, and is probably one of the most flexible and customizable smart home products on the market.\"</p>",
+            "heading": "<h3>Jakob, Electrician, Denmark</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        },
+        "slide_L6A7iA": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>\"Great products (Atios SmartCore with 60+ DALI ballasts plus garage, etc.) They are always quick to help with any issues :-)\"</p>",
+            "heading": "<h3>Lasse, Denmark</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        },
+        "slide_QAzNdK": {
+          "type": "slide",
+          "settings": {
+            "text": "<p>\"We built a new holiday home in the Stockholm archipelago in Sweden. Even with the physical distance, planning and delivery of the promised Home Automation solutions were executed to perfection! I am very happy and can gladly recommend Atios and Malte who was our direct contact.\"</p>",
+            "heading": "<h3>Jonatan, Software Engineer, Sweden</h3>",
+            "pp_mw": 50,
+            "pp_mw_m": 30,
+            "pp_alignment": "0 auto",
+            "pp_position": "0"
+          }
+        }
+      },
+      "block_order": [
+        "slide_9zbBbz",
+        "slide_qFB9j9",
+        "slide_NJF8q3",
+        "slide_8TCi7q",
+        "slide_AdQhCb",
+        "slide_L6A7iA",
+        "slide_QAzNdK"
+      ],
+      "name": "A Slider Reviews",
+      "settings": {
+        "slidesToShow": 4,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "atios_list_logos_njFPqF": {
+      "type": "atios-list--logos",
+      "blocks": {
+        "logo_PYpkkd": {
+          "type": "logo",
+          "settings": {
+            "logo_alt": "",
+            "max_width_logo": 220,
+            "logo_label": "",
+            "logos_label": "You can also find us here:"
+          }
+        },
+        "logo_RpaKr6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/EM.svg",
+            "logo_alt": "",
+            "max_width_logo": 73,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_KaUp7R": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ottofischer.svg",
+            "logo_alt": "",
+            "max_width_logo": 216,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_7U6fYc": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/sonepar.svg",
+            "logo_alt": "",
+            "max_width_logo": 141,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_Ja6X4m": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/voltus.svg",
+            "logo_alt": "",
+            "max_width_logo": 157,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_PYpkkd",
+        "logo_RpaKr6",
+        "logo_KaUp7R",
+        "logo_7U6fYc",
+        "logo_Ja6X4m"
+      ],
+      "name": "A List Logos",
+      "settings": {
+        "custom_class": "",
+        "border_top": true,
+        "persons_per_row_d": 7,
+        "persons_per_row_t": 5,
+        "persons_per_row_m": 2,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
+      }
+    },
+    "atios_image_banner_DhbbYJ": {
+      "type": "atios-image--banner",
+      "blocks": {
+        "heading_DrnL7r": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready to Build the Home of Tomorrow?",
+            "heading_size": "h1"
+          }
+        },
+        "text_DnpwUD": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_YcyeBU": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Schedule a consultation",
+            "button_link_1": "shopify://pages/contact",
+            "button_style_secondary_1": false,
+            "button_label_2": "Explore Our products",
+            "button_link_2": "shopify://pages/atios-knx-bridge",
+            "button_style_secondary_2": false,
+            "button_pt": 60,
+            "button_pb": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_DrnL7r",
+        "text_DnpwUD",
+        "buttons_YcyeBU"
+      ],
+      "name": "A Image Banner",
+      "settings": {
+        "image": "shopify://shop_images/StockCake-Smart_Home_Sunset_1741872403_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "atios_image_banner_7MbJwt",
+    "atios_banner_text_kTnXkX",
+    "atios_banner_text_xYrNja",
+    "atios_slider_dwFMze",
+    "atios_grid_GHPayE",
+    "atios_columns_products_ikTjWU",
+    "atios_slider_reviews_WRwrey",
+    "atios_list_logos_njFPqF",
+    "atios_image_banner_DhbbYJ"
+  ]
+}

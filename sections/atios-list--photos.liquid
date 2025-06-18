@@ -1,0 +1,303 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_p_m }}px;
+    padding-bottom: {{ section.settings.padding_bottom_p_m }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<style>
+  .atios-list--photos.section-{{ section.id }}-padding .photos{
+    padding-top: {{ section.settings.padding_top_p_m }}px;
+    padding-bottom: {{ section.settings.padding_bottom_p_m }}px;
+  }
+  .atios-list--photos.section-{{ section.id }}-padding .photos .person{
+    width: calc(100% / {{ section.settings.persons_per_row_m }});
+  }
+  @media screen and (min-width: 750px) {
+    .atios-list--photos.section-{{ section.id }}-padding .photos{
+      padding-top: {{ section.settings.padding_top_p | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom_p | times: 0.75 | round: 0 }}px;
+    }
+    .atios-list--photos.section-{{ section.id }}-padding .photos .person{
+      width: calc(100% / {{ section.settings.persons_per_row_t }});
+    }
+  }
+  @media screen and (min-width: 1240px) {
+    .atios-list--photos.section-{{ section.id }}-padding .photos{
+      padding-top: {{ section.settings.padding_top_p }}px;
+      padding-bottom: {{ section.settings.padding_bottom_p }}px;
+    }
+    .atios-list--photos.section-{{ section.id }}-padding .photos .person{
+      width: calc(100% / {{ section.settings.persons_per_row_d }});
+    }
+  }
+</style>
+
+
+<div class="atios-list--photos section-{{ section.id }}-padding">
+  <div class="container page-width">
+    <div class="row">
+      <div class="inner">
+        <div class="top_text">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'heading' -%}
+                <div class="text_heading h2">
+                  {{ block.settings.heading }}
+                </div>
+              {%- when 'text' -%}
+                <div class="text_description text_description--{{ block.id }}">
+                  <style>
+                    .text_description--{{ block.id }} {
+                      padding-top: {{ section.settings.pt_text | times: 0.75 | round: 0 }}px;
+                      padding-bottom: {{ section.settings.pb_text | times: 0.75 | round: 0 }}px;
+                    }
+                    @media(min-width: 750px){
+                      .text_description--{{ block.id }} {
+                        padding-top: {{ block.settings.pt_text }}px;
+                        padding-bottom: {{ block.settings.pb_text }}px;
+                      }
+                    }
+                  </style>
+                  {{ block.settings.text }}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+        <div class="photos d_flex">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'person' -%}
+                <div class="person">
+                  <img src="{{ block.settings.person | img_url: 'master' }}" alt="{{ block.settings.person_name }}" />
+                  <div class="person_name">
+                    {{ block.settings.person_name }}
+                  </div>
+                  <div class="person_pos">
+                    {{ block.settings.person_pos }}
+                  </div>
+                  <div class="person_hover_desc">
+                    {{ block.settings.person_desc }}
+                  </div>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "A List Photos",
+    "settings": [
+        {
+          "type": "range",
+          "id": "persons_per_row_d",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Persons Per Row Desktop"
+        },
+        {
+          "type": "range",
+          "id": "persons_per_row_t",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 3,
+          "label": "Persons Per Row Tablet"
+        },
+        {
+          "type": "range",
+          "id": "persons_per_row_m",
+          "min": 1,
+          "max": 3,
+          "step": 1,
+          "default": 1,
+          "label": "Persons Per Row Mobile"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Padding Top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Section Padding Bottom",
+          "default": 36
+        },
+        {
+          "type": "header",
+          "content": "Settings Photos Blocks"
+        },
+        {
+          "type": "range",
+          "id": "padding_top_p",
+          "min": 0,
+          "max": 160,
+          "step": 2,
+          "unit": "px",
+          "label": "Photos Padding Top",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom_p",
+          "min": 0,
+          "max": 160,
+          "step": 2,
+          "unit": "px",
+          "label": "Photos Padding Bottom",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "padding_top_p_m",
+          "min": 0,
+          "max": 160,
+          "step": 2,
+          "unit": "px",
+          "label": "Photos Padding Top M",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom_p_m",
+          "min": 0,
+          "max": 160,
+          "step": 2,
+          "unit": "px",
+          "label": "Photos Padding Bottom M",
+          "default": 50
+        }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<h2>What we care about at Atios</h2>"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>At Atios, we believe your home should be a safe space, and that starts with protecting your data.</p>"
+          },
+          {
+            "type": "range",
+            "id": "pt_text",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Text Padding Top",
+            "default": 36
+          },
+          {
+            "type": "range",
+            "id": "pb_text",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Text Padding Bottom",
+            "default": 36
+          }
+        ]
+      },
+      {
+        "type": "person",
+        "name": "Person",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "person",
+            "label": "Person",
+            "info": "Use the same size images -> 100x100 or 200x200"
+          },
+          {
+            "type": "text",
+            "id": "person_name",
+            "label": "Person Name",
+            "default": "Name"
+          },
+          {
+            "type": "text",
+            "id": "person_pos",
+            "label": "Person Position",
+            "default": "Position"
+          },
+          {
+            "type": "richtext",
+            "id": "person_desc",
+            "label": "Person Description",
+            "default": "<p>Description</p>"
+          }
+        ]
+      }
+    ],
+      "presets": [
+        {
+          "name": "A List Photos",
+          "blocks": [
+            {
+              "type": "heading"
+            },
+            {
+              "type": "text"
+            },
+            {
+              "type": "person"
+            },
+            {
+              "type": "person"
+            },
+            {
+              "type": "person"
+            },
+            {
+              "type": "person"
+            },
+            {
+              "type": "person"
+            }
+          ]
+        }
+      ]
+  }
+{% endschema %}

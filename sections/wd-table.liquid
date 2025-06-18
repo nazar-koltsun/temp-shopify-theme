@@ -1,0 +1,384 @@
+<style>
+    .practice {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .as-heading {
+      /* font-size: 40px; */
+      margin-top: 0;
+    }
+    .as-practice {
+      background-color:#ffffff;
+      box-shadow: 0px 20px 55px 0px #29313226;
+      border: 0px solid #fff;
+      border-radius: 30px;
+      text-align: left;
+    }
+    .main-heading {
+      display: flex;
+    }
+    .top-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .table {
+      display: flex;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px 10px 30px;
+      gap: 10px;
+    }
+    .wd-table-box img {
+      width: 20px;
+    }
+    .atios {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #color {
+      background-color: #F0F7F9;
+    }
+    .wd-table-box {
+      width: 19%;
+      min-height: 75px;
+    }
+    .wd-table-box#wd-name ,
+    .wd-table-box.name {
+      width: 24%;
+    }
+    .wd-table-box p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .wd-table-info p {
+      font-size: 16px;
+    }
+
+    .wd-table-wrapper {
+      background: linear-gradient(180deg, #FFFFFF 0%, #EAEFEF 81.17%);
+    }
+    .table.wd-row {
+      border-top: 1px solid #DBE7E9;
+    }
+    .wd-column-3 ,
+    .wd-column-4 {
+      border-left: 1px solid #DBE7E9;
+    }
+    .as-practice .wd-table-box h3 {
+      font-size: 16px;
+    }
+    .wd-table-box h3 {
+      font-weight: 600;
+      margin: 0;
+    }
+    .wd-table-info {
+      text-align: left;
+      padding: 50px 0 0px;
+    }
+    .wd-table-wrapper:after {
+      content: '';
+      position: absolute;
+      background-image: url(https://cdn.shopify.com/s/files/1/0905/0013/7306/files/Vector_2053.svg?v=1736507884);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: -55px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+  }
+
+  .wd-table-wrapper {
+      position: relative;
+  }
+    @media screen and (max-width: 767px) {
+      .wd-table-wrapper-inner {
+        overflow-x: scroll;
+      }
+      .wd-table-wrapper:after {
+        display: none;
+      }
+
+      .wd-table-wrapper-inner .as-practice {
+        width:100%;
+      }
+      .as-practice {
+        box-shadow: none;
+      }
+      .top-heading h3 {
+        font-weight: 600;
+        margin: 0;
+        transform: rotate(-60deg);
+      }
+        .as-practice .wd-table-box h3 {
+        font-size: 13px;
+      }
+      .wd-column-3 h3 {
+        text-align: center;
+      }
+      .wd-column-4 h3 {
+        text-align: center;
+      }
+      .name {
+        padding: 0 10px;
+      }
+      .main-heading {
+        min-height: 100px;
+      }
+    }
+</style>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="wd-table-wrapper section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="practice">
+      <h2 class="title inline-richtext h1">What sets us apart</h2>
+      <div class="wd-table-wrapper-inner">
+        <div class="as-practice">
+          <div class="main-heading">
+            <div class="top-heading wd-table-box" id="wd-name">
+              {% if section.settings['heading-first'] != blank %}
+                <h3>{{ section.settings['heading-first'] }}</h3>
+              {% endif %}
+            </div>
+            <div class="top-heading wd-table-box" id="color">
+              {% if section.settings['heading-nd'] != blank %}
+                <h3>{{ section.settings['heading-nd'] }}</h3>
+              {% endif %}
+            </div>
+            <div class="top-heading wd-table-box">
+              {% if section.settings['heading-rd'] != blank %}
+                <h3>{{ section.settings['heading-rd'] }}</h3>
+              {% endif %}
+            </div>
+            <div class="top-heading wd-table-box wd-column-3">
+              {% if section.settings['heading-th'] != blank %}
+                <h3>{{ section.settings['heading-th'] }}</h3>
+              {% endif %}
+            </div>
+            <div class="top-heading wd-table-box wd-column-4">
+              {% if section.settings['heading-ht'] != blank %}
+                <h3>{{ section.settings['heading-ht'] }}</h3>
+              {% endif %}
+            </div>
+          </div>
+          {% for block in section.blocks %}
+            <div class="table wd-row">
+              <div class="wd-table-box name">
+                {% if block.settings.icon != blank %}
+                  <img src="{{ block.settings.icon | image_url: width: 100 }}">
+                {% endif %}
+                <h3>{{ block.settings.name }}</h3>
+              </div>
+              {% for i in (1..4) %}
+                {% capture icon %}icon_{{ forloop.index }}{% endcapture %}
+                <div
+                  class="wd-table-box atios wd-column-{{ i }}"
+                  {% if forloop.first %}
+                    id="color"
+                  {% endif %}
+                >
+                  {% if block.settings[icon] == 'tick' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                      <path d="M0.75 8.44923L7.56081 13.6666L18.75 1.66663" stroke="#4F8096" stroke-width="2"/>
+                    </svg>
+                  {% elsif block.settings[icon] == 'cross' %}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="20"
+                      zoomAndPan="magnify"
+                      viewBox="0 0 37.5 37.499999"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      version="1.0"
+                    >
+                      <defs><clipPath id="af7fc01be4"><path d="M 0 0 L 37.007812 0 L 37.007812 37.007812 L 0 37.007812 Z M 0 0 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#af7fc01be4)"><path stroke-linecap="butt" transform="matrix(0.523352, 0.523352, -0.523352, 0.523352, 2.577021, 1.531146)" fill="none" stroke-linejoin="miter" d="M 0.00115432 0.999208 L 62.862166 0.999208 " stroke="#2b8c9e" stroke-width="2" stroke-opacity="1" stroke-miterlimit="4"/><path stroke-linecap="butt" transform="matrix(0.523352, -0.523352, 0.523352, 0.523352, 1.530317, 34.428729)" fill="none" stroke-linejoin="miter" d="M -0.0000247978 1.001971 L 62.860986 1.001971 " stroke="#2b8c9e" stroke-width="2" stroke-opacity="1" stroke-miterlimit="4"/></g>
+                    </svg>
+                  {% elsif block.settings[icon] == 'coming_soon' %}
+                    <p>coming soon</p>
+                  {% elsif block.settings[icon] == 'coming_soon_tick' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="19" viewBox="0 0 45 19" fill="none">
+                      <path d="M1.824 17.104V2.128H4.752V3.072H2.96V16.16H4.752V17.104H1.824ZM32.4046 17.104H29.4766V16.16H31.2686V3.072H29.4766V2.128H32.4046V17.104ZM44.2459 3.904L42.0379 5.152V4.896L44.2459 6.144L43.8779 6.816L41.7019 5.552L41.8779 5.472V7.92H41.1419L41.1579 5.472L41.3179 5.552L39.1579 6.816L38.7739 6.144L40.9979 4.896V5.152L38.7739 3.904L39.1579 3.232L41.3179 4.496L41.1579 4.576L41.1419 2.128H41.8779V4.576L41.7019 4.496L43.8779 3.232L44.2459 3.904Z" fill="#4F8096"/>
+                      <path d="M7 9.78261L13.8108 15L25 3" stroke="#4F8096" stroke-width="2"/>
+                    </svg>
+                  {% elsif block.settings[icon] == 'double_star_tick' %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="19" viewBox="0 0 49 19" fill="none">
+                      <path d="M1.69119 16.9375V1.9615H4.61919V2.9055H2.82719V15.9935H4.61919V16.9375H1.69119ZM29.9593 16.9375H27.0313V15.9935H28.8233V2.9055H27.0313V1.9615H29.9593V16.9375ZM41.8006 3.7375L39.5926 4.9855V4.7295L41.8006 5.9775L41.4326 6.6495L39.2566 5.3855L39.4326 5.3055V7.7535H38.6966L38.7126 5.3055L38.8726 5.3855L36.7126 6.6495L36.3286 5.9775L38.5526 4.7295V4.9855L36.3286 3.7375L36.7126 3.0655L38.8726 4.3295L38.7126 4.4095L38.6966 1.9615H39.4326V4.4095L39.2566 4.3295L41.4326 3.0655L41.8006 3.7375ZM48.2849 3.7375L46.0769 4.9855V4.7295L48.2849 5.9775L47.9169 6.6495L45.7409 5.3855L45.9169 5.3055V7.7535H45.1809L45.1969 5.3055L45.3569 5.3855L43.1969 6.6495L42.8129 5.9775L45.0369 4.7295V4.9855L42.8129 3.7375L43.1969 3.0655L45.3569 4.3295L45.1969 4.4095L45.1809 1.9615H45.9169V4.4095L45.7409 4.3295L47.9169 3.0655L48.2849 3.7375Z" fill="#4F8096"/>
+                      <path d="M7 9.78261L13.8108 15L25 3" stroke="#4F8096" stroke-width="2"/>
+                    </svg>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="wd-table-info">
+        <p>{{ section.settings.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+  "name": "Feature Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading-first",
+      "label": "First Heading",
+      "default": "Heading 1"
+    },
+    {
+      "type": "text",
+      "id": "heading-nd",
+      "label": "Second Heading",
+      "default": "Heading 2"
+    },
+    {
+      "type": "text",
+      "id": "heading-rd",
+      "label": "Third Heading",
+      "default": "Heading 3"
+    },
+    {
+      "type": "text",
+      "id": "heading-th",
+      "label": "Fourth Heading",
+      "default": "Heading 4"
+    },
+    {
+      "type": "text",
+      "id": "heading-ht",
+      "label": "Fifth Heading",
+      "default": "Heading 5"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Info Text",
+      "default": "* Insecure implementation without VPN, based on IP whitelisting"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Feature Name",
+          "default": "Unique Feature"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "label": "First Column Icon",
+          "options": [
+            { "value": "tick", "label": "Tick" },
+            { "value": "cross", "label": "Cross" },
+            { "value": "none", "label": "None" },
+            { "value": "coming_soon", "label": "Coming soon" },
+            { "value": "coming_soon_tick", "label": "Coming Soon Tick" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "label": "Second Column Icon",
+          "options": [
+            { "value": "tick", "label": "Tick" },
+            { "value": "cross", "label": "Cross" },
+            { "value": "none", "label": "None" },
+            { "value": "coming_soon", "label": "Coming soon" },
+            { "value": "coming_soon_tick", "label": "Coming Soon Tick" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "select",
+          "id": "icon_3",
+          "label": "Third Column Icon",
+          "options": [
+            { "value": "tick", "label": "Tick" },
+            { "value": "cross", "label": "Cross" },
+            { "value": "none", "label": "None" },
+            { "value": "coming_soon", "label": "Coming soon" },
+            { "value": "coming_soon_tick", "label": "Coming Soon Tick" },
+            { "value": "double_star_tick", "label": "Double Star Tick" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "select",
+          "id": "icon_4",
+          "label": "Fourth Column Icon",
+          "options": [
+            { "value": "tick", "label": "Tick" },
+            { "value": "cross", "label": "Cross" },
+            { "value": "none", "label": "None" },
+            { "value": "coming_soon", "label": "Coming soon" },
+            { "value": "coming_soon_tick", "label": "Coming Soon Tick" }
+          ],
+          "default": "none"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Table"
+    }
+  ]
+}
+{% endschema %}
