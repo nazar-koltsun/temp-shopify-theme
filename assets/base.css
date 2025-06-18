@@ -75,6 +75,13 @@
 }
 
 /* base */
+main {
+  padding-bottom: 40px;
+}
+
+.template-index main {
+  padding-bottom: 0;
+}
 
 .page-width {
   max-width: var(--page-width);

@@ -332,7 +332,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       {{ content_for_layout }}
     </main>
 
-    {% sections 'footer-group' %}
+    <div class="footer-container">
+      {% sections 'footer-group' %}
+    </div>
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
