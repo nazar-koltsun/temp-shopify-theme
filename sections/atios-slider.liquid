@@ -189,9 +189,10 @@
   
     var $arrow_prev = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" transform="matrix(-1 0 0 1 30 0)" fill="#EEF6F8"/> <path d="M16.6426 20.7503L11.0711 15.1789L16.6426 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
     var $arrow_next = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" fill="#EEF6F8"/> <path d="M13.3574 20.7503L18.9289 15.1789L13.3574 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
+
     $('.atios-slider.section-{{ section.id }}-padding .js-atios-slider').slick({
-      infinite: true,
-      slidesToShow: 4, // Don't apply on the production this
+      infinite: false,
+      slidesToShow: {{ section.settings.slidesToShow }},
       slidesToScroll: 1,
       arrows: true,
       dots: true,
@@ -209,7 +210,6 @@
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            infinite: true,
             dots: true
           }
         },
@@ -218,7 +218,6 @@
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            infinite: true,
             dots: true
           }
         }
