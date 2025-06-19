@@ -1004,10 +1004,9 @@ body{
           height: 100%;
           box-shadow: 0px 20px 55px 0px #29313226;
           border-radius: 30px;
-          gap: 30px;
+          gap: 0px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
           padding: 20px;
           @media(min-width: 750px){
             padding: 35px;
@@ -1026,7 +1025,7 @@ body{
             }
           }
 
-          h1, h2, h3, h4, h5, h6{
+          h1, h2, h3, h4, h5, h6 {
             margin: 0;
           }
           .heading{
@@ -1036,7 +1035,41 @@ body{
             text-align: center;
             font-size: 28px;
             color: #171717;
+
           }
+          
+          .product-heading {
+            width: 450px;
+            max-width: 100%;
+            margin: 0 auto;
+            
+            p {
+              margin: 0;
+            }
+          }
+
+          .product-heading-title {
+            font-size: 28px !important;
+            text-align: center !important;
+
+            @media (max-width: 1100px) {
+              font-size: 24px !important;
+            }
+          }
+
+          .product-heading-subtitle {
+            margin-top: 20px;
+
+            * {
+              font-size: 24px !important;
+              text-align: center !important;
+
+              @media (max-width: 1100px) {
+                font-size: 20px !important;
+              }
+            }
+          }
+          
           .text{
             font-weight: 400;
             font-size: 16px;
@@ -1045,6 +1078,7 @@ body{
             text-align: center;
             color: #171717;
             *{
+              margin-top: 0;
               font-weight: 400;
               font-size: 16px;
               line-height: 24px;
@@ -1053,12 +1087,17 @@ body{
               color: #171717;
             }
           }
+          .desc_btn__wrap {
+            margin-top: auto;
+          }
+
           .img{
-            text-align: center;
+            display: flex;
+            justify-content: center;
             img{
               margin: 0 auto;
               max-width: 100%;
-              max-height: 300px;
+              height: 274px;
               object-fit: cover;
             }
           }

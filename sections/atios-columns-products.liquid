@@ -53,16 +53,18 @@
             }
           </style>
           <div class="item_inner">
-            <div class="heading">
-              {% if block.settings.heading != blank %}
-                {{ block.settings.heading }}
-              {% else %}
+            <div class="heading product-heading">
+              <h4 class="product-heading-title">
                 {{ block.settings.product.title }}
+              </h4>
+
+              {% if block.settings.heading != blank %}
+                <div class="product-heading-subtitle">
+                  {{ block.settings.heading }}
+                </div>
               {% endif %}
             </div>
-            <div class="text">
-              {{ block.settings.text }}
-            </div>
+
             <div class="img">
               {% if block.settings.product_img != blank %}
                 <img src="{{ block.settings.product_img | img_url: 'master' }}"
@@ -71,6 +73,10 @@
                 <img src="{{ block.settings.product.featured_image | img_url: 'master' }}"
                      alt="{{ block.settings.product.featured_image.alt}}" />
               {% endif %}
+            </div>
+
+            <div class="text">
+              {{ block.settings.text }}
             </div>
 
             <div class="desc_btn__wrap">
