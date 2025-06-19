@@ -13,35 +13,36 @@
 {%- endstyle -%}
 
 <style>
-  .js-atios-slider .item_inner .heading *{
+  .js-atios-slider .item_inner .heading * {
     text-align: center !important;
   }
-  .atios-slider.section-{{ section.id }}-padding{
+  .atios-slider.section-{{ section.id }}
+  -padding {
     position: relative;
     z-index: 1;
     margin-top: -200px;
   }
 
-  .js-atios-slider .slick-arrow:before{
+  .js-atios-slider .slick-arrow:before {
     display: none;
   }
-  .js-atios-slider .slick-arrow:after{
+  .js-atios-slider .slick-arrow:after {
     display: none;
   }
-  @media(max-width: 749px){
-    .js-atios-slider .slick-prev{
+  @media(max-width: 749px) {
+    .js-atios-slider .slick-prev {
       left: 0;
       z-index: 2;
       width: auto;
       height: auto;
     }
-    .js-atios-slider .slick-next{
+    .js-atios-slider .slick-next {
       right: 0;
       z-index: 2;
       width: auto;
       height: auto;
     }
-    .atios-slider .inner .js-atios-slider .slick-track{
+    .atios-slider .inner .js-atios-slider .slick-track {
       gap: 20px;
     }
   }
@@ -52,7 +53,7 @@
     <div class="inner">
       <div class="js-atios-slider">
         {%- for block in section.blocks -%}
-          <div class="item flip-container" onmouseenter="flipColor(this)" ontouchstart="flipColor(this)">
+          <div class="item flip-container" onclick="flipColor(this)">
             <div class="item_inner flip-card">
               <div class="flip-front">
                 <div class="img">
@@ -81,10 +82,14 @@
 
 <style>
   .flip-container {
-    /*display: block;
-    width: 200px;
-    height: 200px;
-    perspective: 1000px;*/
+
+
+    /*
+   display: block; 
+   width: 200px; 
+   height: 200px; 
+   perspective: 1000px;
+*/
     cursor: pointer;
   }
 
@@ -106,45 +111,82 @@
   }
 
   .flip-front {
-    /*background-color: red;*/
-  }
+  ;
+  /*background-color: red;*/
+}
 
-  .flip-back {
-    /*background-color: blue;*/
-    transform: rotateY(180deg);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: auto;
-  }
+.flip-back {
+  /*background-color: blue;*/
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: auto;
+}
 
-  .flip-back .text{
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.flip-back .text {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .flip-card.flipped {
-    transform: rotateY(180deg);
-  }
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
 
 </style>
 
 <script>
-
+  const flipContainers = document.querySelectorAll('.atios-slider .flip-container');
+  
   function flipColor(el) {
     const card = el.querySelector('.flip-card');
     card.classList.toggle('flipped');
   }
-
-
+  
+  function handleFlipBoxHover(shouldAdd) {
+    flipContainers.forEach(flipContainer => {
+      const listener = function () {
+        flipColor(this);
+      };
+    
+      // Store listener reference on the element so we can remove it later
+      if (!flipContainer._mouseenterListener) {
+        flipContainer._mouseenterListener = listener;
+      }
+    
+      if (shouldAdd) {
+        flipContainer.addEventListener('mouseenter', flipContainer._mouseenterListener);
+      } else {
+        flipContainer.removeEventListener('mouseenter', flipContainer._mouseenterListener);
+      }
+    });
+  }
+  
+  // Initial setup
+  if (window.innerWidth >= 1024) {
+    handleFlipBoxHover(true);
+  }
+  
+  let wasDesktop = window.innerWidth >= 1024;
+  
+  window.addEventListener('resize', () => {
+    const isDesktop = window.innerWidth >= 1024;
+  
+    if (isDesktop !== wasDesktop) {
+      handleFlipBoxHover(isDesktop);
+      wasDesktop = isDesktop;
+    }
+  });
+  
+  
   $(document).ready(function () {
-
+  
     var $arrow_prev = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" transform="matrix(-1 0 0 1 30 0)" fill="#EEF6F8"/> <path d="M16.6426 20.7503L11.0711 15.1789L16.6426 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
     var $arrow_next = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" fill="#EEF6F8"/> <path d="M13.3574 20.7503L18.9289 15.1789L13.3574 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
     $('.atios-slider.section-{{ section.id }}-padding .js-atios-slider').slick({
@@ -186,111 +228,104 @@
 </script>
 
 {% schema %}
-{
-  "name": "A Slider",
-  "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "range",
-      "id": "slidesToShow",
-      "min": 1,
-      "max": 7,
-      "step": 1,
-      "label": "Slide To Show",
-      "default": 3
+  {
+    "name": "A Slider",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
     },
-    {
-      "type": "header",
-      "content": "Settings"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "min": -100,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Margin Top",
-      "default": 0
-    },
-    {
-    "type": "range",
-    "id": "margin_bottom",
-    "min": -100,
-    "max": 100,
-    "step": 2,
-    "unit": "px",
-    "label": "Margin Bottom",
-    "default": 0
-    }
-  ],
-  "blocks": [
-    {
-      "type": "slide",
-      "name": "Slide",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Icon"
-        },
-        {
-          "type": "richtext",
-          "id": "heading",
-          "label": "Heading",
-          "default": "<h3>Heading</h3>"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text",
-          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "A Slider",
-      "blocks": [
-        {
-          "type": "slide"
-        },
-        {
-          "type": "slide"
-        },
-        {
-          "type": "slide"
-        },
-        {
-          "type": "slide"
-        }
-      ]
-    }
-  ]
-}
+    "settings": [
+      {
+        "type": "range",
+        "id": "slidesToShow",
+        "min": 1,
+        "max": 7,
+        "step": 1,
+        "label": "Slide To Show",
+        "default": 3
+      },
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": -100,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Margin Top",
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": -100,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          }, {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<h3>Heading</h3>"
+          }, {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "A Slider",
+        "blocks": [
+          {
+            "type": "slide"
+          }, {
+            "type": "slide"
+          }, {
+            "type": "slide"
+          }, {
+            "type": "slide"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
