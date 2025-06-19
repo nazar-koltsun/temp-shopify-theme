@@ -52,7 +52,7 @@
     <div class="inner">
       <div class="js-atios-slider">
         {%- for block in section.blocks -%}
-          <div class="item flip-container" onclick="flipColor(this)">
+          <div class="item flip-container" onmouseenter="flipColor(this)" ontouchstart="flipColor(this)">
             <div class="item_inner flip-card">
               <div class="flip-front">
                 <div class="img">
@@ -149,7 +149,7 @@
     var $arrow_next = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"> <g opacity="0.5"> <rect width="30" height="30" rx="15" fill="#EEF6F8"/> <path d="M13.3574 20.7503L18.9289 15.1789L13.3574 9.60742" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g> </svg>';
     $('.atios-slider.section-{{ section.id }}-padding .js-atios-slider').slick({
       infinite: true,
-      slidesToShow: {{ section.settings.slidesToShow }},
+      slidesToShow: 4, // Don't apply on the production this
       slidesToScroll: 1,
       arrows: true,
       dots: true,
@@ -157,7 +157,13 @@
       nextArrow:"<button type='button' class='slick-next'>"+$arrow_next+"</button>",
       responsive: [
         {
-          breakpoint: 1180,
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 1120,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
