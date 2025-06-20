@@ -53,6 +53,7 @@
               {% endif %}
             {% endfor %}
           </div>
+
           {% for block in section.blocks %}
             {% if block.type == 'tab' %}
               <div
@@ -62,6 +63,144 @@
                 <div class="md-resp">
                 <div class="tab-content">
                   {{ block.settings.tab_content }}
+                  
+                  {% if block.settings.show_download_table_knx_bridge %}
+
+                    <table class="md-download-table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Download</th>
+                          <th>Version</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                
+                      <tbody>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">Datasheet</td>
+                          <td>
+                            <a href="//atios.ch/cdn/shop/files/ADE-KD-Datasheet_V1.pdf?v=14921021472473794246">
+                              pdf
+                            </a>
+                          </td>
+                          <td>
+                            <p>1.0</p>
+                          </td>
+                          <td>
+                            <p>02/25</p>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">ETS Product Database</td>
+                          <td>
+                            <a href="//atios.ch/cdn/shop/files/KNXProduct4_v0.5_certified.knxprod?v=681286018235243225">
+                              knxprod
+                            </a>
+                          </td>
+                          <td>
+                            <p>0.5</p>
+                          </td>
+                          <td>
+                            <p>04/17</p>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">CAD</td>
+                          <td>
+                            <a href="//atios.ch/cdn/shop/files/ADE-KD_CAD.01.dwg?v=12471302454238128094">
+                              dwg;
+                            </a>
+                            <a href="//atios.ch/cdn/shop/files/ADE-KD_CAD.01.dxf?v=9878206244150635459">
+                              dxf
+                            </a>
+                          </td>
+                          <td>
+                            <p>0.1</p>
+                          </td>
+                          <td>
+                            <p>02/25</p>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">User Manual</td>
+                          <td>
+                            <a href="//docs.atios.ch/en/knx-bridge">
+                              online
+                            </a>
+                          </td>
+                          <td>
+                            <p>0.1</p>
+                          </td>
+                          <td>
+                            <p>02/25</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  {% endif %}
+
+                  {% if block.settings.show_download_table_smartcore %}
+                    <table class="md-download-table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Download</th>
+                          <th>Version</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                
+                      <tbody>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">Datasheet</td>
+                          <td>
+                            <a href="//atios.ch/cdn/shop/files/ADE-R12_Datasheet_V1.pdf?v=135863301963720936">
+                              pdf
+                            </a>
+                          </td>
+                          <td>
+                            <p>1.0</p>
+                          </td>
+                          <td>
+                            <p>02/25</p>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">CAD</td>
+                          <td>
+                            <a href="//atios.ch/cdn/shop/files/ADE-R12_CAD.01.dwg?v=6384491931293210802">
+                              dwg;
+                            </a>
+                            <a href="//atios.ch/cdn/shop/files/ADE-R12_CAD.01_1b6577c7-3317-46f0-8800-493000f4a040.dxf?v=9128175751727039701">
+                              dxf
+                            </a>
+                          </td>
+                          <td>
+                            <p>0.1</p>
+                          </td>
+                          <td>
+                            <p>02/25</p>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E5E7EB;">
+                          <td class="md-download-table-label">User Manual</td>
+                          <td>
+                            <a href="//docs.atios.ch/en/smartcore">
+                              online
+                            </a>
+                          </td>
+                          <td>
+                            <p>0.1</p>
+                          </td>
+                          <td>
+                            <p>02/25</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  {% endif %}
+
                   {% if block.settings.show_button %}
                     <div class="md-form-wrapper">
                       {% if block.settings.selected_product != blank %}
@@ -298,6 +437,16 @@
           "type": "richtext",
           "id": "tab_content",
           "label": "Tab Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_download_table_knx_bridge",
+          "label": "Show Download Table for Atios KNX Bridge"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_download_table_smartcore",
+          "label": "Show Download Table for Smartcore"
         },
         {
           "type": "checkbox",
