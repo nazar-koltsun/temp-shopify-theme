@@ -53,7 +53,6 @@
               {% endif %}
             {% endfor %}
           </div>
-
           {% for block in section.blocks %}
             {% if block.type == 'tab' %}
               <div
@@ -63,9 +62,8 @@
                 <div class="md-resp">
                 <div class="tab-content">
                   {{ block.settings.tab_content }}
-                  
-                  {% if block.settings.show_download_table_knx_bridge %}
 
+                  {% if block.settings.show_download_table_knx_bridge %}
                     <table class="md-download-table">
                       <thead>
                         <tr>
@@ -200,7 +198,7 @@
                       </tbody>
                     </table>
                   {% endif %}
-
+              
                   {% if block.settings.show_button %}
                     <div class="md-form-wrapper">
                       {% if block.settings.selected_product != blank %}

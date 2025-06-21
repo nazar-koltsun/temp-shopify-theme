@@ -60,7 +60,7 @@
         "heading_LCjj7C": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Have you ever wondered what it’s like to have a concierge in your pocket?</p>"
+            "heading": "<p>Ever had a concierge in your pocket?</p>"
           }
         },
         "text_nzV8bG": {
@@ -150,7 +150,7 @@
           "settings": {
             "icon": "shopify://shop_images/interoperability.svg",
             "heading": "<h3>Interoperability</h3>",
-            "text": "<p>Matter ensures that devices from different brands work seamlessly together, eliminating compatibility issues between ecosystems like Apple Home, Google Home, and Amazon Alexa.</p>"
+            "text": "<p>Matter allows smart devices from different manufacturers to work together across apps, scenes, and automations.</p>"
           }
         },
         "slide_ghfQ4D": {
@@ -158,7 +158,7 @@
           "settings": {
             "icon": "shopify://shop_images/multi-admin.svg",
             "heading": "<h3>Multi-Admin Support</h3>",
-            "text": "<p>Matter allows devices to be controlled by multiple ecosystems at the same time. For example, you can use both Apple HomeKit and Google Home to control you home.</p>"
+            "text": "<p>Devices can be controlled by multiple platforms at the same time - for example, both Apple Home and Google Home.</p>"
           }
         },
         "slide_cnHU8V": {
@@ -166,7 +166,7 @@
           "settings": {
             "icon": "shopify://shop_images/qr.svg",
             "heading": "<h3>Adding Devices</h3>",
-            "text": "<p>By scanning the QR Code on a device, you can add it to any Matter compatible app of your choice. This makes adding new devices fast and easy.</p>"
+            "text": "<p>By simply scanning the QR Code, you can add a device to the app of your choice. </p>"
           }
         },
         "slide_Ja3ndd": {
@@ -174,7 +174,7 @@
           "settings": {
             "icon": "shopify://shop_images/lock.svg",
             "heading": "<h3>Security & Privacy</h3>",
-            "text": "<p>Matter is built with strong encryption and authentication measures, ensuring safer communication between devices while minimizing data exposure to external servers.</p>"
+            "text": "<p>Matter uses end-to-end encryption and communicates locally, so it stays secure and works even when offline.</p>"
           }
         },
         "slide_nVjTpj": {
@@ -182,7 +182,7 @@
           "settings": {
             "icon": "shopify://shop_images/fastforward.svg",
             "heading": "<h3>Futureproof & Scalable</h3>",
-            "text": "<p>Matter is backed by major tech companies - like Apple and Google - and designed to evolve with new updates and features, ensuring long-term compatibility. </p>"
+            "text": "<p>Backed by major tech companies, Matter is designed to evolve with new features, making it future-proof and scalable.</p>"
           }
         }
       },
@@ -194,7 +194,7 @@
         "slide_nVjTpj"
       ],
       "settings": {
-        "slidesToShow": 3,
+        "slidesToShow": 4,
         "padding_top": 36,
         "padding_bottom": 36,
         "margin_top": -86,
@@ -208,7 +208,7 @@
           "type": "item",
           "settings": {
             "heading": "<h4>System Integrator</h4>",
-            "text": "<p>Looking for high-quality smart home solutions that make your job easier and keep your clients happy? We’ve got you covered.</p>",
+            "text": "<p>Need solutions that are easy to install and increase your margins while keeping your clients happy?</p>",
             "item_btn_html": "<button data-form=\"system-integrator\">Contact</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
@@ -218,7 +218,7 @@
           "type": "item",
           "settings": {
             "heading": "<h4>Property Developer</h4>",
-            "text": "<p><strong>Are you planning multiple smart home units or a smart hotel? Our scalable solutions include support from start to finish.</strong></p><p></p>",
+            "text": "<p>Want to boost property value and stand out with innovative and  long-lasting smart home solutions? </p>",
             "item_btn_html": "<button data-form=\"developer\">Contact</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
@@ -228,7 +228,7 @@
           "type": "item",
           "settings": {
             "heading": "<h4>Home Owner</h4>",
-            "text": "<p>Do you want smart home control that’s user-friendly, secure, and reliable - designed to make life easier, not more complicated?</p>",
+            "text": "<p>Looking for smart home control that’s secure and reliable - designed to make life easier?</p>",
             "item_btn_html": "<button data-form=\"home-owner\">Contact</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
@@ -258,8 +258,8 @@
           "type": "product",
           "settings": {
             "product": "atios-knx-bridge",
-            "heading": "<h4>Atios KNX Bridge - KNX Automation for Residential Homes and Villas</h4>",
-            "text": "<p>Atios KNX Bridge is built for any KNX system, it supports Matter and allows direct control of DALI lighting. It offers the freedom to design advanced, fully integrated smart environments, ideal for those who want a smart home that will scale to their needs.</p>",
+            "heading": "<h4>Luxury </h4>",
+            "text": "<p>Building a high-end smart home? Combining three functions in one, Atios KNX Bridge connects KNX to Matter and DALI, providing affordable and easy-to-use smart home control. Ideal for those who want a home that scales to their needs.</p>",
             "desc": "<ul><li></li></ul>",
             "btn_label": "Learn more",
             "block_width": "50%",
@@ -270,8 +270,8 @@
           "type": "product",
           "settings": {
             "product": "atios-smartcore",
-            "heading": "<p>Atios SmartCore - the Affordable Smart Solution for Apartments and Hotel Rooms</p>",
-            "text": "<p>The SmartCore makes smart living simple and budget-friendly. With digital inputs and outputs, a DALI gateway and Matter integration, it functions as a stand-alone controller for smart apartments. The setup is straightforward and does not require any software installation or programming knowledge.</p><p></p>",
+            "heading": "<h4>Cost-effective</h4>",
+            "text": "<p>Need smart control on a budget? Atios SmartCore is the all-in-one controller for budget-friendly smart homes. With digital inputs/outputs, DALI and Matter integration, it runs as a stand-alone system—no software or programming required.</p><p></p>",
             "desc": "",
             "btn_label": "Learn more",
             "block_width": "50%",

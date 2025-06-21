@@ -22,7 +22,7 @@
   padding-left: 40px;
 }
 .md-flex-container td {
-  border: 1px solid #dbe7e9 !important;
+  border: 1px solid #DBE7E9 !important;
 }
 .md-slic-tab-slider,
 .md-slic-tab-desc {
@@ -70,7 +70,7 @@
 
 .md-flex-container .slick-prev:before,
 .md-flex-container .slick-next:before {
-  content: '';
+  content: "";
   background-image: url(/cdn/shop/files/Vector_4.svg?v=1736321695);
   background-repeat: no-repeat;
   background-position: center;
@@ -113,7 +113,7 @@
 }
 
 .md-primary-button {
-  background: #4f8096;
+  background: #4F8096;
   border: none;
   box-shadow: none;
 }
@@ -129,7 +129,7 @@
 }
 
 .md-tabs-button {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 12px 24px;
   border: none;
   background: none;
@@ -141,16 +141,17 @@
 }
 
 .md-tabs-button.active {
-  border-bottom: 2px solid #4f8096;
+ border-bottom: 2px solid #4F8096; 
 }
 
 .md-tabs-button.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
   width: 100%;
   height: 2px;
+  background-color: {{ section.settings.accent_color }};
 }
 
 .md-tabs-content {
@@ -174,11 +175,16 @@
 
 .buy-now-btn {
   display: inline-block;
+  background-color: {{ section.settings.accent_color }};
   color: white;
   text-decoration: none;
   padding: 12px 28px;
   border-radius: 4px;
   transition: background-color 0.3s;
+}
+
+.buy-now-btn:hover {
+  background-color: {{ section.settings.accent_color | color_modify: 'lightness', -20 }};
 }
 
 .custom-icons {
@@ -187,7 +193,8 @@
   gap: 20px;
   padding: 20px 0;
   margin-top: 25px;
-  border-top: 1px solid var(--line-grey, #c2cacc);
+  border-top: 1px solid var(--line-grey, #C2CACC) 
+  
 }
 
 .icon-item {
@@ -254,7 +261,7 @@
     gap: 20px;
   }
   .custom-icons .icon-item {
-    justify-content: center;
+   justify-content: center;
     align-items: center;
     flex-direction: column;
   }
@@ -289,27 +296,25 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) { 
   .md-tabs-content table {
-    box-shadow: none;
-    border-radius: 0;
-    border: 1px solid;
-  }
-
+  box-shadow: none;
+  border-radius:0;
+  border: 1px solid;
+ }
   .md-resp {
     overflow-x: auto;
   }
 }
-
 @media (min-width: 425px) {
   .md-tabs-content table {
-    width: 100% !important;
-  }
+  width: 100% !important;
+ }
 }
 @media (min-width: 1100px) {
-  .md-flex-container .md-font {
-    width: 40% !important;
-  }
+  .md-flex-container .md-font{
+  width: 40% !important;
+ }
 }
 @media (min-width: 768px) {
   .md-form-wrapper {
