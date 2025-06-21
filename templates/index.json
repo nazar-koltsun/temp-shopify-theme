@@ -209,7 +209,7 @@
           "settings": {
             "heading": "<h4>System Integrator</h4>",
             "text": "<p>Need solutions that are easy to install and increase your margins while keeping your clients happy?</p>",
-            "item_btn_html": "<button data-form=\"system-integrator\">Contact</button>",
+            // "item_btn_html": "<button data-form=\"system-integrator\">Contact</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
           }
@@ -219,7 +219,7 @@
           "settings": {
             "heading": "<h4>Property Developer</h4>",
             "text": "<p>Want to boost property value and stand out with innovative and  long-lasting smart home solutions? </p>",
-            "item_btn_html": "<button data-form=\"developer\">Contact</button>",
+            // "item_btn_html": "<button data-form=\"developer\">Contact</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
           }
@@ -229,7 +229,7 @@
           "settings": {
             "heading": "<h4>Home Owner</h4>",
             "text": "<p>Looking for smart home control that’s secure and reliable - designed to make life easier?</p>",
-            "item_btn_html": "<button data-form=\"home-owner\">Contact</button>",
+            // "item_btn_html": "<button data-form=\"home-owner\">Contact</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
           }

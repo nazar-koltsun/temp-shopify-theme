@@ -80,9 +80,9 @@
             <div class="text">
               {{ block.settings.text }}
             </div>
-            <div class="btn_wrap">
+            {% comment %} <div class="btn_wrap">
               {{ block.settings.item_btn_html }}
-            </div>
+            </div> {% endcomment %}
           </div>
         </div>
       {%- endfor -%}
@@ -300,13 +300,6 @@
           "id": "text",
           "label": "Text",
           "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
-        },
-        {
-          "type": "html",
-          "id": "item_btn_html",
-          "label": "Button Code",
-          "default": "<button data-form='system-integrator'>System Integrator</button>",
-          "info": "Forms change in code section, we have 3 forms-> System Integrator & Developer & Home Owner"
         },
         {
           "type": "select",
