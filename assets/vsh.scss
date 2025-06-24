@@ -549,6 +549,11 @@ body{
           color: #6D7172;
           font-size: 14px;
           line-height: 22px;
+
+          @media (max-width: 500px) {
+            font-size: 12px;
+            line-height: 18px;
+          }
         }
         strong, b{
           font-weight: 700;
