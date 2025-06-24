@@ -186,6 +186,28 @@
   </style>
 {% endif %}
 
+{% if section.settings.show_image_on_mobile %} 
+  <style>
+    .atios-banner-text-mob-img {
+      display: none;
+    }
+
+    @media (max-width: 991px) {
+      .atios-banner-text-mob-img {
+        display: block;
+      }
+
+      .atios-banner-text-mob-img img {
+        max-width: 100%;
+      }
+
+      .atios-banner--text.section-{{ section.id }}-padding {
+        background: none;
+      }
+    }
+  </style>
+{% endif %}
+
 <style>
   @media(max-width: 767px){
     .atios-banner--text.section-{{ section.id }}-padding .page-width .inner .text_container {
@@ -199,6 +221,12 @@
 </style>
 
 <div class="atios-banner--text section-{{ section.id }}-padding {{ section.settings.custom_class }}">
+  {% if section.settings.show_image_on_mobile %}
+    <div class="atios-banner-text-mob-img">
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+    </div>
+  {% endif %}
+  
   <div class="page-width">
     <div class="inner">
       <div class="text_container">
@@ -402,6 +430,11 @@
     "unit": "px",
     "label": "Margin Bottom",
     "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image_on_mobile",
+      "label": "Display the image separately on mobile."
     },
     {
       "type": "textarea",
