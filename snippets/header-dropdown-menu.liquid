@@ -81,6 +81,11 @@
             {% if link.current %}
               aria-current="page"
             {% endif %}
+            
+            {% comment %} Hide Home link on desktop {% endcomment %}
+            {% if link.url == '/' %}
+              style="display: none;"
+            {% endif %}
           >
             <span>{{- link.title | escape -}}</span>
           </a>
