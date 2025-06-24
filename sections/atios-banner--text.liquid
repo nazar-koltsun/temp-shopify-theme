@@ -198,7 +198,7 @@
   }
 </style>
 
-<div class="atios-banner--text section-{{ section.id }}-padding">
+<div class="atios-banner--text section-{{ section.id }}-padding {{ section.settings.custom_class }}">
   <div class="page-width">
     <div class="inner">
       <div class="text_container">
@@ -260,6 +260,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom HTML Class"
+    },
     {
       "type": "select",
       "id": "style_section",

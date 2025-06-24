@@ -618,6 +618,10 @@ body{
         align-items: center;
         justify-content: center;
         padding: 30px;
+
+        @media (max-width: 992px) {
+          align-items: flex-start;
+        }
         .text_heading{
           position: relative;
           z-index: 2;
@@ -1202,5 +1206,28 @@ body{
 body{
   .header__menu-item:hover span, .header__menu-item.active span{
     text-decoration: none;
+  }
+}
+
+@media (max-width: 992px) {
+  /* .smart-home-pocket is the class from the Shopify admin */
+  .smart-home-pocket.atios-banner--text {
+    position: relative;
+    background-position: right center !important;
+  }
+
+  .smart-home-pocket.atios-banner--text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  .smart-home-pocket .text_description {
+    color: #121212;
   }
 }
