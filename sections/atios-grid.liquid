@@ -124,87 +124,15 @@
         <a class="button" href="{{ section.settings.btn_url }}">
           {{ section.settings.btn_label }}
         </a>
-      </div>
+
+        </div>
     {% endif %}
-  </div>
 
+    {% if section.settings.show_form_btn %}
+      <button class="show-contact-form-btn">Show Contact Form</button>
+    {% endif %}
 
-  {% comment %}<button data-form="system-integrator">System Integrator</button>
-  <button data-form="developer">Developer</button>
-  <button data-form="home-owner">Home Owner</button>{% endcomment %}
-
-
-  <div id="popup-system-integrator" class="form-popup" style="display:none;">
-    <form class="ajax-form">
-      <input type="hidden" name="form_type" value="contact" />
-      <input type="hidden" name="utf8" value="✓" />
-      <input type="hidden" name="authenticity_token" value="{{ form | authenticity_token }}">
-      <input type="hidden" name="contact[body]" value="System Integrator Form">
-
-      <input type="text" name="contact[name]" placeholder="Full Name*" required />
-      <input type="text" name="contact[company]" placeholder="Company*" required />
-      <input type="email" name="contact[email]" placeholder="Email Address*" required />
-      <input type="tel" name="contact[phone]" placeholder="Phone Number" />
-
-      <div class="checkboxes">
-        <div>Type of Inquiry</div>
-        <label>
-          <input type="checkbox" name="contact[Type_of_Inquiry_Questions]" /> Questions to our products
-        </label>
-        <label>
-          <input type="checkbox" name="contact[Type_of_Inquiry_Support]" /> Support in planning a project
-        </label>
-        <label>
-          <input type="checkbox" name="contact[Type_of_Inquiry_Order]" /> Order inquiry
-        </label>
-        <label>
-          <input type="checkbox" name="contact[Type_of_Inquiry_Something_else]" /> Something else
-        </label>
-      </div>
-
-      <div>Project Location</div>
-      <input type="text" name="contact[location]" placeholder="Project Location" />
-
-      <div>Message: </div>
-      <textarea placeholder="Let us know what you’re working on and how we can help." name="contact[message]"></textarea>
-
-      <button type="submit" class="button">Send</button>
-      <button type="button" class="close-popup">Close</button>
-    </form>
-  </div>
-
-  <div id="popup-developer" class="form-popup" style="display:none;">
-    <form class="ajax-form">
-      <input type="hidden" name="form_type" value="contact" />
-      <input type="hidden" name="utf8" value="✓" />
-      <input type="hidden" name="authenticity_token" value="{{ form | authenticity_token }}">
-      <input type="hidden" name="contact[body]" value="Developer Form">
-
-      <input type="text" name="contact[name]" placeholder="Name developer" required>
-      <input type="email" name="contact[email]" placeholder="Email developer" required>
-      <button type="submit" class="button">Send</button>
-      <button type="button" class="close-popup">Close</button>
-    </form>
-  </div>
-
-  <div id="popup-home-owner" class="form-popup" style="display:none;">
-    <form class="ajax-form">
-      <input type="hidden" name="form_type" value="contact" />
-      <input type="hidden" name="utf8" value="✓" />
-      <input type="hidden" name="authenticity_token" value="{{ form | authenticity_token }}">
-      <input type="hidden" name="contact[body]" value="Home Owner Form">
-
-      <input type="text" name="contact[name]" placeholder="Name owner" required>
-      <input type="email" name="contact[email]" placeholder="Email owner" required>
-      <button type="submit" class="button">Send</button>
-      <button type="button" class="close-popup">Close</button>
-    </form>
-  </div>
-
-
-  <div id="form-success-popup">
-    <p>Sent!</p>
-    <button onclick="document.getElementById('form-success-popup').style.display='none'">Close</button>
+    {% render 'contact-form-popup' %}
   </div>
 </div>
 
@@ -238,6 +166,11 @@
       "type": "text",
       "id": "btn_label",
       "label": "Button Label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_form_btn",
+      "label": "Show Form Button"
     },
     {
       "type": "header",

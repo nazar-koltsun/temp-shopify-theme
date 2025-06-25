@@ -1,0 +1,52 @@
+{{ 'contact-form-popup.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'contact-form-popup.js' | asset_url }}" defer></script>
+
+<div id="formModal" class="form-modal hidden">
+  <div class="form-content">
+    <button class="close-btn" onclick="toggleFormModal()">×</button>
+    <form id="multiStepForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+      <!-- Step 1 -->
+      <div class="form-step step-1">
+        <h3>What best describes your role?</h3>
+        <label><input type="checkbox" name="role" value="System integrator"> System integrator</label><br>
+        <label><input type="checkbox" name="role" value="Property developer"> Property developer</label><br>
+        <label><input type="checkbox" name="role" value="Home owner"> Home owner</label><br>
+        <button type="button" onclick="goToStep(2)">Next</button>
+      </div>
+
+      <!-- Step 2 (example for System integrator) -->
+      <div class="form-step step-2 integrator hidden">
+        <h3>System Integrator Info</h3>
+        <input type="text" name="name" placeholder="Name*" required>
+        <input type="text" name="company" placeholder="Company*" required>
+        <input type="email" name="email" placeholder="Business Email*" required>
+        <input type="tel" name="phone" placeholder="Phone*" required>
+        <input type="text" name="country" placeholder="Country*" required>
+        <input type="text" name="zip" placeholder="Zip Code">
+        <select name="inquiry" onchange="handleInquiryChange(this.value)">
+          <option value="">Select inquiry</option>
+          <option value="Request B2B prices">Request B2B prices</option>
+          <option value="Technical question">Technical question</option>
+        </select>
+        <button type="button" onclick="goToStep(3)">Next</button>
+      </div>
+
+      <!-- Step 3 (example for B2B prices) -->
+      <div class="form-step step-3 b2b hidden">
+        <h3>Select Products</h3>
+        <label><input type="checkbox" name="product" value="Atios KNX Bridge"> Atios KNX Bridge</label><br>
+        <label><input type="checkbox" name="product" value="Atios SmartCore"> Atios SmartCore</label><br>
+        <button type="submit">Send</button>
+      </div>
+
+      <!-- Step 3 (technical question) -->
+      <div class="form-step step-3 tech hidden">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<button onclick="toggleFormModal()">Open Form</button>
