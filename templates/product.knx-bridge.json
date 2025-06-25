@@ -418,6 +418,7 @@
         "brand_dtLrAa"
       ],
       "settings": {
+        "custom_class": "",
         "img": "shopify://shop_images/Group_4.jpg",
         "head": "",
         "padding_top": 36,
@@ -601,17 +602,18 @@
         "text_3wDrW3"
       ],
       "custom_css": [
-        ".banner--content-align-left.banner--desktop-transparent .banner__box {max-width: 62rem;}"
+        ".banner--content-align-left.banner--desktop-transparent .banner__box {max-width: 62rem;}",
+        "@media (min-width: 1480px) {.banner__box {padding: 14rem 0; }}"
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/Group_39394_1.jpg",
-        "image_2": "shopify://shop_images/Frame_39436.jpg",
+        "image": "shopify://shop_images/image1.webp",
+        "image_2": "shopify://shop_images/image2.webp",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-right",
         "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "right",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
@@ -625,7 +627,7 @@
         "column_cUtaTH": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_39389_4.png",
+            "image": "shopify://shop_images/ethernet.svg",
             "bg_img_show": true,
             "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
             "width_img": 58,
@@ -639,7 +641,7 @@
         "column_3LhJMJ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_39389_5.png",
+            "image": "shopify://shop_images/web-programming.svg",
             "bg_img_show": true,
             "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
             "width_img": 58,
@@ -653,7 +655,7 @@
         "column_6L8jAm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_39389_6.png",
+            "image": "shopify://shop_images/qr.svg",
             "bg_img_show": true,
             "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
             "width_img": 58,
@@ -667,7 +669,7 @@
         "column_xXQ4DQ": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_39389_7.png",
+            "image": "shopify://shop_images/smartphone.svg",
             "bg_img_show": true,
             "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
             "width_img": 58,
