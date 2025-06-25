@@ -11,7 +11,7 @@
     }
   }
 {%- endstyle -%}
-<div class="wd-brand-wrapper section-{{ section.id }}-padding">
+<div class="wd-brand-wrapper section-{{ section.id }}-padding {{ section.settings.custom_class }}">
   <div class="page-width">
     <div class="wd-brand-heading">
       {% if section.settings.img != blank %}
@@ -44,6 +44,11 @@
 {
   "name": "Brands",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom HTML Class"
+    },
     {
       "type": "image_picker",
       "id": "img",

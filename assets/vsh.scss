@@ -620,7 +620,7 @@ body{
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         padding: 30px;
 
@@ -1212,4 +1212,10 @@ body{
   .header__menu-item:hover span, .header__menu-item.active span{
     text-decoration: none;
   }
+}
+
+.home-brands {
+  position: relative;
+  margin-top: -80px;
+  z-index: 2;
 }
