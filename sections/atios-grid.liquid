@@ -21,6 +21,35 @@
     flex-wrap: wrap;
     gap: 30px;
   }
+
+  .show-contact-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 20px 0;
+  }
+
+  .show-contact-form-btn {
+    margin: 0 auto;
+    min-height: 47px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #313637;
+    border-radius: 8px;
+    border: none;
+    padding: 6px 40px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 </style>
 <div class="atios-grid section-{{ section.id }}-padding">
   <div class="page-width">
@@ -128,8 +157,10 @@
         </div>
     {% endif %}
 
-    {% if section.settings.show_form_btn %}
-      <button class="show-contact-form-btn">Show Contact Form</button>
+    {% if section.settings.contact_form_btn %}
+      <div class="show-contact-wrap">
+        <button class="show-contact-form-btn">{{ section.settings.contact_btn_label }}</button>
+      </div>
     {% endif %}
 
     {% render 'contact-form-popup' %}
@@ -169,8 +200,14 @@
     },
     {
       "type": "checkbox",
-      "id": "show_form_btn",
+      "id": "contact_form_btn",
       "label": "Show Form Button"
+    },
+    {
+      "type": "text",
+      "id": "contact_btn_label",
+      "label": "Contact Button Label",
+      "default": "GET IN TOUCH"
     },
     {
       "type": "header",

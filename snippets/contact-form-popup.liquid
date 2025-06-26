@@ -1,22 +1,51 @@
 {{ 'contact-form-popup.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'contact-form-popup.js' | asset_url }}" defer></script>
 
-<div id="formModal" class="form-modal hidden">
-  <div class="form-content">
-    <button class="close-btn" onclick="toggleFormModal()">×</button>
-    <form id="multiStepForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+<div class="contact-form hidden">
+  <div class="contact-form-content">
+    <button class="contact-form-close-btn">
+      {% render: 'icon-close' %}
+    </button>
+    
+    <form id="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+      <h2 class="contact-form-title">Just a few details to help us <br>
+        understand your needs.</h2>
       <!-- Step 1 -->
-      <div class="form-step step-1">
-        <h3>What best describes your role?</h3>
-        <label><input type="checkbox" name="role" value="System integrator"> System integrator</label><br>
-        <label><input type="checkbox" name="role" value="Property developer"> Property developer</label><br>
-        <label><input type="checkbox" name="role" value="Home owner"> Home owner</label><br>
-        <button type="button" onclick="goToStep(2)">Next</button>
+      <div class="contact-form-step step-one">
+        <h3 class="contact-form-block-title">What best describes your role?</h3>
+        
+        <div class="contact-form-field-wrap">
+          <label class="contact-form-label">
+            <input class="contact-form-input visually-hidden" 
+              type="radio" name="role" value="System integrator" checked> 
+            <span>System integrator</span>
+            <div class="contact-form-checkbox" role="presentation"></div>
+          </label>
+        </div>
+
+        <div class="contact-form-field-wrap">
+          <label class="contact-form-label">
+            <input class="contact-form-input visually-hidden" type="radio" name="role" value="Property developer"> 
+            <span>Property developer</span>
+            <div class="contact-form-checkbox" role="presentation"></div>
+          </label>
+        </div>
+
+        <div class="contact-form-field-wrap">
+          <label class="contact-form-label">
+            <input class="contact-form-input visually-hidden" 
+              type="radio" name="role" value="Home owner"> 
+              <span>Home owner</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+          </label>
+        </div>
+
+        <button class="contact-form-btn step-one-btn" type="button">Next</button>
       </div>
 
       <!-- Step 2 (example for System integrator) -->
-      <div class="form-step step-2 integrator hidden">
-        <h3>System Integrator Info</h3>
+      <div class="contact-form-step step-two integrator">
+        <h3 class="contact-form-block-title">System Integrator Info</h3>
         <input type="text" name="name" placeholder="Name*" required>
         <input type="text" name="company" placeholder="Company*" required>
         <input type="email" name="email" placeholder="Business Email*" required>
@@ -32,7 +61,7 @@
       </div>
 
       <!-- Step 3 (example for B2B prices) -->
-      <div class="form-step step-3 b2b hidden">
+      <div class="contact-form-step step-3 b2b">
         <h3>Select Products</h3>
         <label><input type="checkbox" name="product" value="Atios KNX Bridge"> Atios KNX Bridge</label><br>
         <label><input type="checkbox" name="product" value="Atios SmartCore"> Atios SmartCore</label><br>
@@ -40,7 +69,7 @@
       </div>
 
       <!-- Step 3 (technical question) -->
-      <div class="form-step step-3 tech hidden">
+      <div class="contact-form-step step-3 tech">
         <label>Message</label>
         <textarea name="message"></textarea>
         <button type="submit">Send</button>
@@ -48,5 +77,3 @@
     </form>
   </div>
 </div>
-
-<button onclick="toggleFormModal()">Open Form</button>
