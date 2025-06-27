@@ -6,73 +6,579 @@
     <button class="contact-form-close-btn">
       {% render: 'icon-close' %}
     </button>
-    
-    <form id="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+
+    <form
+      id="contact-form"
+      method="POST"
+      action="https://formspree.io/f/xkgbkrqo">
       <h2 class="contact-form-title">Just a few details to help us <br>
         understand your needs.</h2>
       <!-- Step 1 -->
       <div class="contact-form-step step-one">
         <h3 class="contact-form-block-title">What best describes your role?</h3>
-        
+
         <div class="contact-form-field-wrap">
-          <label class="contact-form-label">
-            <input class="contact-form-input visually-hidden" 
-              type="radio" name="role" value="System integrator" checked> 
+          <label class="contact-form-label checkbox-label">
+            <input
+              class="contact-form-input visually-hidden"
+              type="radio"
+              name="role"
+              value="System integrator"
+              checked>
             <span>System integrator</span>
             <div class="contact-form-checkbox" role="presentation"></div>
           </label>
         </div>
 
         <div class="contact-form-field-wrap">
-          <label class="contact-form-label">
-            <input class="contact-form-input visually-hidden" type="radio" name="role" value="Property developer"> 
+          <label class="contact-form-label checkbox-label">
+            <input
+              class="contact-form-input visually-hidden"
+              type="radio"
+              name="role"
+              value="Property developer">
             <span>Property developer</span>
             <div class="contact-form-checkbox" role="presentation"></div>
           </label>
         </div>
 
         <div class="contact-form-field-wrap">
-          <label class="contact-form-label">
-            <input class="contact-form-input visually-hidden" 
-              type="radio" name="role" value="Home owner"> 
-              <span>Home owner</span>
-              <div class="contact-form-checkbox" role="presentation"></div>
+          <label class="contact-form-label checkbox-label">
+            <input
+              class="contact-form-input visually-hidden"
+              type="radio"
+              name="role"
+              value="Home owner">
+            <span>Home owner</span>
+            <div class="contact-form-checkbox" role="presentation"></div>
           </label>
         </div>
 
         <button class="contact-form-btn step-one-btn" type="button">Next</button>
       </div>
 
-      <!-- Step 2 (example for System integrator) -->
+      <!-- Step 2 for System integrator -->
       <div class="contact-form-step step-two integrator">
-        <h3 class="contact-form-block-title">System Integrator Info</h3>
-        <input type="text" name="name" placeholder="Name*" required>
-        <input type="text" name="company" placeholder="Company*" required>
-        <input type="email" name="email" placeholder="Business Email*" required>
-        <input type="tel" name="phone" placeholder="Phone*" required>
-        <input type="text" name="country" placeholder="Country*" required>
-        <input type="text" name="zip" placeholder="Zip Code">
-        <select name="inquiry" onchange="handleInquiryChange(this.value)">
-          <option value="">Select inquiry</option>
-          <option value="Request B2B prices">Request B2B prices</option>
-          <option value="Technical question">Technical question</option>
-        </select>
-        <button type="button" onclick="goToStep(3)">Next</button>
+        <label class="contact-form-label text-label">
+          <span>Name
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="integrator_name"
+            required>
+        </label>
+
+
+        <label class="contact-form-label text-label">
+          <span>Company
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="integrator_company"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Business Email
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="email"
+            name="integrator_email"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Phone
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="tel"
+            name="integrator_phone"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Country
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="integrator_country"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Zip Code</span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="integrator_zip">
+        </label>
+
+
+        <label class="contact-form-label select-label">
+          <span>Type of Inquiry</span>
+
+          <div class="contact-form-select-wrap">
+            <select class="contact-form-select" name="integrator_inquiry">
+              <option value="Request B2B prices">Request B2B prices</option>
+              <option value="Technical question">Technical question</option>
+            </select>
+          </div>
+        </label>
+
+        <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-two-btn" type="button">Next</button>
+
+          <div>
+            <sup class="contact-form-star">*</sup>
+            <span class="contact-form-required">required field</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Step 3 (example for B2B prices) -->
-      <div class="contact-form-step step-3 b2b">
-        <h3>Select Products</h3>
-        <label><input type="checkbox" name="product" value="Atios KNX Bridge"> Atios KNX Bridge</label><br>
-        <label><input type="checkbox" name="product" value="Atios SmartCore"> Atios SmartCore</label><br>
-        <button type="submit">Send</button>
+      <!-- Step 2 for Property developer -->
+      <div class="contact-form-step step-two property-developer">
+        <label class="contact-form-label text-label">
+          <span>Name
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="developer_name"
+            required>
+        </label>
+
+
+        <label class="contact-form-label text-label">
+          <span>Company
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="developer_company"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Business Email
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="email"
+            name="developer_email"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Phone
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="tel"
+            name="developer_phone"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Country
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="developer_country"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Zip Code</span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="developer_zip">
+        </label>
+
+        <div class="contact-form-group">
+          <h3 class="contact-form-block-title">
+            Project
+          </h3>
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="developer_project"
+                value="New construction"
+                checked>
+              <span>New construction</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="developer_project"
+                value="Renovation">
+              <span>Renovation</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="contact-form-group timeline-group">
+          <h3 class="contact-form-block-title">
+            Timeline:
+          </h3>
+
+          <label class="contact-form-label text-label">
+            <span>From</span>
+            <input
+              class="contact-form-text"
+              type="date"
+              name="developer_date_from">
+          </label>
+
+          <label class="contact-form-label text-label">
+            <span>To</span>
+            <input
+              class="contact-form-text"
+              type="date"
+              name="developer_date_to">
+          </label>
+        </div>
+
+        <div class="contact-form-group">
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="developer_building_type"
+                value="Residential complex"
+                checked="">
+              <span>Residential complex</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="developer_building_type"
+                value="Apartment building">
+              <span>Apartment building</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="developer_building_type"
+                value="Hotel">
+              <span>Hotel</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="contact-form-group numbers-group">
+          <label class="contact-form-label row-label">
+            <span>Number of units:</span>
+            <input
+              class="contact-form-text"
+              type="number"
+              min="0"
+              name="developer_units_number">
+          </label>
+
+          <label class="contact-form-label row-label">
+            <span>Number of units 2:</span>
+            <input
+              class="contact-form-text"
+              type="number"
+              min="0"
+              name="developer_units_number2">
+          </label>
+
+          <label class="contact-form-label row-label">
+            <span>Number of rooms:</span>
+            <input
+              class="contact-form-text"
+              type="number"
+              min="0"
+              name="developer_rooms_number">
+          </label>
+        </div>
+
+
+        <div class="contact-form-group">
+          <label class="contact-form-label select-label">
+            <span>Type of Inquiry</span>
+
+            <div class="contact-form-select-wrap">
+              <select class="contact-form-select" name="developer_inquiry">
+                <option value="Request introductary Teams call">Request introductary Teams call</option>
+                <option value="Planning support">Planning support</option>
+                <option value="Recommendation of local partners">
+                  Recommendation of local partners
+                </option>
+              </select>
+            </div>
+          </label>
+        </div>
+
+        <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-two-btn" type="button">Next</button>
+
+          <div>
+            <sup class="contact-form-star">*</sup>
+            <span class="contact-form-required">required field</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Step 3 (technical question) -->
-      <div class="contact-form-step step-3 tech">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <button type="submit">Send</button>
+      <!-- Step 2 for Home owner -->
+      <div class="contact-form-step step-two home-owner">
+        <label class="contact-form-label text-label full-width-label">
+          <span>Name
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="home_owner_name"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Email
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="email"
+            name="home_owner_email"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Phone
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="tel"
+            name="home_owner_phone"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Country
+            <sup class="contact-form-star">*</sup>
+          </span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="home_owner_country"
+            required>
+        </label>
+
+        <label class="contact-form-label text-label">
+          <span>Zip Code</span>
+          <input
+            class="contact-form-text"
+            type="text"
+            name="home_owner_zip">
+        </label>
+
+        <div class="contact-form-group">
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="home_owner_project"
+                value="New construction"
+                checked="">
+              <span>New construction</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input
+                class="contact-form-input visually-hidden"
+                type="radio"
+                name="home_owner_project"
+                value="Renovation">
+              <span>Renovation</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_building_type" value="Apartment" checked="">
+              <span>Apartment</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_building_type" value="Renovation">
+              <span>Renovation</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+          
+        </div>
+
+        <div class="contact-form-group">
+          <h3 class="contact-form-block-title">
+            Living space, m²
+          </h3>
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_space" value="< 60" checked="">
+              <span>&lt; 60</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_space" value="60 - 120">
+              <span>60 - 120</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_space" value="> 120">
+              <span>&gt; 120</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <h3 class="contact-form-block-title">
+            Do you already know which one of our products you would like to use for your project?
+          </h3>
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_product" value="Atios KNX Bridge" checked="">
+              <span>Atios KNX Bridge</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_product" value="Atios  SmartCore">
+              <span>Atios  SmartCore</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+
+          <div class="contact-form-field-wrap">
+            <label class="contact-form-label checkbox-label">
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_product" value="Unsure">
+              <span>Unsure</span>
+              <div class="contact-form-checkbox" role="presentation"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <label class="contact-form-label select-label">
+            <span>Type of Inquiry</span>
+
+            <div class="contact-form-select-wrap">
+              <select class="contact-form-select" name="home_owner_inquiry">
+                <option value="Recommend me to a local Atios partner">Recommend me to a local Atios partner</option>
+                <option value="Other requests">Other requests</option>
+              </select>
+            </div>
+          </label>
+        </div>
+
+        <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-two-btn" type="button">Next</button>
+
+          <div>
+            <sup class="contact-form-star">*</sup>
+            <span class="contact-form-required">required field</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 for System integrator B2B prices -->
+      <div class="contact-form-step step-three integrator b-two-b">
+        <div class="contact-form-field-wrap">
+          <label class="contact-form-label checkbox-label">
+            <input
+              class="contact-form-input visually-hidden"
+              type="radio"
+              name="integrator_product"
+              value="Atios KNX Bridge"
+              checked>
+            <span>Atios KNX Bridge</span>
+            <div class="contact-form-checkbox" role="presentation"></div>
+          </label>
+        </div>
+
+        <div class="contact-form-field-wrap">
+          <label class="contact-form-label checkbox-label">
+            <input
+              class="contact-form-input visually-hidden"
+              type="radio"
+              name="integrator_product"
+              value="Atios SmartCore">
+            <span>Atios SmartCore</span>
+            <div class="contact-form-checkbox" role="presentation"></div>
+          </label>
+        </div>
+
+        <button class="contact-form-btn step-three-btn" type="submit">Send</button>
+      </div>
+
+      <!-- Step 3 Message -->
+      <div class="contact-form-step step-three message">
+        <h2 class="contact-form-mess-title">Please tell us more.</h2>
+
+        <label class="contact-form-mess-label">
+          <span>Message</span>
+          <textarea class="message-textarea" name="message"></textarea>
+        </label>
+
+        <button class="contact-form-btn step-three-btn" type="submit">Send</button>
       </div>
     </form>
   </div>
