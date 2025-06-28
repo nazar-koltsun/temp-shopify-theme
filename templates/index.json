@@ -30,7 +30,7 @@
         "text_LP3nXW": {
           "type": "text",
           "settings": {
-            "text": "Experience a smarter, more efficient home built for the future.",
+            "text": "Step into a modern home designed for the future.",
             "text_style": "body"
           }
         }
@@ -258,6 +258,8 @@
         "heading": "<h2>How can we help you?</h2>",
         "btn_url": "shopify://pages/contact",
         "btn_label": "GET IN TOUCH",
+        "contact_form_btn": false,
+        "contact_btn_label": "GET IN TOUCH",
         "padding_top": 36,
         "padding_bottom": 100,
         "margin_top": 0,
