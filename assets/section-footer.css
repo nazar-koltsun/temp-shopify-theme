@@ -502,6 +502,42 @@
   display: block;
 }
 
+@media(max-width: 550px) {
+  .footer__blocks-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  } 
+  
+  .footer__content-top .list-social__item .list-social__link  {
+    margin-right: 0;
+  }
+  
+  .footer-block__brand-info .footer__list-social.list-social {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-block__details-content .list-menu__item--link {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer-block:last-child .footer-block__details-content:last-child li:last-child a {
+    margin: 0;
+  }
+  
+  
+  .footer__blocks-wrapper > .footer-block--menu:nth-child(2) {
+    margin-top: 20px;
+  }
+  
+  .footer-block__details-content {
+    margin-bottom: 0; 
+  }
+}
+
+
 @keyframes animateLocalization {
   0% {
     opacity: 0;
