@@ -1,3 +1,79 @@
+const countryList = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Belgium',
+  'Brazil',
+  'Bulgaria',
+  'Canada',
+  'Chile',
+  'China',
+  'Colombia',
+  'Croatia',
+  'Czech Republic',
+  'Denmark',
+  'Egypt',
+  'Estonia',
+  'Finland',
+  'France',
+  'Germany',
+  'Greece',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Japan',
+  'Kazakhstan',
+  'Kenya',
+  'Latvia',
+  'Lithuania',
+  'Luxembourg',
+  'Malaysia',
+  'Mexico',
+  'Netherlands',
+  'New Zealand',
+  'Nigeria',
+  'Norway',
+  'Pakistan',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Saudi Arabia',
+  'Serbia',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'South Africa',
+  'South Korea',
+  'Spain',
+  'Sweden',
+  'Switzerland',
+  'Thailand',
+  'Turkey',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Vietnam',
+  'Other',
+];
+
 const ROLES = {
   system_integrator: 'System integrator',
   property_developer: 'Property developer',
@@ -10,17 +86,24 @@ const SYSTEM_INTEGRATOR_INQUIRiES = {
 };
 
 const form = document.querySelector('.contact-form');
+const countrySelects = form.querySelectorAll('.country-select');
 
-function openForm(e) {
+async function openForm(e) {
   e.preventDefault();
 
   document.body.style.overflow = 'hidden';
   form.classList.remove('hidden');
+
+  const userCountry = await getUserCountry();
+  setUserCountry(userCountry);
 }
 
 function closeForm() {
   document.body.style.overflow = 'auto';
   form.classList.add('hidden');
+  goToStep(1);
+  form.querySelector('form').reset();
+  form.querySelector('.contact-form-title').style.display = 'block';
 }
 
 // Close form when click is outside the form content
@@ -77,7 +160,6 @@ form
     goToStepWithValidation('.step-two.home-owner', 3);
   });
 
-
 function goToStepWithValidation(selector, step) {
   const stepElement = form.querySelector(selector);
   const inputs = stepElement.querySelectorAll('input, select, textarea');
@@ -122,9 +204,15 @@ function goToStep(step) {
   });
 
   // Disable all fields in hidden steps
-  form.querySelectorAll('.contact-form-step:not(.step-one)').forEach((stepEl) => {
-    disableAllUnactiveFields(stepEl);
-  });
+  form
+    .querySelectorAll('.contact-form-step:not(.step-one)')
+    .forEach((stepEl) => {
+      disableAllUnactiveFields(stepEl);
+    });
+
+  if (step === 1) {
+    form.querySelector('.step-one').classList.add('active');
+  }
 
   // Show and enable only the relevant step
   if (step === 2) {
@@ -166,16 +254,16 @@ function goToStep(step) {
         enableAllActiveFields(el);
         enableAllActiveFields(form.querySelector('.step-two.integrator'));
       }
-    }
-    
-    else {
+    } else {
       deleteInitialTitle();
       const el = form.querySelector('.step-three.message');
       el.classList.add('active');
       enableAllActiveFields(el);
 
       if (selectedRole === ROLES.property_developer) {
-        enableAllActiveFields(form.querySelector('.step-two.property-developer'));
+        enableAllActiveFields(
+          form.querySelector('.step-two.property-developer')
+        );
       }
 
       if (selectedRole === ROLES.home_owner) {
@@ -185,6 +273,35 @@ function goToStep(step) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+async function getUserCountry() {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    return data.country_name;
+  } catch (error) {
+    console.error('Geolocation failed:', error);
+  }
+}
+
+function setUserCountry(country) {
+  countrySelects.forEach((select) => {
+    Array.from(select.options).forEach((option) => {
+      if (option.value === country) {
+        option.selected = true;
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
   form.querySelector('.step-one').classList.add('active');
+
+  countrySelects.forEach((select) => {
+    countryList.forEach((country) => {
+      const option = document.createElement('option');
+      option.value = country;
+      option.textContent = country;
+      select.appendChild(option);
+    });
+  });
 });

@@ -205,6 +205,18 @@
     min-width: 130px;
     padding: 13px;
   }
+
+  &.back-btn {
+    padding: 15px;
+    background: transparent;
+    color: #121212;
+    border: 1px solid #313637;
+
+    &:hover {
+      background-color: #313637;
+      color: #fff;
+    }
+  }
 }
 
 .step-one-btn {
@@ -282,7 +294,9 @@
   line-height: 20px;
   border: none;
   border-bottom: 1px solid #c2cacc;
+  outline: none;
   appearance: none;
+  box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }

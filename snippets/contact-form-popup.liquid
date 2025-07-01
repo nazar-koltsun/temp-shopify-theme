@@ -10,7 +10,7 @@
     <form
       id="contact-form"
       method="POST"
-      action="https://formspree.io/f/mdkzbyav">
+      action="https://formsubmit.co/info@atios.ch">
       <h2 class="contact-form-title">Just a few details to help us <br>
         understand your needs.</h2>
       <!-- Step 1 -->
@@ -105,14 +105,11 @@
         </label>
 
         <label class="contact-form-label text-label">
-          <span>Country
-            <sup class="contact-form-star">*</sup>
-          </span>
-          <input
-            class="contact-form-text"
-            type="text"
-            name="integrator_country"
-            required>
+          <span>Country</span>
+          
+          <div class="contact-form-select-wrap">
+            <select class="contact-form-select country-select" name="integrator_country"></select>
+          </div>
         </label>
 
         <label class="contact-form-label text-label">
@@ -136,6 +133,7 @@
         </label>
 
         <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-two-back-btn back-btn" type="button">Back</button>
           <button class="contact-form-btn step-two-btn" type="button">Next</button>
 
           <div>
@@ -193,14 +191,10 @@
         </label>
 
         <label class="contact-form-label text-label">
-          <span>Country
-            <sup class="contact-form-star">*</sup>
-          </span>
-          <input
-            class="contact-form-text"
-            type="text"
-            name="developer_country"
-            required>
+          <span>Country</span>
+          <div class="contact-form-select-wrap">
+            <select class="contact-form-select country-select" name="developer_country"></select>
+          </div>
         </label>
 
         <label class="contact-form-label text-label">
@@ -349,6 +343,7 @@
         </div>
 
         <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-two-back-btn back-btn" type="button">Back</button>
           <button class="contact-form-btn step-two-btn" type="button">Next</button>
 
           <div>
@@ -394,14 +389,10 @@
         </label>
 
         <label class="contact-form-label text-label">
-          <span>Country
-            <sup class="contact-form-star">*</sup>
-          </span>
-          <input
-            class="contact-form-text"
-            type="text"
-            name="home_owner_country"
-            required>
+          <span>Country</span>
+          <div class="contact-form-select-wrap">
+            <select class="contact-form-select country-select" name="home_owner_country"></select>
+          </div>
         </label>
 
         <label class="contact-form-label text-label">
@@ -530,6 +521,7 @@
         </div>
 
         <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-two-back-btn back-btn" type="button">Back</button>
           <button class="contact-form-btn step-two-btn" type="button">Next</button>
 
           <div>
@@ -566,7 +558,10 @@
           </label>
         </div>
 
-        <button class="contact-form-btn step-three-btn" type="submit">Send</button>
+        <div class="contact-form-action-wrap">
+          <button class="contact-form-btn step-three-back-btn back-btn" type="button">Back</button>
+          <button class="contact-form-btn step-three-btn" type="submit">Send</button>
+        </div>
       </div>
 
       <!-- Step 3 Message -->
@@ -578,7 +573,10 @@
           <textarea class="message-textarea" name="message"></textarea>
         </label>
 
-        <button class="contact-form-btn step-three-btn" type="submit">Send</button>
+        <div class="contact-form-action-wrap">  
+          <button class="contact-form-btn step-three-back-btn back-btn" type="button">Back</button>
+          <button class="contact-form-btn step-three-btn" type="submit">Send</button>
+        </div>
       </div>
     </form>
   </div>
