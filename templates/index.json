@@ -161,22 +161,6 @@
     "atios_slider_dwFMze": {
       "type": "atios-slider",
       "blocks": {
-        "slide_CbyK9G": {
-          "type": "slide",
-          "settings": {
-            "icon": "shopify://shop_images/interoperability.svg",
-            "heading": "<h3>Interoperability</h3>",
-            "text": "<p>Matter allows smart devices from different manufacturers to work together across apps, scenes, and automations.</p>"
-          }
-        },
-        "slide_ghfQ4D": {
-          "type": "slide",
-          "settings": {
-            "icon": "shopify://shop_images/multi-admin.svg",
-            "heading": "<h3>Multi-Admin Support</h3>",
-            "text": "<p>Devices can be controlled by multiple platforms at the same time - for example, both Apple Home and Google Home.</p>"
-          }
-        },
         "slide_cnHU8V": {
           "type": "slide",
           "settings": {
@@ -193,6 +177,14 @@
             "text": "<p>Matter uses end-to-end encryption and communicates locally, so it stays secure and works even when offline.</p>"
           }
         },
+        "slide_CbyK9G": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/interoperability.svg",
+            "heading": "<h3>Interoperability</h3>",
+            "text": "<p>Matter allows smart devices from different manufacturers to work together across apps, scenes, and automations.</p>"
+          }
+        },
         "slide_nVjTpj": {
           "type": "slide",
           "settings": {
@@ -200,17 +192,25 @@
             "heading": "<h3>Futureproof & Scalable</h3>",
             "text": "<p>Backed by major tech companies, Matter is designed to evolve with new features, making it future-proof and scalable.</p>"
           }
+        },
+        "slide_ghfQ4D": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/multi-admin.svg",
+            "heading": "<h3>Multi-Admin Support</h3>",
+            "text": "<p>Devices can be controlled by multiple platforms at the same time - for example, both Apple Home and Google Home.</p>"
+          }
         }
       },
       "block_order": [
-        "slide_CbyK9G",
-        "slide_ghfQ4D",
         "slide_cnHU8V",
         "slide_Ja3ndd",
-        "slide_nVjTpj"
+        "slide_CbyK9G",
+        "slide_nVjTpj",
+        "slide_ghfQ4D"
       ],
       "settings": {
-        "slidesToShow": 4,
+        "slidesToShow": 5,
         "padding_top": 36,
         "padding_bottom": 36,
         "margin_top": -86,
