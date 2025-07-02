@@ -85,6 +85,12 @@ const SYSTEM_INTEGRATOR_INQUIRiES = {
   tech: 'Technical question',
 };
 
+const DEVELOPER_BUILDING_TYPES = {
+  resComplex: 'Residential complex',
+  apartBuilding: 'Apartment building',
+  hotel: 'Hotel',
+};
+
 const form = document.querySelector('.contact-form');
 const countrySelects = form.querySelectorAll('.country-select');
 
@@ -103,7 +109,7 @@ function closeForm() {
   form.classList.add('hidden');
   goToStep(1);
   form.querySelector('form').reset();
-  form.querySelector('.contact-form-title').style.display = 'block';
+  showInitialTitle();
 }
 
 // Close form when click is outside the form content
@@ -160,6 +166,34 @@ form
     goToStepWithValidation('.step-two.home-owner', 3);
   });
 
+// Go back from step 2 to step 1
+goBack('.step-two-back-btn', 1);
+
+// Go back from step 3 to step 2
+goBack('.step-three-back-btn', 2);
+
+document.addEventListener('DOMContentLoaded', async () => {
+  form.querySelector('.step-one').classList.add('active');
+
+  countrySelects.forEach((select) => {
+    countryList.forEach((country) => {
+      const option = document.createElement('option');
+      option.value = country;
+      option.textContent = country;
+      select.appendChild(option);
+    });
+  });
+});
+
+function goBack(selector, step) {
+  form.querySelectorAll(selector).forEach((backBtn) => {
+    backBtn.addEventListener('click', function () {
+      goToStep(step);
+      showInitialTitle();
+    });
+  });
+}
+
 function goToStepWithValidation(selector, step) {
   const stepElement = form.querySelector(selector);
   const inputs = stepElement.querySelectorAll('input, select, textarea');
@@ -177,6 +211,10 @@ function goToStepWithValidation(selector, step) {
   if (isValid) {
     goToStep(step);
   }
+}
+
+function showInitialTitle() {
+  form.querySelector('.contact-form-title').style.display = 'block';
 }
 
 function deleteInitialTitle() {
@@ -197,6 +235,12 @@ function enableAllActiveFields(el) {
 
 function goToStep(step) {
   const selectedRole = form.querySelector('input[name="role"]:checked')?.value;
+  const buildingTypes = form.querySelectorAll(
+    '.step-two.property-developer input[name=developer_building_type]'
+  );
+  let checkedBuildingType = Array.from(buildingTypes).find(
+    (buildingType) => buildingType.checked
+  ).value;
 
   // Hide all steps
   form.querySelectorAll('.contact-form-step').forEach((stepEl) => {
@@ -224,8 +268,18 @@ function goToStep(step) {
 
     if (selectedRole === ROLES.property_developer) {
       const el = form.querySelector('.step-two.property-developer');
+
       el.classList.add('active');
       enableAllActiveFields(el);
+
+      buildingTypes.forEach((buildingType) => {
+        buildingType.addEventListener('change', (event) => {
+          checkedBuildingType = event.target.value;
+          showHideUnitsRooms(checkedBuildingType);
+        });
+      });
+
+      showHideUnitsRooms(checkedBuildingType);
     }
 
     if (selectedRole === ROLES.home_owner) {
@@ -264,12 +318,33 @@ function goToStep(step) {
         enableAllActiveFields(
           form.querySelector('.step-two.property-developer')
         );
+
+        showHideUnitsRooms(checkedBuildingType);
       }
 
       if (selectedRole === ROLES.home_owner) {
         enableAllActiveFields(form.querySelector('.step-two.home-owner'));
       }
     }
+  }
+}
+
+function showHideUnitsRooms(checkedBuildingType) {
+  const roomsLabelEl = form.querySelector('.step-two.property-developer .rooms-label');
+  const unitsLabelEl = form.querySelector('.step-two.property-developer .units-label');
+
+  if (checkedBuildingType === DEVELOPER_BUILDING_TYPES.hotel) {
+    roomsLabelEl.style.display = 'block';
+    roomsLabelEl.querySelector('input').disabled = false;
+
+    unitsLabelEl.style.display = 'none';
+    unitsLabelEl.querySelector('input').disabled = true;
+  } else {
+    roomsLabelEl.style.display = 'none';
+    roomsLabelEl.querySelector('input').disabled = true;
+
+    unitsLabelEl.style.display = 'block';
+    unitsLabelEl.querySelector('input').disabled = false;
   }
 }
 
@@ -292,16 +367,3 @@ function setUserCountry(country) {
     });
   });
 }
-
-document.addEventListener('DOMContentLoaded', async () => {
-  form.querySelector('.step-one').classList.add('active');
-
-  countrySelects.forEach((select) => {
-    countryList.forEach((country) => {
-      const option = document.createElement('option');
-      option.value = country;
-      option.textContent = country;
-      select.appendChild(option);
-    });
-  });
-});

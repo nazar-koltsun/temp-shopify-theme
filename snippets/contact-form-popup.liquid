@@ -10,7 +10,7 @@
     <form
       id="contact-form"
       method="POST"
-      action="https://formsubmit.co/info@atios.ch">
+      action="https://formsubmit.co/nazarkoltsun@gmail.com">
       <h2 class="contact-form-title">Just a few details to help us <br>
         understand your needs.</h2>
       <!-- Step 1 -->
@@ -127,7 +127,8 @@
           <div class="contact-form-select-wrap">
             <select class="contact-form-select" name="integrator_inquiry">
               <option value="Request B2B prices">Request B2B prices</option>
-              <option value="Technical question">Technical question</option>
+              <option value="Technical issue">Technical issue</option>
+              <option value="Other requests">Other requests</option>
             </select>
           </div>
         </label>
@@ -297,28 +298,19 @@
         </div>
 
         <div class="contact-form-group numbers-group">
-          <label class="contact-form-label row-label">
+          <label class="contact-form-label units-label">
             <span>Number of units:</span>
             <input
-              class="contact-form-text"
+              class="contact-form-text units-input"
               type="number"
               min="0"
               name="developer_units_number">
           </label>
 
-          <label class="contact-form-label row-label">
-            <span>Number of units 2:</span>
-            <input
-              class="contact-form-text"
-              type="number"
-              min="0"
-              name="developer_units_number2">
-          </label>
-
-          <label class="contact-form-label row-label">
+          <label class="contact-form-label rooms-label">
             <span>Number of rooms:</span>
             <input
-              class="contact-form-text"
+              class="contact-form-text units-input"
               type="number"
               min="0"
               name="developer_rooms_number">
@@ -441,8 +433,8 @@
 
           <div class="contact-form-field-wrap">
             <label class="contact-form-label checkbox-label">
-              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_building_type" value="Renovation">
-              <span>Renovation</span>
+              <input class="contact-form-input visually-hidden" type="radio" name="home_owner_building_type" value="Single-family home">
+              <span>Single-family home</span>
               <div class="contact-form-checkbox" role="presentation"></div>
             </label>
           </div>
@@ -533,6 +525,8 @@
 
       <!-- Step 3 for System integrator B2B prices -->
       <div class="contact-form-step step-three integrator b-two-b">
+        <h3 class="contact-form-block-title">Which product are you interested in?</h3> 
+
         <div class="contact-form-field-wrap">
           <label class="contact-form-label checkbox-label">
             <input
@@ -558,7 +552,19 @@
           </label>
         </div>
 
-        <div class="contact-form-action-wrap">
+        <div class="contact-form-field-wrap">
+          <label class="contact-form-label checkbox-label">
+            <input
+              class="contact-form-input visually-hidden"
+              type="radio"
+              name="integrator_product"
+              value="Both">
+            <span>Both</span>
+            <div class="contact-form-checkbox" role="presentation"></div>
+          </label>
+        </div>
+
+        <div class="contact-form-action-wrap step-three-action">
           <button class="contact-form-btn step-three-back-btn back-btn" type="button">Back</button>
           <button class="contact-form-btn step-three-btn" type="submit">Send</button>
         </div>
@@ -573,7 +579,7 @@
           <textarea class="message-textarea" name="message"></textarea>
         </label>
 
-        <div class="contact-form-action-wrap">  
+        <div class="contact-form-action-wrap step-three-action">  
           <button class="contact-form-btn step-three-back-btn back-btn" type="button">Back</button>
           <button class="contact-form-btn step-three-btn" type="submit">Send</button>
         </div>

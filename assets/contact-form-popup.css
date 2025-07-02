@@ -134,23 +134,12 @@
     flex-direction: column;
   }
 
-  &.row-label {
-    display: flex;
-    gap: 20px;
-    font-size: 14px;
-
-    @media(max-width: 650px) {
-      align-items: flex-end;
-    }
-
-    .contact-form-text {
-      width: 70px;
-      text-align: center;
-    }
-  }
-
   &.full-width-label {
     grid-column: 1 / -1;
+  }
+
+  &.rooms-label {
+    display: none;
   }
 }
 
@@ -216,6 +205,11 @@
       background-color: #313637;
       color: #fff;
     }
+
+    @media(max-width: 650px) {
+      min-width: 130px;
+      padding: 12px;
+    }
   }
 }
 
@@ -225,10 +219,6 @@
   @media(max-width: 650px) {
     margin-top: 50px;
   }
-}
-
-.contact-form-btn.step-three-btn {
-  margin-top: 50px;
 }
 
 .contact-form-step.active {
@@ -256,6 +246,11 @@
   border-bottom: 1px solid #c2cacc;
   outline: none;
   box-shadow: none;
+
+  &.units-input {
+    width: 50px;
+    text-align: center;
+  }
 
   @media(max-width: 650px) {
     height: 27px;
@@ -319,8 +314,22 @@
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
+  flex-wrap: wrap-reverse;
   gap: 30px;
   margin-top: 20px;
+
+  @media(max-width: 650px) {
+    gap: 20px;
+    row-gap: 10px;
+  }
+
+  &.step-three-action {
+    margin-top: 50px;
+
+    @media(max-width: 650px) {
+      margin-top: 30px;
+    }
+  }
 }
 
 .contact-form-required {
