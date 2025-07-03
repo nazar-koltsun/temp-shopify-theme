@@ -115,11 +115,9 @@
 
 .contact-form-label {
   position: relative;
-
   font-size: 16px;
   line-height: 20px;
   color: #6d7172;
-  cursor: pointer;
 
   @media(max-width: 650px) {
     font-size: 14px;  
@@ -405,4 +403,12 @@
       gap: 25px;
     }
   }
+}
+
+.home-owner-step-two-next {
+  display: none;
+}
+
+.home-owner-step-two-send {
+  display: block;
 }

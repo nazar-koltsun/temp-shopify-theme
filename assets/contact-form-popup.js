@@ -85,6 +85,11 @@ const SYSTEM_INTEGRATOR_INQUIRiES = {
   tech: 'Technical question',
 };
 
+const HOME_OWNER_INQUIRiES = {
+  recommend: 'Recommend me to a local Atios partner',
+  other: 'Other requests',
+};
+
 const DEVELOPER_BUILDING_TYPES = {
   resComplex: 'Residential complex',
   apartBuilding: 'Apartment building',
@@ -286,6 +291,20 @@ function goToStep(step) {
       const el = form.querySelector('.step-two.home-owner');
       el.classList.add('active');
       enableAllActiveFields(el);
+
+      const nextBtn = form.querySelector('.home-owner-step-two-next');
+      const sendBtn = form.querySelector('.home-owner-step-two-send');
+      const inquirySelect = form.querySelector('select[name=home_owner_inquiry]');
+
+      inquirySelect.addEventListener('change', function() {
+        if(this.value === HOME_OWNER_INQUIRiES.recommend) {
+          nextBtn.style.display = 'none';
+          sendBtn.style.display = 'block';
+        } else {
+          nextBtn.style.display = 'block';
+          sendBtn.style.display = 'none';
+        }
+      })
     }
   }
 
