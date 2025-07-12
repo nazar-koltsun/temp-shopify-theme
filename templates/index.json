@@ -104,6 +104,40 @@
         "custom_css": "transform: translate(0, -1px);\n    z-index: 1;\n    position: relative;"
       }
     },
+    "atios_sustainability": {
+      "type": "atios-sustainability",
+      "settings": {
+        "bg_image": "shopify://shop_images/bg-sustainability.png",
+      },
+      "blocks": {
+        "item1": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/sustainability-icon1.svg",
+            "title": "Energy Efficiency",
+            "description": "Smart systems learn your habits to reduce unnecessary energy use without you having to think about it.",
+          }
+        },
+        "item2": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/sustainability-icon2.svg",
+            "title": "Carbon Reduction",
+            "description": "Energy savings directly translate into a reduced carbon footprint, bringing us closer to a decarbonized future.",
+          }
+        },
+        "item3": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/sustainability-icon3.svg",
+            "title": "Resource Conservation",
+            "description": "Smart sensors conserve resources through improved water management and waste reduction.",
+          }
+        }
+      },
+      "block_order": ["item1", "item2", "item3"]
+
+    },
     "wd_brands_UCpYiL": {
       "type": "wd-brands",
       "blocks": {
@@ -552,6 +586,7 @@
     "atios_image_banner_7MbJwt",
     "atios_banner_text_kTnXkX",
     "wd_brands_UCpYiL",
+    "atios_sustainability",
     "atios_slider_dwFMze",
     "atios_grid_GHPayE",
     "atios_columns_products_ikTjWU",

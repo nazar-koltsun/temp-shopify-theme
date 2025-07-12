@@ -1,0 +1,130 @@
+{{ 'sustainability.css' | asset_url | stylesheet_tag }}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="sustainability-wrap">
+    <h2 class="sustainability-title">
+      {{ section.settings.title }}
+    </h2>
+
+    {% if section.blocks.size > 0 %}
+      <ul class="sustainability-list">
+        {% for block in section.blocks %}
+          <li class="sustainability-item">
+            <div class="sustainability-item-head">
+              <img src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.title }}">
+              <h3 class="sustainability-item-title">{{ block.settings.title }}</h3>
+            </div>
+            <p class="sustainability-item-desc">
+              {{ block.settings.description }}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-image: url('{{ section.settings.bg_image | image_url }}');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #226395;
+
+    @media (max-width: 1400px) {
+      padding-top: 150px;
+      padding-bottom: 140px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-top: -150px;
+      padding-top: 250px;
+      padding-bottom: 110px;
+    }
+    
+    @media (max-width: 768px) {
+      margin-top: -200px;
+      background-position: left;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Sustainability",
+    "tag": "section",
+    "class": "sustainability",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Simplify sustainability - without a second thought."
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 270
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 165
+      }
+    ],
+    "blocks": [
+      {
+        "type": "list_item",
+        "name": "List Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          }, {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sustainability",
+        "blocks": [
+          {
+            "type": "list_item"
+          }, {
+            "type": "list_item"
+          }, {
+            "type": "list_item"
+          }
+        ]
+
+      }
+    ]
+  }
+{% endschema %}
