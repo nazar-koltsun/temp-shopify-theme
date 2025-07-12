@@ -281,7 +281,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -534,6 +533,13 @@
       "max_characters": "{{ max_chars }} characters max",
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "shipping_method_notice": "Your order will be shipped from Switzerland without VAT applied. FedEx will charge you VAT and any applicable customs fees upon delivery, according to your country’s import regulations."
+      }
     }
   }
 }

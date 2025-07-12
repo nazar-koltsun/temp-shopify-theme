@@ -273,24 +273,40 @@
           "type": "product",
           "settings": {
             "product": "atios-knx-bridge",
+            "product_img": "shopify://shop_images/knx-bridge-prouduct.png",
             "heading": "<h4>Luxury Homes</h4>",
             "text": "<p>Building a high-end smart home? Our KNX Bridge connects the global gold standard in automation with Matter—making it more affordable, future-ready, and effortless to use.</p>",
-            "desc": "<ul><li></li></ul>",
+            "feature_1_image": "shopify://shop_images/feature1.svg",
+            "feature_1_text": "<p>Visualization and  Control with Matter</p>",
+            "feature_2_image": "shopify://shop_images/feature2.svg",
+            "feature_2_text": "<p>Integrated KNX-IP Interface</p>",
+            "feature_3_image": "shopify://shop_images/feature3.svg",
+            "feature_3_text": "<p>Integrated KNX-DALI Gateway</p>",
+            "requirements_title": "Requirements",
+            "requirements": "<ul><li>Designed for high-end residential KNX systems</li><li>Budget &gt; 10k EUR</li><li>Requires KNX System</li><li>Professional installation</li></ul>",
             "btn_label": "Learn more",
             "block_width": "50%",
-            "block_width_t": "50%"
+            "block_width_t": "100%"
           }
         },
         "product_H734ef": {
           "type": "product",
           "settings": {
             "product": "atios-smartcore",
+            "product_img": "shopify://shop_images/smartcore-product.png",
             "heading": "<h4>Cost-effective Solution</h4>",
             "text": "<p><strong>Need smart control on a budget? SmartCore is your all-in-one, Matter-compatible device with app and voice control—simple to set up, powerful enough for any project.</strong></p>",
-            "desc": "",
+            "feature_1_image": "shopify://shop_images/feature1.svg",
+            "feature_1_text": "<p>Visualization and Control with Matter</p>",
+            "feature_2_image": "shopify://shop_images/feature2-smartcore.svg",
+            "feature_2_text": "<p>12 Digital  Inputs / Outputs</p>",
+            "feature_3_image": "shopify://shop_images/feature3.svg",
+            "feature_3_text": "<p>DALI-2 Master</p>",
+            "requirements_title": "Requirements",
+            "requirements": "<ul><li>Designed for apartments, hotel rooms, rental properties</li><li>Budget &lt; 5k EUR</li><li>Stand-alone System</li><li>Easy set up, no programming</li></ul>",
             "btn_label": "Learn more",
             "block_width": "50%",
-            "block_width_t": "50%"
+            "block_width_t": "100%"
           }
         }
       },
@@ -300,6 +316,7 @@
       ],
       "settings": {
         "svg": "",
+        "section_title": "Our products",
         "padding_top": 36,
         "padding_bottom": 36,
         "margin_top": 0,
