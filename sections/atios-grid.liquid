@@ -81,12 +81,10 @@
             .item--{{ block.id }} {
               width: 100%;
             }
-            .item--{{ block.id }}
-            .btn_wrap {
+            .item--{{ block.id }} .btn_wrap {
               margin-top: 20px;
             }
-            .item--{{ block.id }}
-            .btn_wrap button {
+            .item--{{ block.id }} .btn_wrap button {
               cursor: pointer;
               color: #fff;
               font-weight: 700;
@@ -101,15 +99,15 @@
               transition: all 200ms ease-in-out;
               min-height: 47px;
             }
-            .item--{{ block.id }}.btn_wrap button:hover {
+            .item--{{ block.id }} .btn_wrap button:hover{
               opacity: .8;
             }
-            @media(min-width: 750px) {
+            @media(min-width: 750px){
               .item--{{ block.id }} {
                 width: calc({{ block.settings.block_width_t }} - 30px);
               }
             }
-            @media(min-width: 1440px) {
+            @media(min-width: 1440px){
               .item--{{ block.id }} {
                 width: calc({{ block.settings.block_width }} - 30px);
               }
@@ -125,9 +123,9 @@
             <div class="text">
               {{ block.settings.text }}
             </div>
-          {% comment %} <div class="btn_wrap">
-                          {{ block.settings.item_btn_html }}
-                      </div> {% endcomment %}
+            {% comment %} <div class="btn_wrap">
+              {{ block.settings.item_btn_html }}
+            </div> {% endcomment %}
           </div>
         </div>
       {%- endfor -%}
