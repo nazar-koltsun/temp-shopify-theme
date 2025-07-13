@@ -257,6 +257,7 @@
         "item_n84TV3": {
           "type": "item",
           "settings": {
+            "img": "shopify://shop_images/system-integrator.svg",
             "heading": "<h4>System Integrator</h4>",
             "text": "<p>Need solutions that are easy to install and increase your margins while keeping your clients happy?</p>",
             "block_width": "33.333%",
@@ -266,6 +267,7 @@
         "item_eXfryp": {
           "type": "item",
           "settings": {
+            "img": "shopify://shop_images/property-developer.svg",
             "heading": "<h4>Property Developer</h4>",
             "text": "<p>Want to boost property value and stand out with innovative and  long-lasting smart home solutions? </p>",
             "block_width": "33.333%",
@@ -275,6 +277,7 @@
         "item_9bcPNX": {
           "type": "item",
           "settings": {
+            "img": "shopify://shop_images/home-owner.svg",
             "heading": "<h4>Home Owner</h4>",
             "text": "<p>You dream of a reliable Smart Home but don’t know where to start? We connect you with Atios partners worldwide.</p>",
             "block_width": "33.333%",
@@ -288,7 +291,7 @@
         "item_9bcPNX"
       ],
       "settings": {
-        "bg": "shopify://shop_images/Frame_39398.png",
+        "bg": "shopify://shop_images/bg-how-can-we-help-you.png",
         "heading": "<h2>How can we help you?</h2>",
         "btn_url": "shopify://pages/contact",
         "btn_label": "GET IN TOUCH",
@@ -587,9 +590,9 @@
     "atios_banner_text_kTnXkX",
     "wd_brands_UCpYiL",
     "atios_sustainability",
+    "atios_columns_products_ikTjWU",
     "atios_slider_dwFMze",
     "atios_grid_GHPayE",
-    "atios_columns_products_ikTjWU",
     "atios_slider_reviews_WRwrey",
     "atios_list_logos_njFPqF",
     "atios_image_banner_DhbbYJ"

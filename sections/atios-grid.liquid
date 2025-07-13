@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.4 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -14,25 +14,21 @@
 <style>
   .atios-grid.section-{{ section.id }}-padding {
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEFEF 81.17%);
-    background: url({{ section.settings.bg | img_url: 'master' }}) no-repeat 0 100%;
+    background: url('{{ section.settings.bg | img_url: 'master' }}') no-repeat 0 100%;
     background-size: cover;
   }
-  .atios-grid.section-{{ section.id }}-padding .inner{
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
   .show-contact-wrap {
     display: flex;
     justify-content: center;
-    padding: 80px 0 20px 0;
+    padding: 80px 0 20px;
   }
 
   .show-contact-form-btn {
     margin: 0 auto;
     min-height: 47px;
     color: #fff;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans"
+    , sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
@@ -46,7 +42,7 @@
     transition: all 200ms ease-in-out;
     cursor: pointer;
 
-    &:hover {
+     &:hover {
       opacity: 0.8;
     }
 
@@ -61,24 +57,36 @@
     {% if section.settings.heading != blank %}
       <div class="heading_wrap">
         <style>
-          .atios-grid.section-{{ section.id }}-padding .page-width > .heading_wrap *{
+          .atios-grid.section-{{ section.id }}-padding .page-width > .heading_wrap * {
             text-align: center;
+          }
+          .atios-grid.section-{{ section.id }}-padding .page-width > .heading_wrap h2 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: 36px;
+
+            @media(max-width: 768px) {
+              font-size: 28px;
+            }
           }
         </style>
         {{ section.settings.heading }}
       </div>
     {% endif %}
-    <div class="inner d_flex">
+    <div class="inner d_flex atios-grid-list">
       {%- for block in section.blocks -%}
         <div class="item item--{{ block.id }}">
           <style>
             .item--{{ block.id }} {
               width: 100%;
             }
-            .item--{{ block.id }} .btn_wrap {
+            .item--{{ block.id }}
+            .btn_wrap {
               margin-top: 20px;
             }
-            .item--{{ block.id }} .btn_wrap button {
+            .item--{{ block.id }}
+            .btn_wrap button {
               cursor: pointer;
               color: #fff;
               font-weight: 700;
@@ -93,30 +101,33 @@
               transition: all 200ms ease-in-out;
               min-height: 47px;
             }
-            .item--{{ block.id }} .btn_wrap button:hover{
+            .item--{{ block.id }}.btn_wrap button:hover {
               opacity: .8;
             }
-            @media(min-width: 750px){
+            @media(min-width: 750px) {
               .item--{{ block.id }} {
                 width: calc({{ block.settings.block_width_t }} - 30px);
               }
             }
-            @media(min-width: 1440px){
+            @media(min-width: 1440px) {
               .item--{{ block.id }} {
                 width: calc({{ block.settings.block_width }} - 30px);
               }
             }
           </style>
           <div class="item_inner">
+            <div class="atios-grid-img-wrap">
+              <img src="{{ block.settings.img | img_url: 'master' }}" alt="">
+            </div>
             <div class="heading">
               {{ block.settings.heading }}
             </div>
             <div class="text">
               {{ block.settings.text }}
             </div>
-            {% comment %} <div class="btn_wrap">
-              {{ block.settings.item_btn_html }}
-            </div> {% endcomment %}
+          {% comment %} <div class="btn_wrap">
+                          {{ block.settings.item_btn_html }}
+                      </div> {% endcomment %}
           </div>
         </div>
       {%- endfor -%}
@@ -125,11 +136,11 @@
     {% if section.settings.btn_label != blank %}
       <div class="btn_wrap2">
         <style>
-          .btn_wrap2{
+          .btn_wrap2 {
             text-align: center;
-            padding: 40px 0 20px 0;
+            padding: 40px 0 20px;
           }
-          .btn_wrap2 a.button{
+          .btn_wrap2 a.button {
             color: #fff;
             font-weight: 700;
             font-size: 14px;
@@ -143,15 +154,15 @@
             transition: all 200ms ease-in-out;
           }
           .btn_wrap2 a.button:before,
-          .btn_wrap2 a.button:after{
+          .btn_wrap2 a.button:after {
             display: none;
           }
-          .btn_wrap2 a.button:hover{
+          .btn_wrap2 a.button:hover {
             opacity: .8;
           }
-          @media(min-width: 750px){
-            .btn_wrap2{
-              padding: 80px 0 20px 0;
+          @media(min-width: 750px) {
+            .btn_wrap2 {
+              padding: 80px 0 20px;
             }
           }
         </style>
@@ -159,7 +170,7 @@
           {{ section.settings.btn_label }}
         </a>
 
-        </div>
+      </div>
     {% endif %}
 
     {% if section.settings.contact_form_btn %}
@@ -173,197 +184,186 @@
 </div>
 
 
-
 {% schema %}
-{
-  "name": "A Grid",
-  "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "bg",
-      "label": "Bg"
+  {
+    "name": "A Grid",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
     },
-    {
-      "type": "richtext",
-      "id": "heading",
-      "label": "Heading"
-    },
-    {
-      "type": "url",
-      "id": "btn_url",
-      "label": "Button URL"
-    },
-    {
-      "type": "text",
-      "id": "btn_label",
-      "label": "Button Label"
-    },
-    {
-      "type": "checkbox",
-      "id": "contact_form_btn",
-      "label": "Show Form Button"
-    },
-    {
-      "type": "text",
-      "id": "contact_btn_label",
-      "label": "Form Button Label",
-      "default": "GET IN TOUCH"
-    },
-    {
-      "type": "header",
-      "content": "Settings"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "min": -100,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Margin Top",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "margin_bottom",
-      "min": -100,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Margin Bottom",
-      "default": 0
-    }
-  ],
-  "blocks": [
-    {
-      "type": "item",
-      "name": "Item",
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "heading",
-          "label": "Heading",
-          "default": "<h4>Heading</h4>"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text",
-          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
-        },
-        {
-          "type": "select",
-          "id": "block_width",
-          "options": [
-            {
-              "value": "16.666%",
-              "label": "16.666%"
-            },
-            {
-              "value": "25%",
-              "label": "25%"
-            },
-            {
-              "value": "33.333%",
-              "label": "33.333%"
-            },
-            {
-              "value": "50%",
-              "label": "50%"
-            },
-            {
-              "value": "75%",
-              "label": "75%"
-            },
-            {
-              "value": "100%",
-              "label": "100%"
-            }
-          ],
-          "default": "50%",
-          "label": "Block Width Desktop"
-        },
-        {
-          "type": "select",
-          "id": "block_width_t",
-          "options": [
-            {
-              "value": "16.666%",
-              "label": "16.666%"
-            },
-            {
-              "value": "25%",
-              "label": "25%"
-            },
-            {
-              "value": "33.333%",
-              "label": "33.333%"
-            },
-            {
-              "value": "50%",
-              "label": "50%"
-            },
-            {
-              "value": "75%",
-              "label": "75%"
-            },
-            {
-              "value": "100%",
-              "label": "100%"
-            }
-          ],
-          "default": "50%",
-          "label": "Block Width Tablet"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "A Grid",
-      "blocks": [
-        {
-          "type": "item"
-        },
-        {
-          "type": "item"
-        },
-        {
-          "type": "item"
-        },
-        {
-          "type": "item"
-        },
-        {
-          "type": "item"
-        }
-      ]
-    }
-  ]
-}
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Bg"
+      },
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button URL"
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Label"
+      }, {
+        "type": "checkbox",
+        "id": "contact_form_btn",
+        "label": "Show Form Button"
+      }, {
+        "type": "text",
+        "id": "contact_btn_label",
+        "label": "Form Button Label",
+        "default": "GET IN TOUCH"
+      }, {
+        "type": "header",
+        "content": "Settings"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 100
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 100
+      }, {
+        "type": "range",
+        "id": "margin_top",
+        "min": -100,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Margin Top",
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": -100,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+          {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<h4>Heading</h4>"
+          }, {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }, {
+            "type": "select",
+            "id": "block_width",
+            "options": [
+              {
+                "value": "16.666%",
+                "label": "16.666%"
+              },
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33.333%",
+                "label": "33.333%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              }, {
+                "value": "75%",
+                "label": "75%"
+              }, {
+                "value": "100%",
+                "label": "100%"
+              }
+            ],
+            "default": "50%",
+            "label": "Block Width Desktop"
+          }, {
+            "type": "select",
+            "id": "block_width_t",
+            "options": [
+              {
+                "value": "16.666%",
+                "label": "16.666%"
+              },
+              {
+                "value": "25%",
+                "label": "25%"
+              },
+              {
+                "value": "33.333%",
+                "label": "33.333%"
+              },
+              {
+                "value": "50%",
+                "label": "50%"
+              }, {
+                "value": "75%",
+                "label": "75%"
+              }, {
+                "value": "100%",
+                "label": "100%"
+              }
+            ],
+            "default": "50%",
+            "label": "Block Width Tablet"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "A Grid",
+        "blocks": [
+          {
+            "type": "item"
+          },
+          {
+            "type": "item"
+          },
+          {
+            "type": "item"
+          },
+          {
+            "type": "item"
+          }, {
+            "type": "item"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
