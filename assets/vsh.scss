@@ -1053,6 +1053,10 @@ body{
             padding: 50px;
           }
 
+          @media(max-width: 768px) {
+            box-shadow: 0px 10px 20px 0px #29313226;
+          }
+
           .btn_wrap a.button{
             &:before,
             &:after{
