@@ -879,7 +879,7 @@ body{
           flex-direction: column;
           align-items: center;
           @media(min-width: 750px){
-            padding: 45px 30px;
+            padding: 40px 30px;
           }
           @media(min-width: 1440px){
             padding: 40px;
@@ -901,7 +901,8 @@ body{
               text-align: center!important;
 
               @media(max-width: 768px){
-                margin-top: 16px;
+                margin-top: 30px;
+                font-size: 18px;
               }
             }
           }
@@ -921,7 +922,7 @@ body{
               }
 
               @media(max-width: 768px){
-                margin-top: 12px;
+                margin-top: 20px;
               }
             }
           }
@@ -1454,7 +1455,7 @@ body{
   }
 
   @media(max-width: 768px) {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   .atios-grid-img-wrap {
@@ -1472,12 +1473,12 @@ body{
     }
 
     @media(max-width: 768px) {
-      width: 96px;
-      height: 96px;
+      width: 100px;
+      height: 100px;
 
       img {
         width: auto;
-        height: 50px;
+        height: 45px;
       }
     }
   }

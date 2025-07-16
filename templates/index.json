@@ -357,6 +357,7 @@
       ],
       "settings": {
         "bg": "shopify://shop_images/bg-how-can-we-help-you.png",
+        "bg_mobile": "shopify://shop_images/bg-how-can-we-help-you-mobile.png",
         "heading": "<h2>How can we help you?</h2>",
         "btn_url": "shopify://pages/contact",
         "btn_label": "GET IN TOUCH",

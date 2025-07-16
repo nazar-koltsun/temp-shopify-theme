@@ -14,8 +14,12 @@
 <style>
   .atios-grid.section-{{ section.id }}-padding {
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEFEF 81.17%);
-    background: url('{{ section.settings.bg | img_url: 'master' }}') no-repeat 0 100%;
+    background: url('{{ section.settings.bg | image_url }}') no-repeat 0 100%;
     background-size: cover;
+
+    @media (max-width: 768px) {
+      background: url('{{ section.settings.bg_mobile | image_url }}') no-repeat 0 100%;
+    }
   }
   .show-contact-wrap {
     display: flex;
@@ -67,7 +71,7 @@
             font-size: 36px;
 
             @media(max-width: 768px) {
-              font-size: 28px;
+              font-size: 24px;
             }
           }
         </style>
@@ -136,7 +140,7 @@
         <style>
           .btn_wrap2 {
             text-align: center;
-            padding: 40px 0 20px;
+            padding: 80px 0 20px;
           }
           .btn_wrap2 a.button {
             color: #fff;
@@ -157,11 +161,6 @@
           }
           .btn_wrap2 a.button:hover {
             opacity: .8;
-          }
-          @media(min-width: 750px) {
-            .btn_wrap2 {
-              padding: 80px 0 20px;
-            }
           }
         </style>
         <a class="button" href="{{ section.settings.btn_url }}">
@@ -195,6 +194,11 @@
         "type": "image_picker",
         "id": "bg",
         "label": "Bg"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Bg Mobile"
       },
       {
         "type": "richtext",
