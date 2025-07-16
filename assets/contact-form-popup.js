@@ -96,6 +96,7 @@ const DEVELOPER_BUILDING_TYPES = {
   hotel: 'Hotel',
 };
 
+const showContactFormBtn = document.querySelector('.show-contact-form-btn');
 const form = document.querySelector('.contact-form');
 const countrySelects = form.querySelectorAll('.country-select');
 
@@ -134,9 +135,9 @@ document.addEventListener('keydown', function (e) {
 });
 
 // Open form
-document
-  .querySelector('.show-contact-form-btn')
-  .addEventListener('click', openForm);
+if (showContactFormBtn) {
+  showContactFormBtn.addEventListener('click', openForm);
+}
 
 // Close form on close button click
 form
