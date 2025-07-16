@@ -235,7 +235,6 @@
           "settings": {
             "heading": "<h4>System Integrator</h4>",
             "text": "<p>Our devices combine multiple features and easy installation. We help you achieve prompt results and happy clients.</p>",
-            "item_btn_html": "<button data-form=\"system-integrator\">System Integrator</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
           }
@@ -245,7 +244,6 @@
           "settings": {
             "heading": "<h4>Developer</h4>",
             "text": "<p>Atios hardware is made for scalable smart home projects. <strong>We assist with planning and provide ongoing support.</strong></p><p></p>",
-            "item_btn_html": "<button data-form=\"system-integrator\">System Integrator</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
           }
@@ -255,7 +253,6 @@
           "settings": {
             "heading": "<h4>Home Owner</h4>",
             "text": "<p>All our devices support Matter, delivering a user-friendly, modern interface with voice control, remote access, and secure local connectivity.</p>",
-            "item_btn_html": "<button data-form=\"system-integrator\">System Integrator</button>",
             "block_width": "33.333%",
             "block_width_t": "50%"
           }
@@ -287,7 +284,6 @@
             "product": "atios-knx-bridge",
             "heading": "",
             "text": "<p>The KNX Bridge brings your home into the modern world. It connects your smart home with Matter, so you can use voice control and modern apps. It is built for any KNX setup - from small homes to large villas.</p>",
-            "desc": "<ul><li><strong>KNX-IP Interface</strong><br/>It has 12 built-in digital inputs and outputs, as well as a DALI-2 Controller, which enables the integration of 64 DALI control gears (lamps, switching actuators...) and 64 DALI control devices (push buttons and other sensors).</li><li><strong>KNX-DALI Gateway</strong><br/>Control DALI lights directly via KNX using the integrated DALI gateway. </li><li><strong>Matter</strong><br/>Matter is the new smart home standard supported by Apple, Google, Amazon and more. It works locally across platforms and is user-friendly and secure.</li></ul>",
             "btn_label": "Learn more",
             "block_width": "50%",
             "block_width_t": "50%"
@@ -299,7 +295,6 @@
             "product": "atios-smartcore",
             "heading": "",
             "text": "<p>The Atios SmartCore is designed for apartments and smaller spaces. As a stand-alone controller, it  makes smart living simple and budget-friendly. The setup is easy and requires no software or programming skills.</p>",
-            "desc": "<ul><li><strong>12 inputs / 12 outputs</strong><br/>The SmartCore features 12 configurable digital inputs and outputs. They support both binary input and output modes for versatile integration.</li><li><strong>DALI </strong><br/>The SmartCore includes a built-in DALI interace to which you can connect up to 128 DALI devices including sensors, ballasts, and drivers.</li><li><strong>Matter</strong><br/>Matter is the new smart home standard supported by Apple, Google, Amazon and more. It works locally across platforms and is user-friendly and secure.</li></ul>",
             "btn_label": "Learn more",
             "block_width": "50%",
             "block_width_t": "50%"
