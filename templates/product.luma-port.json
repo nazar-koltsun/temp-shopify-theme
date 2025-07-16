@@ -116,85 +116,67 @@
         "padding_bottom": 28
       }
     },
-    "image_with_text_zdTTqw": {
+    "image_with_text_zaHqNL": {
       "type": "image-with-text",
       "blocks": {
-        "heading_heQ8aC": {
+        "heading_Uw4Hwt": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>1</strong> device",
-            "heading_size": "hxl"
+            "heading": "<strong>Luma</strong>Port",
+            "heading_size": "h1"
           }
         },
-        "heading_GD8Y3d": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>3</strong> functions",
-            "heading_size": "hxl"
-          }
-        },
-        "heading_r63dgH": {
-          "type": "heading",
-          "settings": {
-            "heading": "possibilities",
-            "heading_size": "hxl",
-            "icon": "shopify://shop_images/Vector_1.svg"
-          }
-        },
-        "image_tLeWb6": {
-          "type": "image",
-          "settings": {
-            "img_1": "shopify://shop_images/matter_white.svg",
-            "text_1": "Control with Matter",
-            "mw_1": 40,
-            "img_2": "shopify://shop_images/KNX_white.svg",
-            "text_2": "KNX-IP Interface",
-            "mw_2": 63,
-            "img_3": "shopify://shop_images/dali-2_f851cce6-0f4c-4156-b8d9-2af82f690278.png",
-            "text_3": "KNX-DALI Gateway",
-            "mw_3": 222,
-            "t_size": 16
-          }
-        },
-        "button_nYeyQf": {
-          "type": "button",
-          "settings": {
-            "button_label": "BUY NOW",
-            "button_link": "#",
-            "button_style_secondary": false,
-            "selected_product": "atios-knx-bridge"
-          }
-        },
-        "text_8zEixN": {
+        "text_CzWLUx": {
           "type": "text",
           "settings": {
-            "text": "<p>Including <strong>100 days refund</strong> and <strong>3 years warranty</strong>.</p>",
+            "text": "<p><strong>The ultimate commercial lighting solution:</strong></p><p>Control your Casambi lights with Matter for straightforward integration and reliable control.</p><p><em><strong>Coming Autumn 2025</strong></em></p>",
             "text_style": "body",
             "color": "#ffffff"
+          }
+        },
+        "image_mPdgkj": {
+          "type": "image",
+          "settings": {
+            "text_1": "<div class=\"div-img\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0905/0013/7306/files/matter_0cea4e02-1de4-40f1-9689-885ede11cb79.svg?v=1752637974\" alt=\"matter\">\n\n<img src=\"https://cdn.shopify.com/s/files/1/0905/0013/7306/files/casambi-logo-dark_1.svg?v=1752638036\" alt=\"casambi\">\n\n</div>\n<style>\n\n  .div-img {\n    display: flex; \n    gap: 50px; \n\n\n@media screen and (max-width: 750px) {\n\n .div-img  {\nmargin-left:80vw;\nmargin-right:50vw;\n     flex-direction: column; \n     align-items: center; \n     justify-content: center;\n   }\n   }\n\n}\n</style>",
+            "mw_1": 42,
+            "text_2": "",
+            "mw_2": 70,
+            "text_3": "",
+            "mw_3": 170,
+            "t_size": 14
+          }
+        },
+        "button_QbTwWa": {
+          "type": "button",
+          "settings": {
+            "button_label": "PRE-ORDER",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "selected_product": ""
           }
         }
       },
       "block_order": [
-        "heading_heQ8aC",
-        "heading_GD8Y3d",
-        "heading_r63dgH",
-        "image_tLeWb6",
-        "button_nYeyQf",
-        "text_8zEixN"
+        "heading_Uw4Hwt",
+        "text_CzWLUx",
+        "image_mPdgkj",
+        "button_QbTwWa"
       ],
       "custom_css": [
-        ".wd-img-with-text {margin-top: -84px; overflow: hidden;}"
+        "{margin-top: -84px; overflow: hidden;}",
+        "a {color: #fff; font-weight: 600;}"
       ],
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "md-check": true,
-        "number_1": "1",
-        "text_1": "device",
-        "number_2": "3",
-        "text_2": "functions",
-        "number_3": "∞",
-        "text_3": "possibilities",
-        "number_color": "#4f8096",
-        "image": "shopify://shop_images/tempImageDrT9lN_1.webp",
+        "number_1": "Luma",
+        "text_1": "Port",
+        "number_2": "",
+        "text_2": "",
+        "number_3": "",
+        "text_3": "",
+        "number_color": "#87ceeb",
+        "image": "shopify://shop_images/ADE-LP_white-black-fv_2.png",
         "md-button_label": "",
         "md-button_link": "",
         "md-button_bg_color": "",
@@ -209,13 +191,18 @@
         "color_scheme": "scheme-1d7f41c3-abe5-4c57-a900-1c4c8c345cdf",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "class": "wd-img-with-text mrk-bottom-image md-img-re",
+        "class": "wd-img-with-text mrk-bottom-image md-size-up",
         "padding_top": 120,
         "padding_bottom": 48
       }
     },
     "custom_liquid_PLRcDz": {
       "type": "custom-liquid",
+      "custom_css": [
+        "svg {margin-top: -100%; width: 100%;}",
+        "@media (max-width: 1120px) {svg {height: 55px; }}",
+        "@media (max-width: 769px) {{display: none; }}"
+      ],
       "settings": {
         "custom_liquid": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1728 82\" fill=\"none\" style=\"&#10;\">\n<path d=\"M956.463 48.3069H0V82H1728V0H1093.98C1076.52 0 1059.37 4.5689 1044.23 13.2524L1006.21 35.0545C991.069 43.738 973.918 48.3069 956.463 48.3069Z\" fill=\"white\"/>\n</svg>",
         "color_scheme": "",
@@ -308,6 +295,83 @@
         "show_text_below": true
       }
     },
+    "multicolumn_yRjAjK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HjCUTc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/casambi_nodes.webp",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Casambi Nodes",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XVkRYi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/lumaport.svg",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "LumaPort",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hwn999": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/matter_d1d17eb6-a1dd-46dc-838d-cd1923db4350.svg",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Matter",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HjCUTc",
+        "column_XVkRYi",
+        "column_hwn999"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center;}",
+        "img {padding: 70px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<h2>One Device, Multiple Control Options</h2>",
+        "heading_size": "h1",
+        "md-multi-txt": "",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "text_color": "#000000",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "class": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "wd_slider_with_text_3N6hzC": {
       "type": "wd-slider-with-text",
       "blocks": {
@@ -358,7 +422,7 @@
       ],
       "settings": {
         "head": "Why <strong>Matter</strong> matters",
-        "text": "<p>Allow your clients to control their KNX System with the apps they know and love. Matter is the new smart home standard, that ensures user satisfaction and broadens your client base.<br/><br/></p><ul><li>User-friendly Interface </li><li>Future-proof Technology</li><li>Privacy & Security</li></ul>",
+        "text": "<p>Matter makes smart home control simple, reliable and secure. It works locally, keeps your data private, and stays up to date. All your devices are connected in one system to simplify your everyday life.</p><ul><li>User-friendly Interface </li><li>Future-proof Technology</li><li>Privacy & Security</li></ul>",
         "head_color": "#171717",
         "text_color": "#313637",
         "bollet_color": "#313637",
@@ -420,107 +484,20 @@
         "padding_bottom": 60
       }
     },
-    "multicolumn_WtWQTE": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_cKRd9W": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mic-2.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "Voice Control",
-            "text": "<p>Enjoy hands-free control of your home.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_cVqzQH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/temperature_control.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "Scenes and Automations",
-            "text": "<p>Adjust room temperature and lights automatically.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_yxKHF4": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/keys.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "Shared Access",
-            "text": "<p>Share control of your home with your loved ones.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_xgkjYy": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/map.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "Remote Control",
-            "text": "<p>Check in on what’s happening at home from anywhere.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_cKRd9W",
-        "column_cVqzQH",
-        "column_yxKHF4",
-        "column_xgkjYy"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "md-multi-txt": "",
-        "text": "",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-67fc48b8-383d-41aa-9ca2-dac1f17da049",
-        "text_color": "#6d7172",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "class": "wd-multicolumn",
-        "padding_top": 36,
-        "padding_bottom": 52
-      }
-    },
     "image_banner_PF8DHM": {
       "type": "image-banner",
       "blocks": {
         "heading_jmWERg": {
           "type": "heading",
           "settings": {
-            "heading": "Connect to ETS with our built-in <strong>KNX-IP Interface</strong>",
+            "heading": "<strong>Lighting Сontrol </strong>to Match Your Mood",
             "heading_size": "h1"
           }
         },
         "text_kGtxW4": {
           "type": "text",
           "settings": {
-            "text": "Save space and reduce hardware costs: The Atios KNX Bridge comes with an integrated KNX-IP Interface for ETS programming.",
+            "text": "Lorem ipsum dolor sit amet consectetur. Turpis nulla duis bibendum mollis porta nulla auctor diam eleifend.",
             "text_style": "body"
           }
         },
@@ -539,10 +516,19 @@
             "heading_size": "h1"
           }
         },
+        "image_Hh8Cyp": {
+          "type": "image",
+          "settings": {
+            "text_1": "<span class=\"bold_w\">Zurich Occhio Store</span> Stauffacherstrasse 16 8004 Zurich Switzerland\n<style>\n.bold_w {\nfont-weight:bold;\n}\n</style>",
+            "text_2": "<span class=\"bold_w\">Dubai Occhio store</span>\nUnit R04, Building 4 Dubai Design District, Dubai United Arab Emirates",
+            "text_3": "",
+            "t_size": 14
+          }
+        },
         "text_XmmXq7": {
           "type": "text",
           "settings": {
-            "text": "Our upcoming remote access feature enables you to remotely program KNX via ETS. Skip unnecessary site visits and increase efficiency for both you and your client.",
+            "text": "",
             "text_style": "body"
           }
         }
@@ -553,15 +539,16 @@
         "space_JnFjPn",
         "space_kwqRhp",
         "heading_xAUXjQ",
+        "image_Hh8Cyp",
         "text_XmmXq7"
       ],
       "custom_css": [
+        ".wd-icon-text-wrapper-inner {align-items: flex-start;}",
         "@media (min-width: 767px) {.banner--content-align-left.banner--desktop-transparent .banner__box {max-width: 500px; }}"
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/Group_1_1.jpg",
-        "image_2": "shopify://shop_images/924ec4282bb02d420b843d12b62e6a16_1.png",
+        "image": "shopify://shop_images/bg.webp",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-left",
@@ -574,20 +561,127 @@
         "show_text_below": true
       }
     },
+    "multicolumn_WtWQTE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cKRd9W": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_39389.webp",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Switch",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cVqzQH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_39389_1.webp",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Dim",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yxKHF4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_39389_2.webp",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Color",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xgkjYy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_39389_3.webp",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Remote Control",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DF8JeR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_39389_4.webp",
+            "bg_img_show": false,
+            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
+            "width_img": 58,
+            "height_img": 58,
+            "title": "Remote Control",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_cKRd9W",
+        "column_cVqzQH",
+        "column_yxKHF4",
+        "column_xgkjYy",
+        "column_DF8JeR"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center;}",
+        "@media screen and (min-width: 750px) {.grid__item {/* width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4); */ max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2); width: 80px; }}"
+      ],
+      "name": "we support all the chr",
+      "settings": {
+        "title": "<p>We support all the characteristics of your light</p>",
+        "heading_size": "h1",
+        "md-multi-txt": "",
+        "text": "",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-67fc48b8-383d-41aa-9ca2-dac1f17da049",
+        "text_color": "#6d7172",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "class": "wd-multicolumn",
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
     "image_banner_HD3d8q": {
       "type": "image-banner",
       "blocks": {
         "heading_6ptByF": {
           "type": "heading",
           "settings": {
-            "heading": "Precise Dimming, Perfectly Integrated: <strong>KNX-DALI Gateway</strong>",
+            "heading": "<strong>Premium</strong> Lighting <strong>Partners</strong>",
             "heading_size": "h1"
           }
         },
         "text_3wDrW3": {
           "type": "text",
           "settings": {
-            "text": "With DALI now a standard in most lighting systems, our built-in KNX-DALI gateway reduces hardware costs and saves cabinet space. Simplify your installation and let your clients enjoy modern lighting control without the unneccessary equipment.",
+            "text": "Compatible with the world's leading high-end lighting manufacturers using Casambi technology",
             "text_style": "body"
           }
         }
@@ -598,241 +692,98 @@
       ],
       "custom_css": [
         ".banner--content-align-left.banner--desktop-transparent .banner__box {max-width: 62rem;}",
-        "@media (min-width: 1480px) {.banner__box {padding: 14rem 0; }}"
+        "@media (min-width: 1480px) {.banner__box {padding: 14rem 0; }}",
+        ".wd-banner-heading {justify-content: flex-end;}"
       ],
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/image1.webp",
-        "image_2": "shopify://shop_images/image2.webp",
+        "image": "shopify://shop_images/bg_1.webp",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-right",
         "show_text_box": false,
         "desktop_content_alignment": "right",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
     },
-    "multicolumn_Ngffh4": {
-      "type": "multicolumn",
+    "atios_list_logos_biFC3j": {
+      "type": "atios-list--logos",
       "blocks": {
-        "column_cUtaTH": {
-          "type": "column",
+        "logo_kRfbFR": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/ethernet.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "",
-            "text": "<p>Connect to Ethernet and KNX</p>",
-            "link_label": "",
-            "link": ""
+            "logo": "shopify://shop_images/Group_1171275251.svg",
+            "logo_alt": "",
+            "max_width_logo": 150,
+            "logo_label": "",
+            "logos_label": ""
           }
         },
-        "column_3LhJMJ": {
-          "type": "column",
+        "logo_fpKhzr": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/web-programming.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "",
-            "text": "<p>Add Devices<br/>in Web Interface</p>",
-            "link_label": "",
-            "link": ""
+            "logo": "shopify://shop_images/luceplan-seeklogo_1.svg",
+            "logo_alt": "",
+            "max_width_logo": 70,
+            "logo_label": "",
+            "logos_label": ""
           }
         },
-        "column_6L8jAm": {
-          "type": "column",
+        "logo_bq7BTe": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/qr.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "",
-            "text": "<p>Scan Matter<br/> QR Code</p>",
-            "link_label": "",
-            "link": ""
+            "logo": "shopify://shop_images/Shape.svg",
+            "logo_alt": "",
+            "max_width_logo": 150,
+            "logo_label": "",
+            "logos_label": ""
           }
         },
-        "column_xXQ4DQ": {
-          "type": "column",
+        "logo_yG8DbH": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/smartphone.svg",
-            "bg_img_show": true,
-            "bg_img": "background: linear-gradient(180deg, #F4FBFC 0%, #E6F0F2 100%);",
-            "width_img": 58,
-            "height_img": 58,
-            "title": "",
-            "text": "<p>Control your Home<br/>with your Phone</p>",
-            "link_label": "",
-            "link": ""
+            "logo": "shopify://shop_images/g1.svg",
+            "logo_alt": "",
+            "max_width_logo": 150,
+            "logo_label": "",
+            "logos_label": ""
+          }
+        },
+        "logo_J3QKqW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Group_1171275252.svg",
+            "logo_alt": "",
+            "max_width_logo": 150,
+            "logo_label": "",
+            "logos_label": ""
           }
         }
       },
       "block_order": [
-        "column_cUtaTH",
-        "column_3LhJMJ",
-        "column_6L8jAm",
-        "column_xXQ4DQ"
+        "logo_kRfbFR",
+        "logo_fpKhzr",
+        "logo_bq7BTe",
+        "logo_yG8DbH",
+        "logo_J3QKqW"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 990px) {.title-wrapper-with-link {margin-bottom: 6rem; }}"
-      ],
+      "name": "A List Logos",
       "settings": {
-        "title": "<p>Get started in no time</p>",
-        "heading_size": "h1",
-        "md-multi-txt": "",
-        "text": "<p>Simply connect the device, configure the key settings in our web interface, and you're ready to go - no ETS needed. </p>",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "WEBINTERFACE DEMO",
-        "button_link": "https://kd.atios.ch/",
-        "color_scheme": "scheme-700598b5-a44d-4b56-9cc9-204aff4bca3a",
-        "text_color": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "class": "wd-steps",
-        "padding_top": 100,
-        "padding_bottom": 36
-      }
-    },
-    "wd_table_BgxDg4": {
-      "type": "wd-table",
-      "blocks": {
-        "feature_Uy7a9V": {
-          "type": "feature",
-          "settings": {
-            "name": "Matter",
-            "icon_1": "tick",
-            "icon_2": "tick",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        },
-        "feature_yRJPqG": {
-          "type": "feature",
-          "settings": {
-            "name": "KNX IP Interface",
-            "icon_1": "tick",
-            "icon_2": "tick",
-            "icon_3": "tick",
-            "icon_4": "tick"
-          }
-        },
-        "feature_7wrPgM": {
-          "type": "feature",
-          "settings": {
-            "name": "KNX DALI Gateway",
-            "icon_1": "tick",
-            "icon_2": "none",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        },
-        "feature_jxrDaw": {
-          "type": "feature",
-          "settings": {
-            "name": "Apple HomeKit",
-            "icon_1": "tick",
-            "icon_2": "none",
-            "icon_3": "tick",
-            "icon_4": "none"
-          }
-        },
-        "feature_FET68c": {
-          "type": "feature",
-          "settings": {
-            "name": "Power over Ethernet",
-            "icon_1": "tick",
-            "icon_2": "none",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        },
-        "feature_nbJ8Dk": {
-          "type": "feature",
-          "settings": {
-            "name": "WiFi Support",
-            "icon_1": "tick",
-            "icon_2": "none",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        },
-        "feature_ggygp6": {
-          "type": "feature",
-          "settings": {
-            "name": "Secure Remote Access",
-            "icon_1": "coming_soon",
-            "icon_2": "coming_soon_tick",
-            "icon_3": "tick",
-            "icon_4": "none"
-          }
-        },
-        "feature_pRD66T": {
-          "type": "feature",
-          "settings": {
-            "name": "Power Efficiency (< 1 W)",
-            "icon_1": "tick",
-            "icon_2": "none",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        },
-        "feature_yAzAjA": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/image_22402.png",
-            "name": "Swiss Made",
-            "icon_1": "tick",
-            "icon_2": "none",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        },
-        "feature_kBwULB": {
-          "type": "feature",
-          "disabled": true,
-          "settings": {
-            "name": "Unique Feature",
-            "icon_1": "none",
-            "icon_2": "none",
-            "icon_3": "none",
-            "icon_4": "none"
-          }
-        }
-      },
-      "block_order": [
-        "feature_Uy7a9V",
-        "feature_yRJPqG",
-        "feature_7wrPgM",
-        "feature_jxrDaw",
-        "feature_FET68c",
-        "feature_nbJ8Dk",
-        "feature_ggygp6",
-        "feature_pRD66T",
-        "feature_yAzAjA",
-        "feature_kBwULB"
-      ],
-      "settings": {
-        "heading-first": "",
-        "heading-nd": "Atios",
-        "heading-rd": "1Home",
-        "heading-th": "Thinka",
-        "heading-ht": "Gira",
-        "text": "* Insecure implementation without VPN, based on IP whitelisting",
+        "custom_class": "",
+        "border_top": false,
+        "persons_per_row_d": 7,
+        "persons_per_row_t": 5,
+        "persons_per_row_m": 2,
         "padding_top": 36,
-        "padding_bottom": 16
+        "padding_bottom": 36,
+        "padding_top_p": 100,
+        "padding_bottom_p": 100,
+        "padding_top_p_m": 50,
+        "padding_bottom_p_m": 50
       }
     },
     "md_slider_and_tabs_GmMJnM": {
@@ -841,7 +792,8 @@
         "slide_4Tbgq7": {
           "type": "slide",
           "settings": {
-            "c_liquid": "<model-viewer \n  src=\"https://cdn.shopify.com/3d/models/5436ff9b3a4b820a/ADE-KD_glb.glb\" \n    ar \n    auto-rotate \n    camera-controls \n    style=\"width: 100%; height: 100%;\">\n  </model-viewer>\n<script type=\"module\" src=\"https://unpkg.com/@google/model-viewer\"></script>"
+            "img": "shopify://shop_images/ADE-LP_white-black-fv_2.png",
+            "c_liquid": ""
           }
         },
         "tab_kK9966": {
@@ -892,16 +844,16 @@
             "show_download_table_knx_bridge": false,
             "show_download_table_smartcore": false,
             "show_table": true,
-            "Table-text1": "Dimensions",
-            "Table-value1": "70 x 85 x 60 mm",
-            "Table-text2": "Power Supply",
-            "Table-value2": "802.11af PoE or 12-24V DC",
-            "Table-text3": "Bus Standards",
-            "Table-value3": "KNX and DALI",
-            "Table-text4": "App Support",
-            "Table-value4": "Apple Home via HomeKit; Apple Home, Google Home, Samsung SmartThings und Amazon Alexa via Matter",
-            "Table-text5": "Commmunication",
-            "Table-value5": "Ethernet and 2.4 GHz WiFi",
+            "Table-text1": "Wireless Protocols",
+            "Table-value1": "Matter, Casambi Mesh, WiFi, Bluetooth",
+            "Table-text2": "Wired Protocols",
+            "Table-value2": "DALI, KNX/EIB, Ethernet",
+            "Table-text3": "Device Capacity",
+            "Table-value3": "Up to 250 Casambi fixtures per bridge",
+            "Table-text4": "Installation",
+            "Table-value4": "DIN rail mounting, PoE+ powered",
+            "Table-text5": "Cloud Integration",
+            "Table-value5": "Secure encrypted connection to Casambi Cloud",
             "Table-text6": "",
             "Table-value6": "",
             "Table-text7": "",
@@ -971,172 +923,219 @@
         "padding_bottom": 50
       }
     },
-    "collapsible_content_wAHhbd": {
-      "type": "collapsible-content",
+    "image_banner_cGwTpd": {
+      "type": "image-banner",
       "blocks": {
-        "collapsible_row_KznWB3": {
-          "type": "collapsible_row",
+        "heading_ikP9zP": {
+          "type": "heading",
           "settings": {
-            "heading": "How many KNX group addresses or devices can be added to the Atios KNX Bridge?",
-            "icon": "none",
-            "row_content": "<p>Each of the accessories (e.g. lights, blinds)  can have as many group addresses they may require. When paired with HomeKit we support 100 accessories (limit by Apple). With Matter there is currently no limit and we had successful installations with ~160 accessories. If that is still not enough, you could always use multiple Atios KNX Bridges and pair them to the same Apple / Google Home account.</p>",
-            "page": ""
+            "heading": "Integrate Casambi into <strong>KNX</strong>",
+            "heading_size": "h1"
           }
         },
-        "collapsible_row_L8HKkQ": {
-          "type": "collapsible_row",
+        "text_VVRJ9T": {
+          "type": "text",
           "settings": {
-            "heading": "What is Matter?",
-            "icon": "none",
-            "row_content": "<p>Matter is an open standard for smart home technology designed to enable interoperability between all Matter-certified devices through one unified protocol. With broad industry adoption, its rapid growth is driven by major players like Apple, Google, Amazon, Samsung and Philips.By unifying smart home assistants - such as Apple Home, Google Home, Samsung SmartThings, and Alexa - under a single protocol, Matter empowers consumers to choose and integrate their preferred smart home assistant ecosystem.</p>",
-            "page": ""
+            "text": "Get full KNX compatibility for commercial and residential projects:",
+            "text_style": "body"
           }
         },
-        "collapsible_row_9KRCw8": {
-          "type": "collapsible_row",
+        "text_3cfjD3": {
+          "type": "text",
           "settings": {
-            "heading": "Do I need a separate KNX-IP interface for the installation?",
-            "icon": "none",
-            "row_content": "<p>You don’t need a separate KNX-IP interface, as there is one integrated into the Atios KNX Bridge already.</p>",
-            "page": ""
+            "text": "● KNX keypads",
+            "text_style": "body"
           }
         },
-        "collapsible_row_zQ3nVC": {
-          "type": "collapsible_row",
+        "text_HRVceg": {
+          "type": "text",
           "settings": {
-            "heading": "Does the Atios KNX Bridge require an internet connection?",
-            "icon": "none",
-            "row_content": "<p>The Atios KNX Bridge works locally and does not need an internet connection. Matter and KNX also do not require WiFi, ensuring your home runs smoothly even when the internet is down.</p>",
-            "page": ""
+            "text": "● Climate control, blinds and more",
+            "text_style": "body"
           }
         },
-        "collapsible_row_TEVh4A": {
-          "type": "collapsible_row",
+        "text_LrAWJT": {
+          "type": "text",
           "settings": {
-            "heading": "How do I install the Atios KNX Bridge? Do I need ETS for the configuration?",
-            "icon": "none",
-            "row_content": "<p>No, you do not need ETS or knowledge of other special software to set up the Atios KNX Bridge. The configuration is simply done via our web interface. Find a step by step instruction here: <a href=\"https://docs.atios.ch/en/atios-knx-bridge/setup-installation\"><span style=\"text-decoration:underline\">https://docs.atios.ch/en/atios-knx-bridge/setup-installation</span></a></p>",
-            "page": ""
+            "text": "● Integration of Casambi luminaires in your KNX ecosystem",
+            "text_style": "body"
           }
         },
-        "collapsible_row_fcPyDD": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is the Atios KNX Bridge secure?",
-            "icon": "none",
-            "row_content": "<p>Yes. We value your privacy and do not have access to your home or your data. Everything runs on your local network</p>",
-            "page": ""
-          }
+        "space_CUY8fJ": {
+          "type": "space",
+          "settings": {}
         },
-        "collapsible_row_NkRDiW": {
-          "type": "collapsible_row",
+        "text_M4hVVr": {
+          "type": "text",
           "settings": {
-            "heading": "Is my data transferred to a cloud?",
-            "icon": "none",
-            "row_content": "<p>We value your privacy and do not have access to your home or your data. It is not transferred to a cloud, everything runs on your local network</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_tDXnTC": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does the Atios KNX Bridge support DALI DT8 (tunable white and color control)?",
-            "icon": "none",
-            "row_content": "<p>Yes, the Atios KNX Bridge supports DALI DT8, including tunable white and color control for DALI lighting systems.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_jii9zq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do I configure HomeKit?",
-            "icon": "none",
-            "row_content": "<p>Please check <a href=\"https://docs.atios.ch/en/atios-knx-bridge/setup-installation\"><span style=\"text-decoration:underline\">https://docs.atios.ch/en/atios-knx-bridge/setup-installation</span></a> for a step by step explanation on the configuration of HomeKit or Matter</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_4zaMfg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do I have to pay monthly fees?",
-            "icon": "none",
-            "row_content": "<p>No. We do not charge monthly fees.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_DJmV39": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do I have to pay for firmware updates?",
-            "icon": "none",
-            "row_content": "<p>No. Our software updates are free.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_EqmBtx": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is your return policy?",
-            "icon": "none",
-            "row_content": "<p>From the day your order was delivered, we offer 100 days money back guarantee. Please get in touch with us to request a refund.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_9kzK4r": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do I get a warranty?",
-            "icon": "none",
-            "row_content": "<p>We offer a 3-year warranty on your purchased product. The item will be repaired, replaced or credited within this time frame according to our terms and conditions. Please get in touch with us to claim your warranty.</p>",
-            "page": ""
+            "text": "Release: Free Firmware Update Q4 2025",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "collapsible_row_KznWB3",
-        "collapsible_row_L8HKkQ",
-        "collapsible_row_9KRCw8",
-        "collapsible_row_zQ3nVC",
-        "collapsible_row_TEVh4A",
-        "collapsible_row_fcPyDD",
-        "collapsible_row_NkRDiW",
-        "collapsible_row_tDXnTC",
-        "collapsible_row_jii9zq",
-        "collapsible_row_4zaMfg",
-        "collapsible_row_DJmV39",
-        "collapsible_row_EqmBtx",
-        "collapsible_row_9kzK4r"
+        "heading_ikP9zP",
+        "text_VVRJ9T",
+        "text_3cfjD3",
+        "text_HRVceg",
+        "text_LrAWJT",
+        "space_CUY8fJ",
+        "text_M4hVVr"
       ],
       "settings": {
-        "caption": "",
-        "heading": "Frequently asked questions",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "layout": "none",
+        "custom_class": "",
+        "image": "shopify://shop_images/bg_2.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_banner_YrFHzq": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_qKEHHx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Integrate Casambi into <strong>DALI</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_xNdipQ": {
+          "type": "text",
+          "settings": {
+            "text": "Replace CBU-DCS DALI controllers and connect Casambi devices directly to your DALI infrastructure.",
+            "text_style": "body"
+          }
+        },
+        "space_eBbAqD": {
+          "type": "space",
+          "settings": {}
+        },
+        "text_d4t4d7": {
+          "type": "text",
+          "settings": {
+            "text": "Release: Free Firmware Update Q4 26",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qKEHHx",
+        "text_xNdipQ",
+        "space_eBbAqD",
+        "text_d4t4d7"
+      ],
+      "custom_css": [],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/bg_3.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_banner_ycxEFL": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_pDt7LP": {
+          "type": "heading",
+          "settings": {
+            "heading": "You own a lighting store? Display our solutions.",
+            "heading_size": "h1"
+          }
+        },
+        "text_cQMbWp": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Be the first to experience the future of integrated lighting control when we launch this autumn.</strong>",
+            "text_style": "body"
+          }
+        },
+        "space_KeJGUQ": {
+          "type": "space",
+          "settings": {}
+        },
+        "buttons_eNayxJ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "PREORDER FOR 299,- INSTEAD OF 699,-",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "CONTACT US!",
+            "button_link_2": "shopify://pages/contact",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pDt7LP",
+        "text_cQMbWp",
+        "space_KeJGUQ",
+        "buttons_eNayxJ"
+      ],
+      "custom_css": [
+        ".wd-banner-heading {display: flex; justify-content: center; align-items: center;}"
+      ],
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/AdobeStock_87467452722_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_liquid_Mxdkgp": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "{display: none;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.banner__buttons {\n  display: inline-flex;\n  max-width: 70rem;\ncolor:#000;\nfont-weight:600;\n  a:last-of-type  {\n    color:#fff;\nfont-weight:600;\n    background-color: #4f8096;\n  }\n</style>",
         "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 100,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "image_with_text_zdTTqw",
+    "image_with_text_zaHqNL",
     "custom_liquid_PLRcDz",
     "image_banner",
+    "multicolumn_yRjAjK",
     "wd_slider_with_text_3N6hzC",
     "wd_brands_yCKEPU",
-    "multicolumn_WtWQTE",
     "image_banner_PF8DHM",
+    "multicolumn_WtWQTE",
     "image_banner_HD3d8q",
-    "multicolumn_Ngffh4",
-    "wd_table_BgxDg4",
+    "atios_list_logos_biFC3j",
     "md_slider_and_tabs_GmMJnM",
-    "collapsible_content_wAHhbd"
+    "image_banner_cGwTpd",
+    "image_banner_YrFHzq",
+    "image_banner_ycxEFL",
+    "custom_liquid_Mxdkgp"
   ]
 }

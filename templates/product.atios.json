@@ -398,6 +398,7 @@
         "brand_dtLrAa"
       ],
       "settings": {
+        "custom_class": "",
         "img": "shopify://shop_images/Group_4.jpg",
         "head": "",
         "padding_top": 36,
