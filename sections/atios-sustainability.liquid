@@ -11,7 +11,9 @@
         {% for block in section.blocks %}
           <li class="sustainability-item">
             <div class="sustainability-item-head">
-              <img src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.title }}">
+              <div class="sustainability-item-head-icon">
+                <img src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.title }}">
+              </div>
               <h3 class="sustainability-item-title">{{ block.settings.title }}</h3>
             </div>
             <p class="sustainability-item-desc">
@@ -40,14 +42,10 @@
     }
 
     @media (max-width: 1024px) {
-      margin-top: -150px;
-      padding-top: 250px;
-      padding-bottom: 110px;
-    }
-    
-    @media (max-width: 768px) {
-      margin-top: -200px;
-      background-position: left;
+      padding-top: 100px;
+      padding-bottom: 90px;
+      background-position: top right;
+      background-image: url('{{ section.settings.bg_image_mobile | image_url }}');
     }
   }
 {% endstyle %}
@@ -65,7 +63,13 @@
         "type": "image_picker",
         "id": "bg_image",
         "label": "Background Image"
-      }, {
+      }, 
+      {
+        "type": "image_picker",
+        "id": "bg_image_mobile",
+        "label": "Background Image for Mobile"
+      }, 
+      {
         "type": "text",
         "id": "title",
         "label": "Title",

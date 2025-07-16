@@ -193,6 +193,7 @@
       ],
       "settings": {
         "bg_image": "shopify://shop_images/bg-sustainability.png",
+        "bg_image_mobile": "shopify://shop_images/bg-sustainability-mobile.png",
         "title": "Simplify sustainability - without a second thought.",
         "padding_top": 270,
         "padding_bottom": 165
